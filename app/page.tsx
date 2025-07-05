@@ -21,7 +21,7 @@ const homepage17 = () => {
    
       <HeroV17 />
       <SocialProof />
-      <MarqueeV3 />
+     {/* <MarqueeV3 /> */}
       {/*< <ClientSuccessStories /> */}
       <ServicesV15 />
       {/*<DawnloadOurApp /> */}
