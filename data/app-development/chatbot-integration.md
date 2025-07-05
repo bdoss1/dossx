@@ -2,8 +2,9 @@
 
 title: 'AI Chatbot & Agent Integration'
 description: 'Embed custom GPT-powered chatbots and multi-agent workflows into your product or site—no heavy lifting.'
-coverImage: '/images/services/services-details2-img.png'
+coverImage: '/images/services/dossx_header.png'
 badgeTitle: 'Conversational AI'
+logoDark: '/images/dossx_logo.png'
 feature: ['LLM Chat Interfaces', 'Multi-Agent Workflows']
 ---
 

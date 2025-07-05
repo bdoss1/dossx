@@ -1,7 +1,7 @@
 ---
 title: 'SwiftInvoice'
 description: 'Automated invoicing, reminders, and late fees that slash DSO and keep cash flowing.'
-coverImage: '/images/services/services-details2-img.png'
+coverImage: '/images/services/dossx_header.png'
 badgeTitle: 'AI-Powered Billing'
 feature: ['GPT Follow-Ups', 'Stripe / QuickBooks Sync']
 ---

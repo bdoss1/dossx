@@ -1,7 +1,7 @@
 ---
 title: 'Fractional CTO & AI Solutions Architecture'
 description: 'Strategic tech leadership and LLM-powered roadmaps—on demand, without the full-time price tag.'
-coverImage: '/images/services/services-details2-img.png'
+coverImage: '/images/services/dossx_header.png'
 badgeTitle: 'Executive Advisory'
 feature: ['Cloud & Cost Optimization', 'LLMOps Blueprinting']
 ---
