@@ -1,0 +1,28 @@
+{
+  "pages": {
+    "/investors/page": [
+      "static/chunks/node_modules_1d3cd05f._.js",
+      "static/chunks/_e508924b._.js",
+      "static/chunks/_2ca6a2ce._.css",
+      "static/chunks/app_layout_tsx_aaf7d535._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_9dabc57f._.js",
+      "static/chunks/node_modules_6b3b821f._.js",
+      "static/chunks/_69aab14f._.js",
+      "static/chunks/app_not-found_tsx_8dd5b56a._.js",
+      "static/chunks/app_global-error_tsx_13831f2b._.js",
+      "static/chunks/app_global-error_tsx_8dd5b56a._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_314077d0._.js",
+      "static/chunks/_1d99d665._.js",
+      "static/chunks/node_modules_f80317a1._.js",
+      "static/chunks/app_investors_page_tsx_8dd5b56a._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_fff34f97._.js",
+      "static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc06._.js",
+      "static/chunks/node_modules_next_dist_compiled_38d265cf._.js",
+      "static/chunks/node_modules_next_dist_client_c24f7707._.js",
+      "static/chunks/node_modules_next_dist_3bfaed20._.js",
+      "static/chunks/node_modules_@swc_helpers_cjs_00636ac3._.js",
+      "static/chunks/_e69f0d32._.js",
+      "static/chunks/_a2b209e9._.js"
+    ]
+  }
+}

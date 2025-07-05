@@ -1,0 +1,39 @@
+[
+
+  {
+    "title": "Resources",
+    "links": [
+      { "href": "/ai-blog",              "label": "Blog / Insights" },
+      { "href": "/case-studies",      "label": "Case Studies" },
+      { "href": "/docs",              "label": "Documentation" },
+      { "href": "/api-dev",               "label": "API Reference" },
+      { "href": "/status",            "label": "System Status" }
+    ]
+  },
+  {
+    "title": "Company",
+    "links": [
+      { "href": "/about",             "label": "About DossX" },
+      { "href": "/team",              "label": "Team" },
+      { "href": "/pricing",           "label": "Pricing" },
+      { "href": "/investors",         "label": "Investors" },
+      { "href": "/press",             "label": "Press / Media Kit" }
+    ]
+  },
+  {
+    "title": "Support",
+    "links": [
+      { "href": "/faq",               "label": "FAQ" },
+      { "href": "/contact",           "label": "Contact" }
+    ]
+  },
+  {
+    "title": "Legal",
+    "links": [
+      { "href": "/terms",             "label": "Terms of Service" },
+      { "href": "/privacy",           "label": "Privacy Policy" },
+      { "href": "/ethics",            "label": "Data & AI Ethics" },
+      { "href": "/security",          "label": "Security & Compliance" }
+    ]
+  }
+]

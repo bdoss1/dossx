@@ -1,0 +1,38 @@
+[
+  [
+    {
+      "id": 1,
+      "question": "Do I need coding skills to use DossX products?",
+      "answer": "Nope. All workflows ship as plug-and-play. Connect your apps, toggle a few options, and you’re live—no code, no dev hours."
+    },
+    {
+      "id": 2,
+      "question": "How fast can I see ROI after deployment?",
+      "answer": "Most customers start measuring impact within the first week—whether that’s faster invoicing with SwiftInvoice or new leads via SwiftBuild."
+    }
+  ],
+  [
+    {
+      "id": 3,
+      "question": "Is my data secure and compliant?",
+      "answer": "Absolutely. We follow SOC 2–ready practices, encrypt data in transit & at rest, and support role-based access controls for every product."
+    },
+    {
+      "id": 4,
+      "question": "Can I upgrade, downgrade, or cancel anytime?",
+      "answer": "Yes. Plans are month-to-month with prorated adjustments, so you can scale up or pause as your needs change."
+    }
+  ],
+  [
+    {
+      "id": 5,
+      "question": "Do you offer a free trial or pilot?",
+      "answer": "Every Starter plan includes a 7-day free trial—no credit card required—so you can test drive before committing."
+    },
+    {
+      "id": 6,
+      "question": "What support options are included?",
+      "answer": "Starter & Growth plans get email support; Scale plans include a dedicated Slack channel plus quarterly strategy sessions with our solutions team."
+    }
+  ]
+]
