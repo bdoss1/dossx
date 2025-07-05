@@ -12,7 +12,7 @@ const HeroV17 = () => {
           {/*<div className="rv-badge mb-3">
             <span className="rv-badge-text">Where Innovation Meets Execution</span>
           </div> */}
-          <h1 className="mb-3 lg:leading-[1.08]">Deploy Tomorrow—Today.</h1>
+          <h1 className="mb-3 lg:leading-[1.08]">Innovation, On-Tap.</h1>
 
           
          

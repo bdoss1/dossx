@@ -60,7 +60,7 @@ const WhyChooseUsV6 = () => {
             <RevealWrapper className="flex-1 border px-[30px] py-20 dark:border-dark">
               <h5 className="mb-2.5 mt-5 lg:text-[35px]">AI-Powered Automations</h5>
               <p className="text-base leading-[1.6]">
-                GPT-driven workflows and multi-agent orchestration that erase busywork and keep operations running 24 / 7.
+                AI-driven workflows and multi-agent orchestration that erase busywork and keep operations running 24 / 7.
               </p>
             </RevealWrapper>
 
