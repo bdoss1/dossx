@@ -18,7 +18,7 @@ const ServicesV15 = () => {
         <div className="mb-16 flex flex-col items-start justify-center gap-x-10 gap-y-3 md:mb-20 md:flex-row md:items-center lg:justify-start">
           <div className="md:w-[60%]">
             <RevealWrapper className="rv-badge mb-3 md:mb-4">
-              <span className="rv-badge-text">Services</span>
+              <span className="rv-badge-text">Solutions</span>
             </RevealWrapper>
             <TextAppearAnimation02>
               <h2>
