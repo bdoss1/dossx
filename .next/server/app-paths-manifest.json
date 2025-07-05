@@ -12,5 +12,6 @@
   "/team/page": "app/team/page.js",
   "/docs/page": "app/docs/page.js",
   "/pricing/page": "app/pricing/page.js",
-  "/terms/page": "app/terms/page.js"
+  "/terms/page": "app/terms/page.js",
+  "/services/[slug]/page": "app/services/[slug]/page.js"
 }

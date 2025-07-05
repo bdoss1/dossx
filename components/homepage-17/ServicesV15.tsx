@@ -3,6 +3,7 @@ import Link from 'next/link'
 import RevealWrapper from '../animation/RevealWrapper'
 import TextAppearAnimation02 from '../animation/TextAppearAnimation02'
 
+
 interface ServicesType {
   slug: string
   content: string
@@ -60,6 +61,7 @@ const ServicesV15 = () => {
   "
 >
   {loadedData.map((service) => (
+    
     <RevealWrapper
       key={service.slug}
       className="group relative h-[500px] w-full overflow-hidden"
@@ -89,7 +91,7 @@ const ServicesV15 = () => {
           </p>
 
           <ul className="mt-6 translate-y-3 pl-4 opacity-0 transition-all delay-[440ms] duration-[800ms] group-hover:translate-y-0 group-hover:opacity-100">
-            {service.feature.map((f) => (
+              {service.feature.map((f: string) => (
               <li key={f} className="list-disc text-base leading-relaxed text-backgroundBody/70 dark:text-backgroundBody/70">
                 {f}
               </li>
