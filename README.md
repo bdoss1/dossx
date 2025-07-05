@@ -133,7 +133,7 @@ All DB changes via `supabase migration new <name>`.
 ## 📄 License
 
 © 2025 DossX LLC — released under **Business Source License 1.1**  
-(Free for evaluation & contribution; production use needs a DossX license.)
+(Production use needs a DossX license.)
 
 ---
 
