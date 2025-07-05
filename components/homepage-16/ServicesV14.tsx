@@ -39,14 +39,7 @@ const ServicesV14 = () => {
             key={service.slug}
             className="reveal-me group border px-6 py-9 dark:border-dark lg:px-[30px] lg:py-[50px]">
             <Link href={`/services/${service.slug}`}>
-              <figure>
-                <Image
-                  src={service.logo}
-                  alt="Light Logo"
-                  className="inline-block dark:hidden"
-                  width={60}
-                  height={60}
-                />
+             
                 <Image
                   src={service.logoDark}
                   alt="Light Logo"
@@ -54,7 +47,7 @@ const ServicesV14 = () => {
                   width={60}
                   height={60}
                 />
-              </figure>
+           
               <h5 className="mb-2 mt-4 lg:mb-3 lg:mt-6">{service.title}</h5>
               <p className="mb-20 lg:mb-[106px]">{service.description}</p>
               <div className="flex items-center justify-center overflow-hidden border p-8 transition-colors duration-[400ms] ease-team-bezier group-hover:bg-secondary dark:border-dark dark:group-hover:bg-backgroundBody max-lg:size-16 lg:h-24 lg:w-[92px]">

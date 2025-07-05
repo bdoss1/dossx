@@ -1,10 +1,10 @@
 ---
 title: 'SwiftWatch Community Alert Agent'
 description: 'Geo-tagged incident reporting and real-time resident alerts for HOAs and property managers.'
-coverImage: '/images/services/services-details2-img.png'
+coverImage: '/images/services/dossx_header.png'
 badgeTitle: 'Neighborhood Safety'
-logo: '/images/icons/services-icon/service-icon-1.svg'
-logoDark: '/images/icons/services-icon/service-icon-dark-1.svg'
+logoDark: '/images/dossx_logo.png'
+
 ---
 
 ### Service overview

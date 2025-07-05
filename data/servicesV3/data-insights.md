@@ -1,10 +1,9 @@
 ---
 title: 'SwiftInsights Data & Analytics'
 description: 'Unified data pipelines and AI-powered dashboards that turn raw metrics into real-time decisions.'
-coverImage: '/images/services/services-details2-img.png'
+coverImage: '/images/services/dossx_header.png'
 badgeTitle: 'DataOps & BI'
-logo: '/images/icons/services-icon/service-icon-1.svg'
-logoDark: '/images/icons/services-icon/service-icon-dark-1.svg'
+logoDark: '/images/dossx_logo.png'
 ---
 
 ### Service overview

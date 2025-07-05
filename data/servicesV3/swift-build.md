@@ -1,10 +1,9 @@
 ---
 title: 'SwiftBuild Business Automation Suite'
 description: 'One dashboard of n8n workflows that captures leads, texts missed callers, and drives repeat business.'
-coverImage: '/images/services/services-details2-img.png'
+coverImage: '/images/services/dossx_header.png'
 badgeTitle: 'Local Biz Growth'
-logo: '/images/icons/services-icon/service-icon-1.svg'
-logoDark: '/images/icons/services-icon/service-icon-dark-1.svg'
+logoDark: '/images/dossx_logo.png'
 ---
 
 ### Service overview
