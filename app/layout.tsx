@@ -26,7 +26,7 @@ export default function RootLayout({
           <SmoothScrollProvider>
             <ThemeModeProvider>
               <SpeedInsights/>
-              <Analytics
+              <Analytics />
               {/*<ThemeSwitcher />*/}
               <SplashCursor />
               {children}
