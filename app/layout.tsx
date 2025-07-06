@@ -8,6 +8,7 @@ import { ReactNode, Suspense } from 'react'
 import '../scss/main.scss'
 import SplashCursor from '@/components/animation/SplashCursor'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: 'DossX | Future-Ready Apps & Automation',
@@ -25,6 +26,7 @@ export default function RootLayout({
           <SmoothScrollProvider>
             <ThemeModeProvider>
               <SpeedInsights/>
+              <Analytics
               {/*<ThemeSwitcher />*/}
               <SplashCursor />
               {children}
