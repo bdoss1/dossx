@@ -8,13 +8,13 @@ import getMarkDownData from '@/utils/GetMarkDownData'
 export const metadata = {
   title: 'Privacy & Policy',
 }
-export interface TermsDataType {
+export interface PolicyDataType {
   slug: string
   content: string
   [key: string]: any
 }
 
-const termsData: TermsDataType[] = getMarkDownData('data/policy')
+const termsData: PolicyDataType[] = getMarkDownData('data/policy')
 
 const FAQPage = () => {
   return (
