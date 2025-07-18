@@ -31,15 +31,6 @@ const BlogDetails = async ({ params }: { params: Promise<{ slug: string }> }) =>
       <BlogContent blog={blog} />
       <CTA>
         Let's chat!
-        <CtaImageSlider
-          slides={[
-            { id: '1', img: '/images/agent/01.jpg' },
-            { id: '3', img: '/images/agent/03.jpg' },
-            { id: '2', img: '/images/agent/11.png' },
-          ]}
-        />
-        with us.
-        <i className="block font-instrument italic max-md:inline-block max-sm:pl-2 sm:mt-10">A virtual coffee?</i>
       </CTA>
     </LayoutOne>
   )

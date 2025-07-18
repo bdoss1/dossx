@@ -15,7 +15,7 @@ export interface Blog2Type {
   [key: string]: any
 }
 
-const loadedBlogs: Blog2Type[] = getMarkDownData('data/blogs')
+const loadedBlogs: Blog2Type[] = getMarkDownData('data/blogsV2')
 
 const BlogPage02 = () => {
   return (

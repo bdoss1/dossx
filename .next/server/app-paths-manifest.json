@@ -1,5 +1,5 @@
 {
-  "/ai-blog/page": "app/ai-blog/page.js",
-  "/page": "app/page.js",
-  "/policy/page": "app/policy/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/ai-blog/[slug]/page": "app/ai-blog/[slug]/page.js",
+  "/ai-blog/page": "app/ai-blog/page.js"
 }

@@ -8,7 +8,7 @@ import getMarkDownData from '@/utils/GetMarkDownData'
 import { Blog2Type } from '../page'
 
 export async function generateStaticParams() {
-  const blogs: Blog2Type[] = getMarkDownData('data/blogs')
+  const blogs: Blog2Type[] = getMarkDownData('data/blogsV2')
 
   return blogs.map((post) => ({
     slug: post.slug,

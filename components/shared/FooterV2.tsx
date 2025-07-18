@@ -27,7 +27,7 @@ DossX delivers AI-driven software and automation solutions worldwide, empowering
               </p>
               <div className="mt-7 flex gap-6 md:mt-10">
                 <span>
-                  <Link href="https://www.facebook.com/staticmania">
+                  <Link href="https://www.facebook.com/dossx">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={23}
@@ -50,7 +50,7 @@ DossX delivers AI-driven software and automation solutions worldwide, empowering
                   </Link>
                 </span>
                 <span>
-                  <Link href="https://www.youtube.com/channel/UCAaNCn1kzI1fXD4-fPD157Q">
+                  <Link href="#">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="stroke-[#565656] duration-200 hover:stroke-primary"
@@ -68,7 +68,7 @@ DossX delivers AI-driven software and automation solutions worldwide, empowering
                   </Link>
                 </span>
                 <span>
-                  <Link href="https://www.instagram.com/staticmania">
+                  <Link href="https://www.instagram.com/dossx.ai">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="stroke-[#565656] duration-200 hover:stroke-primary"
@@ -96,7 +96,7 @@ DossX delivers AI-driven software and automation solutions worldwide, empowering
                 
                
                 <span>
-                  <Link href="https://www.linkedin.com/company/staticmania/">
+                  <Link href="https://www.linkedin.com/company/dossx/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="stroke-[#565656] duration-200 hover:stroke-primary"

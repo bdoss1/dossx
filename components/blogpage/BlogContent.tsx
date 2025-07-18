@@ -13,7 +13,7 @@ interface RestOfTheBlogType {
   [key: string]: any
 }
 
-const blogs: RestOfTheBlogType[] = getMarkDownData('data/blogs')
+const blogs: RestOfTheBlogType[] = getMarkDownData('data/blogsV2')
 const RestBlogData = blogs.filter((blog) => blog.featured === false).slice(0, 3)
 
 const BlogContent = ({ blog }: any) => {
@@ -39,7 +39,7 @@ const BlogContent = ({ blog }: any) => {
                 <h3 className="mb-7 mt-10 text-3xl md:text-4xl lg:mt-16 xl:mt-20">Share</h3>
                 <ul className="flex items-center gap-5">
                   <li className="relative inline-block h-10 w-10 rounded-full border-2 border-secondary duration-300 hover:bg-primary dark:border-dark">
-                    <Link href="https://discord.gg/fSxDJyvJmr" target="_blank">
+                    <Link href="https://discord.gg/dossx" target="_blank">
                       <span className="absolute left-1/2 top-1/2 inline -translate-x-1/2 -translate-y-1/2 dark:hidden">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ const BlogContent = ({ blog }: any) => {
                   </li>
 
                   <li className="relative inline-block h-10 w-10 rounded-full border-2 border-secondary duration-300 hover:bg-primary dark:border-dark">
-                    <Link href="https://www.facebook.com/staticmania" target="_blank">
+                    <Link href="https://www.facebook.com/dossx" target="_blank">
                       <span className="absolute left-1/2 top-1/2 inline -translate-x-1/2 -translate-y-1/2 dark:hidden">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +88,7 @@ const BlogContent = ({ blog }: any) => {
                     </Link>
                   </li>
                   <li className="relative inline-block h-10 w-10 rounded-full border-2 border-secondary duration-300 hover:bg-primary dark:border-dark">
-                    <Link href="https://www.linkedin.com/company/staticmania/" target="_blank">
+                    <Link href="https://www.linkedin.com/company/dossx/" target="_blank">
                       <span className="absolute left-1/2 top-1/2 inline -translate-x-1/2 -translate-y-1/2 dark:hidden">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +112,7 @@ const BlogContent = ({ blog }: any) => {
                     </Link>
                   </li>
                   <li className="relative inline-block h-10 w-10 rounded-full border-2 border-secondary duration-300 hover:bg-primary dark:border-dark">
-                    <Link href="https://www.instagram.com/staticmania" target="_blank">
+                    <Link href="https://www.instagram.com/dossx.ai" target="_blank">
                       <span className="absolute left-1/2 top-1/2 inline -translate-x-1/2 -translate-y-1/2 dark:hidden">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
