@@ -29,13 +29,8 @@ const homepage17 = () => {
       <FaqV2 titleChange />
       <CTA buttonText="Launch Now">
        Launch Your AI Workflow in Minutes.
-        <CtaImageSlider
-          slides={[
-            { id: '1', img: '/images/agent/13.png' },
-            { id: '2', img: '/images/agent/02.jpg' },
-            { id: '3', img: '/images/agent/12.png' },
-          ]}
-        />
+        
+        
       </CTA>
     </LayoutTwo>
   )
