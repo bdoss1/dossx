@@ -36,5 +36,3 @@ Onboarding automation pitfalls:
 - **Workflow maintenance:** Version and document flows for easy updates.  
 
 With a robust setup, businesses can scale onboarding and boost customer satisfaction.
-
----
