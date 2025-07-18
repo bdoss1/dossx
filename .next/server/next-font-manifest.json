@@ -1,6 +1,14 @@
 {
   "app": {
+    "[project]/app/ai-blog/page": [
+      "static/media/Satoshi_Regular-s.p.d967cd81.woff",
+      "static/media/Satoshi_Medium-s.p.e2210dbf.woff"
+    ],
     "[project]/app/page": [
+      "static/media/Satoshi_Regular-s.p.d967cd81.woff",
+      "static/media/Satoshi_Medium-s.p.e2210dbf.woff"
+    ],
+    "[project]/app/policy/page": [
       "static/media/Satoshi_Regular-s.p.d967cd81.woff",
       "static/media/Satoshi_Medium-s.p.e2210dbf.woff"
     ]

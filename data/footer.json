@@ -14,8 +14,8 @@
     "title": "Company",
     "links": [
       { "href": "/about",             "label": "About DossX" },
-      { "href": "/team",              "label": "Team" },
-      { "href": "/pricing",           "label": "Pricing" },
+    
+    
       { "href": "/investors",         "label": "Investors" },
       { "href": "/press",             "label": "Press / Media Kit" }
     ]
