@@ -1,6 +1,6 @@
 ---
 thumbnail: '/images/blog-img/homeV3-img-5.png'
-featureImage: '/images/blog-img/blog-details-img-5.png'
+featureImage: '/images/blog-img/blog-details-img-1.png'
 title: 'The Future of LLMOps: Best Practices & Emerging Trends'
 description: 'An inside look at the evolving landscape of LLM operations and how to future-proof your AI investments.'
 date: 'July 18, 2025'

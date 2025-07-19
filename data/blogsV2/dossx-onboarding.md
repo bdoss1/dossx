@@ -1,5 +1,5 @@
 ---
-thumbnail: '/images/blog-img/homeV3-img-3.png'
+thumbnail: '/images/blog-img/blog-details-img-3.png'
 featureImage: '/images/blog-img/blog-details-img-3.png'
 title: 'Automating Customer Onboarding with DossX Workflows'
 description: 'See how DossX creates seamless onboarding experiences that delight customers and reduce manual effort.'

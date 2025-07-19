@@ -1,6 +1,6 @@
 ---
-thumbnail: '/images/blog-img/homeV3-img-2.png'
-featureImage: '/images/blog-img/blog-details-img-2.png'
+thumbnail: '/images/blog-img/blog-details-img-1.png'
+featureImage: '/images/blog-img/blog-details-img-1.png'
 title: 'Scaling with AI Agents: From Prototype to Production'
 description: 'Discover how AI-powered agents streamline business processes and deliver consistent results at scale.'
 date: 'July 12, 2025'
