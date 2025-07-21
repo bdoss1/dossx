@@ -82,9 +82,9 @@ const WhyChooseUsV6 = () => {
               </p>
             </RevealWrapper>
 
-            {/* Launch in Days, Not Months */}
+            {/* Launch in Hours, Not Months */}
             <RevealWrapper className="min-h-[322px] flex-1 border px-[30px] py-20 dark:border-dark">
-              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Launch in Days, Not Months</h5>
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Launch in Hours, Not Months</h5>
               <p className="text-base leading-[1.6]">
                 Pre-wired integrations and no-code configuration let you ship new workflows—or entire products—in a single sprint.
               </p>

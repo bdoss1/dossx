@@ -1,27 +1,28 @@
 ---
-title: 'SwiftInsights Data & Analytics'
-description: 'Unified data pipelines and AI-powered dashboards that turn raw metrics into real-time decisions.'
+title: 'Data & Analytics Pipelines'
+description: 'Transform raw data into real-time insights with low-code ETL/ELT and live dashboards.'
 coverImage: '/images/services/dossx_header.png'
-badgeTitle: 'DataOps & BI'
-feature: ['No-Code ETL Pipelines', 'AI Forecast Dashboards']
+badgeTitle: 'Data Engineering'
+logoDark: '/images/dossx_logo.png'
+feature: ['Low-Code ETL/ELT', 'Live Dashboards']
 ---
 
 ### Service overview
 
-Data lives everywhere—Stripe, Shopify, Google Ads, your own Postgres—but leadership still waits on weekly spreadsheets to see what’s happening. **SwiftInsights** stitches those sources together with no-code ETL workflows, drops them into a managed warehouse, and layers on AI-driven dashboards that predict trends before they appear in the bank account.
+From campaign metrics to operational KPIs, DossX builds end-to-end pipelines using n8n, Supabase, Postgres, MongoDB, or Snowflake. We ingest, cleanse, enrich, and visualize your data — no full data-engineering team required.
 
 ### Our service includes
 
-**Source Connectors:** One-click sync for databases, SaaS apps, ad platforms, and even CSV uploads.  
+**Connector Setup:** One-click integrations for CRMs, ad platforms, databases, and custom APIs.  
 
-**AI Forecasting & Anomaly Detection:** GPT-powered models highlight revenue dips or cost overruns 30 days out.  
+**Data Transformation:** Low-code mapping, normalization, and enrichment for analysis-ready datasets.  
 
-**Custom KPI Dashboards:** Tailored views for execs, marketing, finance—all styled to your brand.  
+**Dashboarding & Alerts:** Live metrics in Looker, Grafana, or Data Studio plus threshold-based notifications.  
 
-**Automated Alerts:** Slack, email, or SMS pings when metrics cross predefined thresholds.  
+**Scaling & Governance:** Modular architecture, cost monitoring, and access controls to grow with confidence.  
 
-**Governance & Security:** Role-based access controls and audit trails, with SOC 2-ready logging.
+**Training & Documentation:** Data model guides, sample queries, and best practices to keep your team self-sufficient.
 
 ### Why Choose Us
 
-Most BI tools show you *what* happened. SwiftInsights shows you **why**—and alerts you *before* it matters. Clients report up to 25 % faster decision cycles and newfound confidence in every growth move.
+Deploy and iterate pipelines in days, not months. We optimize for speed, cost, and reliability — giving you a competitive edge with real-time intelligence.

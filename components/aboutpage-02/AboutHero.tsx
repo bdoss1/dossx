@@ -11,11 +11,7 @@ const AboutHero = () => {
           </h1>
 
           <p className="max-w-[470px]">
-          DossX is a forward-thinking software studio founded by Baron Doss—a technologist with a flair for scalable systems, 
-          elegant design, and real-world impact. We exist to crack tough problems with smarter code, mixing engineering precision 
-          with a spark of imagination. From startups that need to ship yesterday to enterprises craving rock-solid infrastructure, 
-          we bring sharp product strategy and bulletproof engineering together under one roof—always guided by intention, integrity, 
-          and a little bit of swagger.
+          DossX is your go-to lab for next-gen software and AI automations, founded by Baron Doss—an engineer who codes like an artist and dreams like a futurist. We tackle your hardest challenges with rock-solid architecture, clever workflows, and a dash of swagger. Whether you’re a scrappy startup racing the clock or an enterprise demanding bulletproof scale, we fuse product vision and engineering precision into solutions that move you faster, think smarter, and leave competitors in the dust.
           </p>
         </div>
 

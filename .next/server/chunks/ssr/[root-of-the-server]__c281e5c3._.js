@@ -55,7 +55,7 @@ const HeroV17 = ()=>{
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                             className: "mb-3 lg:leading-[1.08]",
-                            children: "Innovation, On-Tap."
+                            children: "Accelerate Your Business with AI-Powered Automation"
                         }, void 0, false, {
                             fileName: "[project]/components/homepage-17/HeroV17.tsx",
                             lineNumber: 15,
@@ -63,27 +63,8 @@ const HeroV17 = ()=>{
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "mx-auto mb-8 max-w-xl md:mb-14 lg:max-w-[750px] xl:mb-[76px]",
-                            children: [
-                                "DossX turns bleeding-edge AI and n8n automations into plug-and-play products that slash busywork and unlock instant growth. ",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                    className: "inline font-instrument",
-                                    children: "Helmed by founder Baron Doss"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/homepage-17/HeroV17.tsx",
-                                    lineNumber: 21,
-                                    columnNumber: 45
-                                }, this),
-                                ", our crew of engineers, designers, and strategists ships elegant, future-proof solutions in days—",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "whitespace-nowrap",
-                                    children: "not months."
-                                }, void 0, false, {
-                                    fileName: "[project]/components/homepage-17/HeroV17.tsx",
-                                    lineNumber: 23,
-                                    columnNumber: 34
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                            children: "At DossX, we turn your repetitive tasks and complex processes into intelligent, self-running systems—so you can spend less time on busywork and more on growth. From seamless AI-powered agents to enterprise-grade automation, our solutions get you live in hours, not months."
+                        }, void 0, false, {
                             fileName: "[project]/components/homepage-17/HeroV17.tsx",
                             lineNumber: 19,
                             columnNumber: 11
@@ -102,12 +83,12 @@ const HeroV17 = ()=>{
                                                 children: "Launch Your Workflow"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/homepage-17/HeroV17.tsx",
-                                                lineNumber: 29,
+                                                lineNumber: 26,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/homepage-17/HeroV17.tsx",
-                                            lineNumber: 28,
+                                            lineNumber: 25,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -117,28 +98,28 @@ const HeroV17 = ()=>{
                                                 children: "Launch Your Workflow"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/homepage-17/HeroV17.tsx",
-                                                lineNumber: 32,
+                                                lineNumber: 29,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/homepage-17/HeroV17.tsx",
-                                            lineNumber: 31,
+                                            lineNumber: 28,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/homepage-17/HeroV17.tsx",
-                                    lineNumber: 27,
+                                    lineNumber: 24,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/homepage-17/HeroV17.tsx",
-                                lineNumber: 26,
+                                lineNumber: 23,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/homepage-17/HeroV17.tsx",
-                            lineNumber: 25,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, this)
                     ]
@@ -295,20 +276,19 @@ const ServicesV15 = ()=>{
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$animation$2f$TextAppearAnimation02$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                         children: [
-                                            "Super-charge your ops with turnkey apps and advisory muscle",
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "font-instrument italic",
-                                                children: "—no costly rebuilds, no endless sprints."
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/homepage-17/ServicesV15.tsx",
-                                                lineNumber: 25,
-                                                columnNumber: 76
-                                            }, this),
-                                            " ",
+                                            "AI-Powered Automations Built for ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/components/homepage-17/ServicesV15.tsx",
                                                 lineNumber: 25,
-                                                columnNumber: 165
+                                                columnNumber: 50
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                                                className: "font-instrument",
+                                                children: " Real-World Growth"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/homepage-17/ServicesV15.tsx",
+                                                lineNumber: 26,
+                                                columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
@@ -1119,7 +1099,7 @@ __turbopack_context__.n(__TURBOPACK__imported__module__$5b$project$5d2f$componen
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-__turbopack_context__.v(JSON.parse("[{\"title\":\"Resources\",\"links\":[{\"href\":\"/ai-blog\",\"label\":\"Blog / Insights\"},{\"href\":\"/case-studies\",\"label\":\"Case Studies\"},{\"href\":\"/docs\",\"label\":\"Documentation\"},{\"href\":\"/api-dev\",\"label\":\"API Reference\"},{\"href\":\"/status\",\"label\":\"System Status\"}]},{\"title\":\"Company\",\"links\":[{\"href\":\"/about\",\"label\":\"About DossX\"},{\"href\":\"/investors\",\"label\":\"Investors\"},{\"href\":\"/press\",\"label\":\"Press / Media Kit\"}]},{\"title\":\"Support\",\"links\":[{\"href\":\"/faq\",\"label\":\"FAQ\"},{\"href\":\"/contact\",\"label\":\"Contact\"}]},{\"title\":\"Legal\",\"links\":[{\"href\":\"/terms\",\"label\":\"Terms of Service\"},{\"href\":\"/policy\",\"label\":\"Privacy Policy\"},{\"href\":\"/ethics\",\"label\":\"Data & AI Ethics\"},{\"href\":\"/security\",\"label\":\"Security & Compliance\"}]}]"));}}),
+__turbopack_context__.v(JSON.parse("[{\"title\":\"Solutions\",\"links\":[{\"href\":\"/bundles/ai-agents/\",\"label\":\"AI Chatbots & Agents\"},{\"href\":\"/bundles/marketing\",\"label\":\"Marketing & Social Media\"},{\"href\":\"/bundles/sales\",\"label\":\"Sales & CRM Accelerator\"},{\"href\":\"/bundles/ecommerce\",\"label\":\"E-commerce Optimization\"},{\"href\":\"/bundles/productivity/\",\"label\":\"Productivity & Scheduling\"},{\"href\":\"/bundles/data-enrichment/\",\"label\":\"Data Enrichment & Integration\"}]},{\"title\":\"Resources\",\"links\":[{\"href\":\"/ai-blog\",\"label\":\"Blog / Insights\"},{\"href\":\"/case-studies\",\"label\":\"Case Studies\"},{\"href\":\"/docs\",\"label\":\"Documentation\"},{\"href\":\"/api-dev\",\"label\":\"API Reference\"},{\"href\":\"/status\",\"label\":\"System Status\"}]},{\"title\":\"Company\",\"links\":[{\"href\":\"/about\",\"label\":\"About DossX\"},{\"href\":\"/team\",\"label\":\"Team\"},{\"href\":\"/careers\",\"label\":\"Careers\"},{\"href\":\"/press\",\"label\":\"Press / Media Kit\"},{\"href\":\"/investors\",\"label\":\"Investors\"}]},{\"title\":\"Support &Legal\",\"links\":[{\"href\":\"/faq\",\"label\":\"FAQ\"},{\"href\":\"/contact\",\"label\":\"Contact\"},{\"href\":\"/terms\",\"label\":\"Terms of Service\"},{\"href\":\"/policy\",\"label\":\"Privacy Policy\"},{\"href\":\"/ethics\",\"label\":\"Data & AI Ethics\"},{\"href\":\"/security\",\"label\":\"Security & Compliance\"}]}]"));}}),
 "[project]/components/shared/FooterV2.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 

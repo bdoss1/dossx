@@ -10,45 +10,6 @@ import TextAppearAnimation from '../animation/TextAppearAnimation';
 const servicesData = [
   {
     id: 1,
-    title: 'SwiftInvoice',
-    subtitle: 'Automated invoicing & collections, powered by GPT.',
-    items: [
-      'Branded PDF invoices',
-      'GPT email reminders',
-      'Stripe / QuickBooks sync',
-      'Smart late-fee logic',
-      'Analytics dashboard',
-      'DSO insights',
-    ],
-  },
-  {
-    id: 2,
-    title: 'SwiftBuild Suite',
-    subtitle: 'Lead capture, missed-call text-back, and loyalty flows.',
-    items: [
-      'Local lead scraper',
-      'Missed-call text-back',
-      'WhatsApp & Slack alerts',
-      'Coupon & loyalty automation',
-      'Drag-and-drop n8n builder',
-      'ROI analytics',
-    ],
-  },
-  {
-    id: 3,
-    title: 'SwiftWatch',
-    subtitle: 'Real-time community alerts for HOAs & property managers.',
-    items: [
-      'Geo-tagged incident reports',
-      'Google Maps & Street View',
-      'WhatsApp / email broadcasts',
-      'Board-meeting scheduler',
-      'Heat-map analytics',
-      'Role-based permissions',
-    ],
-  },
-  {
-    id: 4,
     title: 'AI Chatbot Integration',
     subtitle: 'Custom GPT chatbots & multi-agent workflows.',
     items: [
@@ -58,6 +19,71 @@ const servicesData = [
       'Omni-channel deployment',
       'Usage analytics',
       'API integration',
+    ],
+  },
+  {
+    id: 2,
+    title: 'Marketing & Social Media Suite',
+    subtitle: 'AI-driven post creation & scheduling across all networks.',
+    items: [
+      'Automated content ideation',
+      'Hashtag optimization',
+      'Multi-platform scheduling',
+      'Performance analytics',
+      'Content repurposing',
+      'Trend monitoring',
+    ],
+  },
+  {
+    id: 3,
+    title: 'Sales & CRM Accelerator',
+    subtitle: 'Automate outreach, follow-ups & lead scoring.',
+    items: [
+      'AI-powered follow-ups',
+      'Hot lead scoring',
+      'CRM synchronization',
+      'Payment notifications',
+      'Pipeline analytics',
+      'Dynamic email templates',
+    ],
+  },
+  {
+    id: 4,
+    title: 'E-commerce Optimization Pack',
+    subtitle: 'Streamline order workflows & generate product media.',
+    items: [
+      'Order automation',
+      'AI image/video generation',
+      'Inventory alerts',
+      'Abandoned-cart triggers',
+      'Shopify/Magento sync',
+      'Sales performance reports',
+    ],
+  },
+  {
+    id: 5,
+    title: 'Productivity & Scheduling Toolkit',
+    subtitle: 'Two-way calendar sync & team broadcast automation.',
+    items: [
+      'Calendar integration',
+      'Automated reminders',
+      'Team announcements',
+      'Recurring meeting setup',
+      'Task assignment flows',
+      'Productivity dashboards',
+    ],
+  },
+  {
+    id: 6,
+    title: 'Data Enrichment & Integration',
+    subtitle: 'Enrich leads & sync across all your apps.',
+    items: [
+      'Firmographic enrichment',
+      'Email verification',
+      'CRM import/export',
+      'Custom webhook triggers',
+      'Data transformation',
+      'Integration templates',
     ],
   },
 ];
@@ -75,13 +101,13 @@ const ServicesV3 = () => {
       </div>
 
       <div className="container">
-        {/* header */}
+        {/* About Header */}
         <div className="mb-10 flex flex-col items-start justify-center gap-x-10 gap-y-2 md:mb-20 md:flex-row lg:justify-between">
           <div className="flex-1">
             <TextAppearAnimation>
               <h2 className="text-appear max-lg:leading-[1.33]">
-                <span className="font-instrument italic lg:text-[65px]">Our&nbsp;</span>
-                AI-Powered Services
+                <span className="font-instrument italic lg:text-[65px]">About&nbsp;</span>
+                DossX
               </h2>
             </TextAppearAnimation>
           </div>
@@ -89,9 +115,7 @@ const ServicesV3 = () => {
           <div className="flex-1 max-md:w-full md:self-end">
             <TextAppearAnimation>
               <p className="text-appear max-w-lg md:justify-self-end md:text-right">
-                From automated invoicing to multi-agent chatbots, DossX delivers plug-and-play
-                products backed by enterprise-grade workflows. Explore how each service can level
-                up your operations.
+                DossX is your go-to lab for next-gen software and AI automations, founded by Baron Doss—an engineer who codes like an artist and dreams like a futurist. We tackle your hardest challenges with rock-solid architecture, clever workflows, and a dash of swagger. Whether you’re a scrappy startup racing the clock or an enterprise demanding bulletproof scale, we fuse product vision and engineering precision into solutions that move you faster, think smarter, and leave competitors in the dust.
               </p>
             </TextAppearAnimation>
 

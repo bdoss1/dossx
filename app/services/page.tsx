@@ -5,7 +5,7 @@ import CtaImageSlider from '@/components/shared/CtaImageSlider'
 import LayoutOne from '@/components/shared/LayoutOne'
 
 export const metadata = {
-  title: 'Services ',
+  title: 'Solutions | DossX',
 }
 
 const ServicesPage = () => {

@@ -1,5 +1,15 @@
 [
-
+{
+    "title": "Solutions",
+    "links": [
+      { "href": "/bundles/ai-agents/",            "label": "AI Chatbots & Agents" },
+      { "href": "/bundles/marketing",        "label": "Marketing & Social Media" },
+      { "href": "/bundles/sales",            "label": "Sales & CRM Accelerator" },
+      { "href": "/bundles/ecommerce",         "label": "E-commerce Optimization" },
+      { "href": "/bundles/productivity/",       "label": "Productivity & Scheduling" },
+      { "href": "/bundles/data-enrichment/",       "label": "Data Enrichment & Integration" }
+    ]
+  },
   {
     "title": "Resources",
     "links": [
@@ -14,22 +24,18 @@
     "title": "Company",
     "links": [
       { "href": "/about",             "label": "About DossX" },
-    
-    
-      { "href": "/investors",         "label": "Investors" },
-      { "href": "/press",             "label": "Press / Media Kit" }
+      { "href": "/team",              "label": "Team" },
+      { "href": "/careers",           "label": "Careers" },
+      { "href": "/press",             "label": "Press / Media Kit" },
+      { "href": "/investors",         "label": "Investors" }
     ]
   },
+  
   {
-    "title": "Support",
+    "title": "Support &Legal",
     "links": [
       { "href": "/faq",               "label": "FAQ" },
-      { "href": "/contact",           "label": "Contact" }
-    ]
-  },
-  {
-    "title": "Legal",
-    "links": [
+      { "href": "/contact",           "label": "Contact" },
       { "href": "/terms",             "label": "Terms of Service" },
       { "href": "/policy",           "label": "Privacy Policy" },
       { "href": "/ethics",            "label": "Data & AI Ethics" },

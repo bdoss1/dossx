@@ -22,8 +22,8 @@ const ServicesV15 = () => {
             </RevealWrapper>
             <TextAppearAnimation02>
               <h2>
-                Super-charge your ops with turnkey apps and advisory muscle<span className="font-instrument italic">—no costly rebuilds, no endless sprints.</span> <br />
-                
+                AI-Powered Automations Built for <br />
+                <i className="font-instrument"> Real-World Growth</i>
               </h2>
             </TextAppearAnimation02>
           </div>
