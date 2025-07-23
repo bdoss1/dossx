@@ -1,88 +1,92 @@
-// app/bundles/ecommerce/page.tsx
-import LayoutOne from '@/components/shared/LayoutOne'
-import Link from 'next/link'
-import Head from 'next/head'
+// app/services/ecommerce-optimization-pack/page.tsx
+'use client'
 
-export default function EcommerceBundlePage() {
+import LayoutOne from '@/components/shared/LayoutOne'
+import PageHero from '@/components/shared/PageHero'
+import Link from 'next/link'
+
+export default function EcommerceOptimizationPackPage() {
   return (
     <LayoutOne>
-      <>
-        <Head>
-          <title>E-commerce Automation Pack | DossX</title>
-          <meta name="description" content="Automate Shopify fulfillment, product content, marketing assets, and notifications with the DossX E-commerce Optimization Pack. Hosted and scalable." />
-          <meta name="keywords" content="ecommerce automation, Shopify workflows, AI product assets, order fulfillment automation, DossX, no-code ecommerce" />
-          <meta property="og:title" content="E-commerce Automation Pack | DossX" />
-          <meta property="og:description" content="Automate Shopify fulfillment, product content, marketing assets, and notifications with the DossX E-commerce Optimization Pack." />
-          <meta property="og:type" content="website" />
-        </Head>
+      <PageHero
+        title="E-commerce"
+        italicTitle="Optimization"
+        badgeTitle="Pack"
+        description="Boost sales with automated inventory alerts, abandoned-cart recovery, and dynamic pricing flows."
+        scale
+      />
 
-        <section className="pb-14 pt-32 md:pb-16 md:pt-36 lg:pb-[88px] lg:pt-[200px] xl:pb-[100px]">
-          <div className="container">
-            {/* Hero */}
-            <div className="mb-14 md:mb-[60px] lg:mb-[100px] text-center">
-              <h1 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-                E-commerce Optimization Pack
-              </h1>
-              <p className="mx-auto max-w-2xl text-lg text-colorText md:text-xl">
-                Speed up fulfillment, automate product marketing, and eliminate tedious Shopify tasks. The DossX E-commerce Optimization Pack helps your store run itself—so you can scale what works.
-              </p>
-            </div>
+      <section className="pb-14 pt-14 container max-w-3xl">
+        <img src="/images/services/ecommerce_header.png" alt="E-commerce Optimization Pack" className="mb-10 w-full rounded-md" />
 
-            <div className="grid gap-10 lg:grid-cols-2">
-              {/* Details */}
-              <div>
-                <div className="mb-10">
-                  <h2 className="mb-4 text-2xl font-bold md:text-3xl">What’s Included</h2>
-                  <ul className="space-y-3 text-lg text-colorText">
-                    <li>• Shopify webhook listeners that trigger fulfillment updates, customer tags, and Slack alerts.</li>
-                    <li>• Automated generation of product visuals, thumbnails, and branded promotional graphics using AI.</li>
-                    <li>• Content stored and categorized in Google Drive, Sheets, or Airtable for easy team access.</li>
-                    <li>• Option to integrate review management or upsell automation tools.</li>
-                  </ul>
-                </div>
+        <h2 className="mb-6 text-2xl font-bold">Service Overview</h2>
+        <p className="mb-8 text-base leading-6">
+          Automate your storefront with real-time stock alerts, personalized abandoned-cart campaigns, and AI-driven
+          dynamic pricing—all seamlessly integrated into Shopify, Magento, or custom platforms.
+        </p>
 
-                <div className="mb-10">
-                  <h2 className="mb-4 text-2xl font-bold md:text-3xl">Why It Works</h2>
-                  <p className="text-lg text-colorText">
-                    Manual content creation and order tracking don’t scale. This bundle frees your team to focus on CX, sales, and growth—while automation handles fulfillment, asset generation, and asset organization.
-                  </p>
-                  <p className="mt-4 text-lg text-colorText">
-                    You get instant ROI, faster product drops, and smoother campaign coordination.
-                  </p>
-                </div>
+        <h3 className="mb-4 text-xl font-semibold">What’s Included</h3>
+        <ul className="mb-10 list-disc pl-6 space-y-2 text-base">
+          <li>Inventory low-stock notifications</li>
+          <li>Abandoned-cart email & SMS recovery</li>
+          <li>Automated promo-code distribution</li>
+          <li>Revenue & CLV analytics</li>
+        </ul>
 
-                <div className="mb-10">
-                  <h2 className="mb-4 text-2xl font-bold md:text-3xl">Pricing</h2>
-                  <ul className="space-y-2 text-lg text-colorText">
-                    <li>• <strong>Starter License: $600/year</strong> — Includes install template, full webhook coverage, and AI asset prompts.</li>
-                    <li>• <strong>Managed: $1,500/month</strong> — End-to-end automation, optimization, and visual asset creation service.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* CTAs */}
-              <div className="flex flex-col gap-6 rounded-lg bg-white p-8 shadow-md dark:bg-secondary">
-                <h2 className="text-2xl font-bold md:text-3xl">Turn Orders Into Automated Growth</h2>
-                <p className="text-lg text-colorText">
-                  Build a modern, scalable store with AI + automation—no extra headcount required.
-                </p>
-                <Link
-                  href="/stripe/checkout/ecommerce-quickstart"
-                  className="rv-button rv-button-primary block text-center"
-                >
-                  Get Starter License ($600/year)
-                </Link>
-                <Link
-                  href="/stripe/checkout/ecommerce-managed"
-                  className="rv-button rv-button-secondary block text-center"
-                >
-                  Launch Managed ($1,500/mo)
-                </Link>
-              </div>
-            </div>
+        <h3 className="mb-6 text-xl font-semibold">Pricing Plans</h3>
+        <div className="grid gap-6 md:grid-cols-3">
+          {/* Starter */}
+          <div className="rounded-lg border p-6 text-center">
+            <h4 className="mb-4 text-2xl font-bold">Starter</h4>
+            <p className="mb-6 text-lg font-semibold">$249<span className="text-base font-normal">/mo</span></p>
+            <ul className="mb-6 space-y-1 text-left">
+              <li>• 1 000 runs/mo</li>
+              <li>• 1 prebuilt flow</li>
+              <li>• Email/chat support</li>
+            </ul>
+            <Link href="https://buy.stripe.com/placeholder-ecomm-starter">
+              <button className="rv-button rv-button-primary w-full">
+                <div className="rv-button-top">Buy Starter</div>
+                <div className="rv-button-bottom">Buy Starter</div>
+              </button>
+            </Link>
           </div>
-        </section>
-      </>
+
+          {/* Professional */}
+          <div className="rounded-lg border p-6 text-center">
+            <h4 className="mb-4 text-2xl font-bold">Professional</h4>
+            <p className="mb-6 text-lg font-semibold">$749<span className="text-base font-normal">/mo</span></p>
+            <ul className="mb-6 space-y-1 text-left">
+              <li>• 5 000 runs/mo</li>
+              <li>• 4 flows (3 prebuilt + 1 custom)</li>
+              <li>• Monthly strategy call</li>
+            </ul>
+            <Link href="https://buy.stripe.com/placeholder-ecomm-pro">
+              <button className="rv-button rv-button-secondary w-full">
+                <div className="rv-button-top">Buy Professional</div>
+                <div className="rv-button-bottom">Buy Professional</div>
+              </button>
+            </Link>
+          </div>
+
+          {/* Enterprise */}
+          <div className="rounded-lg border p-6 text-center">
+            <h4 className="mb-4 text-2xl font-bold">Enterprise</h4>
+            <p className="mb-6 text-lg font-semibold">$1,999<span className="text-base font-normal">/mo</span></p>
+            <ul className="mb-6 space-y-1 text-left">
+              <li>• Unlimited runs & flows</li>
+              <li>• Omni-channel deployment</li>
+              <li>• Dedicated SLA & concierge</li>
+            </ul>
+            <Link href="https://buy.stripe.com/placeholder-ecomm-enterprise">
+              <button className="rv-button rv-button-primary w-full">
+                <div className="rv-button-top">Buy Enterprise</div>
+                <div className="rv-button-bottom">Buy Enterprise</div>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </LayoutOne>
   )
 }

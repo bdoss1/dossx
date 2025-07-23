@@ -1,83 +1,92 @@
-// app/bundles/marketing/page.tsx
-import LayoutOne from '@/components/shared/LayoutOne'
-import Link from 'next/link'
-import Head from 'next/head'
+// app/services/marketing-social-suite/page.tsx
+'use client'
 
-export default function MarketingBundlePage() {
+import LayoutOne from '@/components/shared/LayoutOne'
+import PageHero from '@/components/shared/PageHero'
+import Link from 'next/link'
+
+export default function MarketingSocialSuitePage() {
   return (
     <LayoutOne>
-      <>
-        <Head>
-          <title>Marketing & Social Media Automation | DossX</title>
-          <meta name="description" content="Automate social media and content marketing across all platforms with the DossX Marketing Suite. AI-powered, hosted, and ready to scale." />
-          <meta name="keywords" content="social media automation, AI marketing tools, content repurposing, marketing automation, DossX, n8n workflows" />
-          <meta property="og:title" content="Marketing & Social Media Automation | DossX" />
-          <meta property="og:description" content="Automate social media and content marketing across all platforms with the DossX Marketing Suite." />
-          <meta property="og:type" content="website" />
-        </Head>
+      <PageHero
+        title="Marketing &"
+        italicTitle="Social"
+        badgeTitle="Suite"
+        description="Automate your social and marketing workflows with prebuilt + custom flows—no code required."
+        scale
+      />
 
-        <section className="pb-14 pt-32 md:pb-16 md:pt-36 lg:pb-[88px] lg:pt-[200px] xl:pb-[100px]">
-          <div className="container">
-            {/* Hero */}
-            <div className="mb-14 md:mb-[60px] lg:mb-[100px] text-center">
-              <h1 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-                Marketing &amp; Social Media Suite
-              </h1>
-              <p className="mx-auto max-w-2xl text-lg text-colorText md:text-xl">
-                Flood your channels with fresh, on-brand posts—effortlessly. Let AI ideate, create, schedule, and
-                repurpose your content across LinkedIn, X, Instagram, TikTok &amp; beyond—so you never miss a beat.
-              </p>
-            </div>
+      <section className="pb-14 pt-14 container max-w-3xl">
+        <img src="/images/services/marketing_social_header.png" alt="Marketing & Social Suite" className="mb-10 w-full rounded-md" />
 
-            <div className="grid gap-10 lg:grid-cols-2">
-              {/* Details */}
-              <div>
-                <div className="mb-10">
-                  <h2 className="mb-4 text-2xl font-bold md:text-3xl">Why You Need This Bundle</h2>
-                  <ul className="space-y-3 text-lg text-colorText">
-                    <li>• Consistent posting drives 3× more engagement—without hiring more staff.</li>
-                    <li>• AI-powered repurposing turns one video into 10 social clips in seconds.</li>
-                    <li>• Beat the algorithm with optimized scheduling and trending hashtags.</li>
-                  </ul>
-                </div>
+        <h2 className="mb-6 text-2xl font-bold">Service Overview</h2>
+        <p className="mb-8 text-base leading-6">
+          Launch and manage targeted campaigns across email, social, and ads with our turnkey marketing automation suite.
+          Choose from prebuilt flows or have us craft custom sequences that nurture leads, boost engagement, and drive conversions.
+        </p>
 
-                <div className="mb-10">
-                  <h2 className="mb-4 text-2xl font-bold md:text-3xl">Instant Impact</h2>
-                  <p className="text-lg text-colorText">
-                    Deploy in under an hour. Watch your social calendar fill itself, freeing your team to focus on
-                    strategy, creative direction, and conversion.
-                  </p>
-                </div>
+        <h3 className="mb-4 text-xl font-semibold">What’s Included</h3>
+        <ul className="mb-10 list-disc pl-6 space-y-2 text-base">
+          <li>Prebuilt social posting & email nurture flows</li>
+          <li>Custom campaign design & setup</li>
+          <li>Multi-channel analytics dashboard</li>
+          <li>Bi-weekly performance review call</li>
+        </ul>
 
-                <div className="mb-10">
-                  <h2 className="mb-4 text-2xl font-bold md:text-3xl">Pricing</h2>
-                  <ul className="space-y-2 text-lg text-colorText">
-                    <li>• Quick-Start: <strong>$750 one-time</strong> (DIY import + step-by-step guide)</li>
-                    <li>• Managed: <strong>$2,000/mo</strong> (we host, monitor, optimize, support)</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* CTAs */}
-              <div className="flex flex-col gap-6 rounded-lg bg-white p-8 shadow-md dark:bg-secondary">
-                <h2 className="text-2xl font-bold md:text-3xl">Ready to Amplify Your Reach?</h2>
-                <Link
-                  href="/stripe/checkout/marketing-quickstart"
-                  className="rv-button rv-button-primary block text-center"
-                >
-                  Get Quick-Start ($750)
-                </Link>
-                <Link
-                  href="/stripe/checkout/marketing-managed"
-                  className="rv-button rv-button-secondary block text-center"
-                >
-                  Launch Managed ($2,000/mo)
-                </Link>
-              </div>
-            </div>
+        <h3 className="mb-6 text-xl font-semibold">Pricing Plans</h3>
+        <div className="grid gap-6 md:grid-cols-3">
+          {/* Starter */}
+          <div className="rounded-lg border p-6 text-center">
+            <h4 className="mb-4 text-2xl font-bold">Starter</h4>
+            <p className="mb-6 text-lg font-semibold">$249<span className="text-base font-normal">/mo</span></p>
+            <ul className="mb-6 space-y-1 text-left">
+              <li>• 1 000 runs/mo</li>
+              <li>• 1 prebuilt flow</li>
+              <li>• Email/chat support</li>
+            </ul>
+            <Link href="https://buy.stripe.com/placeholder-marketing-starter">
+              <button className="rv-button rv-button-primary w-full">
+                <div className="rv-button-top">Buy Starter</div>
+                <div className="rv-button-bottom">Buy Starter</div>
+              </button>
+            </Link>
           </div>
-        </section>
-      </>
+
+          {/* Professional */}
+          <div className="rounded-lg border p-6 text-center">
+            <h4 className="mb-4 text-2xl font-bold">Professional</h4>
+            <p className="mb-6 text-lg font-semibold">$749<span className="text-base font-normal">/mo</span></p>
+            <ul className="mb-6 space-y-1 text-left">
+              <li>• 5 000 runs/mo</li>
+              <li>• 4 flows (3 prebuilt + 1 custom)</li>
+              <li>• Monthly strategy call</li>
+            </ul>
+            <Link href="https://buy.stripe.com/placeholder-marketing-pro">
+              <button className="rv-button rv-button-secondary w-full">
+                <div className="rv-button-top">Buy Professional</div>
+                <div className="rv-button-bottom">Buy Professional</div>
+              </button>
+            </Link>
+          </div>
+
+          {/* Enterprise */}
+          <div className="rounded-lg border p-6 text-center">
+            <h4 className="mb-4 text-2xl font-bold">Enterprise</h4>
+            <p className="mb-6 text-lg font-semibold">$1,999<span className="text-base font-normal">/mo</span></p>
+            <ul className="mb-6 space-y-1 text-left">
+              <li>• Unlimited runs & flows</li>
+              <li>• Omni-channel deployment</li>
+              <li>• Dedicated SLA & concierge</li>
+            </ul>
+            <Link href="https://buy.stripe.com/placeholder-marketing-enterprise">
+              <button className="rv-button rv-button-primary w-full">
+                <div className="rv-button-top">Buy Enterprise</div>
+                <div className="rv-button-bottom">Buy Enterprise</div>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </LayoutOne>
   )
 }

@@ -9,7 +9,7 @@ feature: ['LLM Chat Interfaces', 'Multi-Agent Workflows']
 
 ### Service overview
 
-Turn static support pages and clunky forms into intelligent, conversational experiences. DossX designs and deploys custom GPT-4 / Gemini chatbots and orchestrates behind-the-scenes AI agents that handle everything from ticket triage to personalized product recommendations. Whether you need a single FAQ bot or a fleet of collaborative agents running on n8n, we bake conversational AI directly into your existing stack—with enterprise-grade security and analytics.
+Turn static support pages and clunky forms into intelligent, conversational experiences. DossX designs and deploys custom GPT-4 / Gemini AI Agents and orchestrates behind-the-scenes AI agents that handle everything from ticket triage to personalized product recommendations. Whether you need a single FAQ bot or a fleet of collaborative agents running on n8n, we bake conversational AI directly into your existing stack—with enterprise-grade security and analytics.
 
 ### Our service includes
 

@@ -2723,39 +2723,39 @@ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$gsap$4
 const MARQUEE_IMAGES = [
     {
         id: 1,
-        src: '/images/marquee-img/hero-marquee-01.png'
+        src: '/images/marquee-img/hero-marquee-04.png'
     },
     {
         id: 2,
-        src: '/images/marquee-img/hero-marquee-02.png'
+        src: '/images/marquee-img/hero-marquee-05.png'
     },
     {
         id: 3,
-        src: '/images/marquee-img/hero-marquee-03.png'
+        src: '/images/marquee-img/hero-marquee-06.png'
     },
     {
         id: 4,
-        src: '/images/marquee-img/hero-marquee-01.png'
+        src: '/images/marquee-img/hero-marquee-04.png'
     },
     {
         id: 5,
-        src: '/images/marquee-img/hero-marquee-02.png'
+        src: '/images/marquee-img/hero-marquee-05.png'
     },
     {
         id: 6,
-        src: '/images/marquee-img/hero-marquee-03.png'
+        src: '/images/marquee-img/hero-marquee-06.png'
     },
     {
         id: 7,
-        src: '/images/marquee-img/hero-marquee-01.png'
+        src: '/images/marquee-img/hero-marquee-04.png'
     },
     {
         id: 8,
-        src: '/images/marquee-img/hero-marquee-02.png'
+        src: '/images/marquee-img/hero-marquee-05.png'
     },
     {
         id: 9,
-        src: '/images/marquee-img/hero-marquee-03.png'
+        src: '/images/marquee-img/hero-marquee-06.png'
     }
 ];
 const SkewMarquee = ()=>{
