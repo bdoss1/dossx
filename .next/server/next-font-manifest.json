@@ -1,6 +1,10 @@
 {
   "app": {
-    "[project]/app/about/page": [
+    "[project]/app/_not-found/page": [
+      "static/media/Satoshi_Regular-s.p.d967cd81.woff",
+      "static/media/Satoshi_Medium-s.p.e2210dbf.woff"
+    ],
+    "[project]/app/contact/page": [
       "static/media/Satoshi_Regular-s.p.d967cd81.woff",
       "static/media/Satoshi_Medium-s.p.e2210dbf.woff"
     ]

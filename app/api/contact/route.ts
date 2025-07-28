@@ -5,30 +5,36 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    // Basic validation
-    const required = ['name', 'email', 'service', 'budget', 'message'];
-    if (required.some((f) => !body[f])) {
-      return NextResponse.json({ ok: false, error: 'Missing required fields' }, { status: 400 });
+    // only require the truly mandatory fields
+    const required = ['name','email','preferredContact','message'];
+    const missing = required.find((f) => !body[f]);
+    if (missing) {
+      return NextResponse.json(
+        { ok: false, error: `Missing required field: ${missing}` },
+        { status: 400 }
+      );
     }
 
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const resend = new Resend(process.env.RESEND_API_KEY!);
     const { error } = await resend.emails.send({
       from: 'DossX Contact <noreply@dossx.com>',
-      to: 'hello@dossx.com',
-      subject: `🔔 New inquiry from ${body.name}`,
+      to:   'hello@dossx.com',
+      subject: `🔔 New inquiry at DossX - ${body.name}`,
       html: `
         <h2>New inquiry from dossx.com</h2>
         <p><strong>Name:</strong> ${body.name}</p>
         <p><strong>Company:</strong> ${body.company || '—'}</p>
         <p><strong>Email:</strong> ${body.email}</p>
-        <p><strong>Service:</strong> ${body.service}</p>
-        <p><strong>Budget:</strong> ${body.budget}</p>
+        <p><strong>Role:</strong> ${body.role || '—'}</p>
+        <p><strong>Preferred Contact:</strong> ${body.preferredContact}</p>
+        ${body.preferredContact === 'Phone' ? `<p><strong>Phone:</strong> ${body.phone}</p>` : ''}
+        <p><strong>Timeline:</strong> ${body.timeline || '—'}</p>
+        <p><strong>Heard About:</strong> ${body.heardAbout || '—'}</p>
         <p><strong>Message:</strong><br/>${body.message.replace(/\n/g, '<br/>')}</p>
       `,
     });
 
     if (error) {
-      // Pass Resend’s error back to the client for easier debugging
       return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
     }
 
