@@ -6,7 +6,7 @@ import RevealWrapper from '../animation/RevealWrapper'
 const CareerHero = () => {
   return (
     <section className="relative overflow-hidden pb-14 pt-[132px] sm:pt-36 md:pb-16 md:pt-40 lg:pb-[88px] lg:pt-44 xl:pb-[100px] xl:pt-[210px]">
-      <HeroGradientAnimation />
+      { /* <HeroGradientAnimation /> */}
 
       <RevealWrapper className="container">
         <div className="text-center">

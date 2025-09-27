@@ -25,13 +25,7 @@ const ServiceDetails = async ({ params }: { params: Promise<{ slug: string }> })
     <LayoutOne>
       <ServicesHero title={postServices?.title} description={postServices?.description} scale />
       <ServiceContent service={service} />
-      <WhyChooseUsV6 />
-      <FaqV2 titleChange />
-      <CTA>
-        Let's chat!
-        
-        <i className="block font-instrument italic max-md:inline-block max-sm:pl-2 sm:mt-10">A virtual coffee?</i>
-      </CTA>
+      <FaqV2 />
     </LayoutOne>
   )
 }

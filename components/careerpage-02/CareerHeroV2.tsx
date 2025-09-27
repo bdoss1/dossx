@@ -5,7 +5,7 @@ import RevealWrapper from '../animation/RevealWrapper'
 const CareerHeroV2 = () => {
   return (
     <section className="relative overflow-hidden pb-20 pt-32 sm:pt-36 md:pb-32 md:pt-44 lg:pb-[180px] lg:pt-44 xl:pt-[210px]">
-      <HeroGradientAnimation />
+      { /* <HeroGradientAnimation /> */}
 
       <RevealWrapper className="container">
         <p className="font-poppins flex flex-col items-center gap-2 text-sm font-normal uppercase leading-6 tracking-[3px] max-lg:justify-center md:flex-row md:gap-5">

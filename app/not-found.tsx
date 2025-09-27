@@ -10,7 +10,7 @@ const NotFound = () => {
   return (
     <main className="relative z-10 mb-0 bg-backgroundBody dark:bg-dark">
       <section className="relative h-screen overflow-hidden pt-36 md:pt-12 lg:pt-0 2xl:pt-12">
-        <HeroGradientAnimation />
+        { /* <HeroGradientAnimation /> */}
         <div className="container">
           <RevealWrapper className="flex flex-col items-center justify-center">
             <h1 className="font-instrument text-[180px] md:text-[490px] md:leading-[1.05]">404</h1>

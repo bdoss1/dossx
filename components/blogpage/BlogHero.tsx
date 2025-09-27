@@ -6,7 +6,7 @@ const BlogHero = () => {
   return (
     <section className="relative overflow-hidden pb-10 pt-36 lg:pb-20 lg:pt-[240px]">
       <div className="absolute -z-10 h-full w-full blur-[60px] max-lg:-translate-y-1/2 max-md:top-1/2 md:h-[45%] md:w-[45%] md:translate-x-[20%] lg:top-[23%]">
-        <HeroGradientAnimation />
+        { /* <HeroGradientAnimation /> */}
       </div>
 
       <div className="container">

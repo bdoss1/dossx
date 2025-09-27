@@ -5,7 +5,7 @@ import HeroGradientAnimation from '../shared/HeroGradientAnimation'
 const HeroV2 = () => {
   return (
     <section className="relative overflow-hidden pb-14 pt-[137px] md:pb-[100px] md:pt-[180px] lg:pb-[120px] lg:pt-[150px]">
-      <HeroGradientAnimation />
+      { /* <HeroGradientAnimation /> */}
       <RevealWrapper className="container">
         <p className="flex items-center justify-center gap-5 text-sm font-normal uppercase leading-6 tracking-[3px] lg:justify-start">
           <span>Design Agency</span>

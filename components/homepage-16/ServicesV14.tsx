@@ -23,14 +23,12 @@ const ServicesV14 = () => {
         </RevealWrapperV2>
         <TextAppearAnimation02>
           <h2 className="text-appear mb-3">
-            AI-Powered Automations Built for <br />
-            <i className="font-instrument"> Real-World Growth</i>
+           AI-Powered Solutions, Real-World Impact
           </h2>
         </TextAppearAnimation02>
         <TextAppearAnimation>
           <p className="text-appear mx-auto lg:max-w-[770px]">
-            Our DossX workflows blend GPT intelligence with no-code orchestration to amplify engagement, cut busywork, and put your brand in front of customers exactly when it counts.
-          </p>
+          From voice agents and smart data infrastructure to intelligent sales funnels, DossX helps businesses operate smarter, scale faster, and deliver more value — without adding more overhead.          </p>
         </TextAppearAnimation>
       </div>
       <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-[30px] px-4 md:grid-cols-2 md:px-[30px] 2xl:grid-cols-3">

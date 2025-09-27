@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
 
     const resend = new Resend(process.env.RESEND_API_KEY!);
     const { error } = await resend.emails.send({
-      from: 'DossX Contact <noreply@dossx.com>',
+      from: 'DossX Contact <contactform@dossx.com>',
       to:   'hello@dossx.com',
       subject: `🔔 New inquiry at DossX - ${body.name}`,
       html: `

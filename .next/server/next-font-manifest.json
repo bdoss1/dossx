@@ -1,14 +1,26 @@
 {
   "app": {
     "[project]/app/_not-found/page": [
+      "static/media/Satoshi_Medium-s.p.e2210dbf.woff",
+      "static/media/Satoshi_Regular-s.p.d967cd81.woff"
+    ],
+    "[project]/app/about/page": [
       "static/media/Satoshi_Regular-s.p.d967cd81.woff",
       "static/media/Satoshi_Medium-s.p.e2210dbf.woff"
     ],
-    "[project]/app/contact/page": [
+    "[project]/app/agents/voice/page": [
       "static/media/Satoshi_Regular-s.p.d967cd81.woff",
       "static/media/Satoshi_Medium-s.p.e2210dbf.woff"
     ],
-    "[project]/app/page": [
+    "[project]/app/policy/page": [
+      "static/media/Satoshi_Regular-s.p.d967cd81.woff",
+      "static/media/Satoshi_Medium-s.p.e2210dbf.woff"
+    ],
+    "[project]/app/status/page": [
+      "static/media/Satoshi_Regular-s.p.d967cd81.woff",
+      "static/media/Satoshi_Medium-s.p.e2210dbf.woff"
+    ],
+    "[project]/app/support/page": [
       "static/media/Satoshi_Regular-s.p.d967cd81.woff",
       "static/media/Satoshi_Medium-s.p.e2210dbf.woff"
     ]

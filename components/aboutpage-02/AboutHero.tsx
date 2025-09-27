@@ -10,8 +10,11 @@ const AboutHero = () => {
             About
           </h1>
 
-          <p className="max-w-[470px]">
-          DossX is your go-to lab for next-gen software and AI automations, founded by Baron Doss—an engineer who codes like an artist and dreams like a futurist. We tackle your hardest challenges with rock-solid architecture, clever workflows, and a dash of swagger. Whether you’re a scrappy startup racing the clock or an enterprise demanding bulletproof scale, we fuse product vision and engineering precision into solutions that move you faster, think smarter, and leave competitors in the dust.
+          <p className="max-w-[470px] text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+            DossX is where bold ideas become powerful software. Founded by Baron Doss — an engineer who codes like an
+            artist and architects like a strategist — we design intelligent systems that automate the grind, scale
+            operations, and unlock new revenue streams. From always-on voice agents to fully autonomous sales engines,
+            we turn cutting-edge AI into business outcomes that move faster, think smarter, and outpace the competition.
           </p>
         </div>
 

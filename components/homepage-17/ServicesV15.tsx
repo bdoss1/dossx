@@ -22,23 +22,23 @@ const ServicesV15 = () => {
             </RevealWrapper>
             <TextAppearAnimation02>
               <h2>
-                AI-Powered Automations Built for <br />
-                <i className="font-instrument"> Real-World Growth</i>
+                From Idea to Impact: AI Automations That Drive<br />
+            <i className="font-instrument"> Real-World Results</i>
               </h2>
             </TextAppearAnimation02>
           </div>
           <div className="max-md:w-full md:w-[40%]">
             <p className="text-appear text-appear-2 max-w-lg max-md:text-justify md:place-self-end md:text-right">
-              We turn AI-powered workflows into plug-and-play products that slash busywork and unlock instant growth.
+            At DossX, we fuse cutting-edge AI with strategic execution to turn complex workflows into seamless growth — helping your business operate smarter, respond faster, and engage deeper.
             </p>
             <RevealWrapper as="ul" className="reveal-me mt-5 justify-self-end max-md:w-full md:mt-10">
               <li className="mx-auto block w-full text-center md:inline-block md:w-auto">
-                <Link href="/contact" className="rv-button rv-button-white block md:inline-block">
+                <Link href="/services" className="rv-button rv-button-white block md:inline-block">
                   <div className="rv-button-top">
-                    <span>Launch Your Workflow</span>
+                    <span>Explore Our Solutions</span>
                   </div>
                   <div className="rv-button-bottom">
-                    <span>Launch Your Workflow</span>
+                    <span>Explore Our Solutions</span>
                   </div>
                 </Link>
               </li>

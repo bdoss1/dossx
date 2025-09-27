@@ -11,7 +11,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
-  title: 'DossX | Future-Ready Apps & Automation',
+  title: 'DossX | Where AI Meets Real-World Business',
 }
 
 export default function RootLayout({

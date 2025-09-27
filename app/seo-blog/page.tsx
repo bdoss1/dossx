@@ -1,12 +1,10 @@
 import BlogHero from '@/components/blogpage/BlogHero'
 import BlogItems from '@/components/blogpage/BlogItems'
-import CTA from '@/components/shared/CTA'
-import CtaImageSlider from '@/components/shared/CtaImageSlider'
 import LayoutOne from '@/components/shared/LayoutOne'
 import getMarkDownData from '@/utils/GetMarkDownData'
 
 export const metadata = {
-  title: 'Blog-02',
+  title: 'The DossX Growth Lab',
 }
 
 export interface Blog2Type {
@@ -15,25 +13,18 @@ export interface Blog2Type {
   [key: string]: any
 }
 
-const loadedBlogs: Blog2Type[] = getMarkDownData('data/blogsV2')
+// ✅ Updated to load from new blog folder
+const loadedBlogs: Blog2Type[] = getMarkDownData('data/dossx-blog')
 
 const BlogPage02 = () => {
   return (
     <LayoutOne>
-      <BlogHero />
+      {/* ✅ Updated hero title to match new blog brand */}
+      <BlogHero
+        title="The DossX Growth Lab"
+        subtitle="Insights, strategies, and stories on how AI is reshaping business — from automation to revenue growth."
+      />
       <BlogItems loadedBlogs={loadedBlogs} />
-      <CTA>
-        Let's chat!
-        <CtaImageSlider
-          slides={[
-            { id: '1', img: '/images/agent/17.png' },
-            { id: '2', img: '/images/agent/02.jpg' },
-            { id: '3', img: '/images/agent/06.png' },
-          ]}
-        />
-        with us.
-        <i className="block font-instrument italic max-md:inline-block max-sm:pl-2 sm:mt-10">A virtual coffee?</i>
-      </CTA>
     </LayoutOne>
   )
 }

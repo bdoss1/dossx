@@ -2,37 +2,37 @@
   [
     {
       "id": 1,
-      "question": "Which DossX solution is best for my needs?",
-      "answer": "Use AI Chatbot Integration for conversational support, Marketing & Social Suite for automated campaigns, Sales & CRM Accelerator for lead workflows, or choose from our other Packs to fit your goals."
+      "question": "Which DossX solution is right for my business?",
+      "answer": "If you want 24/7 phone and web support, VoiceAgent is your go-to. For smarter lead generation and follow-ups, SalesAgent handles the heavy lifting. Need clean, reliable data across tools? DataAgent keeps everything synced. And if you’re just starting your AI journey, our Consulting packages guide you from strategy to launch."
     },
     {
       "id": 2,
-      "question": "How do I integrate DossX into my existing systems?",
-      "answer": "All DossX bundles connect via API or lightweight SDK. Point our workflows at your apps, configure credentials in the dashboard, and you’re live—no heavy lifting or custom dev required."
+      "question": "How does DossX integrate with my existing systems?",
+      "answer": "DossX solutions connect to CRMs, ERPs, calendars, and databases via secure APIs or lightweight SDKs. Most setups require no custom development—just add your credentials in the dashboard and start syncing data, calls, and workflows in minutes."
     }
   ],
   [
     {
       "id": 3,
       "question": "How is pricing structured and billed?",
-      "answer": "We offer Starter, Professional, and Enterprise monthly plans. Billing is month-to-month, prorated on upgrades/downgrades, and you can cancel anytime without penalty."
+      "answer": "Each solution has Starter, Growth, and Pro monthly tiers based on usage and feature depth. A one-time setup fee is billed with your first subscription, and all plans are month-to-month with no long-term contracts. You can upgrade, downgrade, or cancel anytime."
     },
     {
       "id": 4,
       "question": "What’s the typical onboarding timeline?",
-      "answer": "Most clients go from sign-up to production in under a week. We handle setup, configuration, and a kickoff call—your first automated workflows can be live within 3–5 days."
+      "answer": "Most clients are live within 3–7 business days. After you subscribe, our team handles setup, connects your data sources, and walks you through a kickoff call. Your first AI-powered agents or data pipelines can be active within the first week."
     }
   ],
   [
     {
       "id": 5,
-      "question": "Can you build custom workflows beyond the prebuilt packs?",
-      "answer": "Absolutely. Every plan includes email & chat support for customizations. Our Professional and Enterprise tiers add dedicated strategy calls and concierge development for bespoke needs."
+      "question": "Can DossX build custom AI solutions for my business?",
+      "answer": "Absolutely. Beyond our standard solutions, we offer custom development through our Consulting packages. Whether you need a unique voice workflow, a specialized data pipeline, or complex multi-agent orchestration, we’ll design and build a solution tailored to your exact goals."
     },
     {
       "id": 6,
-      "question": "What reporting and analytics are included?",
-      "answer": "All plans include a real-time dashboard tracking runs, agent performance, and key KPIs like lead volume or invoice cycle time. Professional & Enterprise get advanced SLAs and usage reports."
+      "question": "What reporting and analytics do I get?",
+      "answer": "Every DossX solution includes a real-time dashboard that tracks usage, performance, and ROI metrics. Higher tiers add deeper analytics—like transcript insights for VoiceAgent, pipeline conversions for SalesAgent, and anomaly detection reports for DataAgent."
     }
   ]
 ]

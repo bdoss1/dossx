@@ -1,32 +1,32 @@
 [
   {
     "id": 1,
-    "question": "Which DossX solution is best for my needs?",
-    "answer": "Use AI Chatbot Integration for conversational support, Marketing & Social Suite for automated campaigns, Sales & CRM Accelerator for lead workflows, or choose from our other Packs to fit your goals."
+    "question": "Which DossX solution should I start with?",
+    "answer": "If you need phones or live voice, start with Voxia. If you want more leads and booked meetings, start with QuotaX. For self-serve chat across web or Slack/Teams, use AI Chatbots & Agents."
   },
   {
     "id": 2,
-    "question": "How do I integrate DossX into my existing systems?",
-    "answer": "All DossX bundles connect via API or lightweight SDK. Point our workflows at your apps, configure credentials in the dashboard, and you’re live—no heavy lifting or custom dev required."
+    "question": "How do I integrate with my systems?",
+    "answer": "Connect calendars, CRMs, and databases in the dashboard using OAuth/API keys. Voxia reads knowledge bases and calendars; QuotaX syncs with HubSpot, Salesforce, and Pipedrive; Chatbots use RAG pipelines."
   },
   {
     "id": 3,
-    "question": "How is pricing structured and billed?",
-    "answer": "We offer Starter, Professional, and Enterprise monthly plans. Billing is month-to-month, prorated on upgrades/downgrades, and you can cancel anytime without penalty."
+    "question": "What’s the typical time to go live?",
+    "answer": "Most deployments go live in 3–5 business days after credentials are connected and flows are tuned. We handle setup and testing."
   },
   {
     "id": 4,
-    "question": "What’s the typical onboarding timeline?",
-    "answer": "Most clients go from sign-up to production in under a week. We handle setup, configuration, and a kickoff call—your first automated workflows can be live within 3–5 days."
+    "question": "How is pricing structured?",
+    "answer": "Each product has Starter, Growth, and Pro plans billed monthly, with a one-time setup fee at first purchase. You can upgrade or cancel anytime."
   },
   {
     "id": 5,
-    "question": "Can you build custom workflows beyond the prebuilt packs?",
-    "answer": "Absolutely. Every plan includes email & chat support for customizations. Our Professional and Enterprise tiers add dedicated strategy calls and concierge development for bespoke needs."
+    "question": "Can we customize tone, flows, and rules?",
+    "answer": "Yes. We tune brand voice, escalation rules, qualification questions, and follow-up sequences. You can extend with custom connectors if needed."
   },
   {
     "id": 6,
-    "question": "What reporting and analytics are included?",
-    "answer": "All plans include a real-time dashboard tracking runs, agent performance, and key KPIs like lead volume or invoice cycle time. Professional & Enterprise get advanced SLAs and usage reports."
+    "question": "Where do we see performance?",
+    "answer": "In your dashboard: transcripts, meetings booked, response times, deflection, sequence lift, and pipeline metrics—depending on the product."
   }
 ]

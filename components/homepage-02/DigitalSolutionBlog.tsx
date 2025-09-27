@@ -29,8 +29,7 @@ const DigitalSolutionBlog = () => {
           <div className="flex-1 md:self-end">
             <TextAppearAnimation>
               <p className="text-appear max-w-lg md:place-self-end md:text-right">
-                We champion athletes, storytellers, and brands that shape culture and inspire the world with their
-                unique perspectives.
+                We empower founders, operators, and teams to unlock growth through automation, AI agents, and next-gen workflows — helping businesses move faster, work smarter, and scale bigger.
               </p>
             </TextAppearAnimation>
             <RevealWrapper as="ul" className="mt-5 justify-self-end max-md:w-full md:mt-10">

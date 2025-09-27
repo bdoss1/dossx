@@ -67,10 +67,7 @@ const AboutPage = () => {
       <HeroAbout spacingTop="pt-10 sm:pt-16 md:pt-[100px] mb-10 lg:mb-20" />
       <SkewMarquee />
       <ServicesV3 />
-     
       <Clients />
-   
-      <CtaV2 />
     </LayoutOne>
   )
 }

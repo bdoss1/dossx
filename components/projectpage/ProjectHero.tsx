@@ -4,7 +4,7 @@ import HeroGradientAnimation from '../shared/HeroGradientAnimation'
 const ProjectHero = () => {
   return (
     <section className="relative overflow-hidden pt-28 max-md:pb-16 sm:pb-28 md:py-[155px] lg:py-[177px]">
-      <HeroGradientAnimation />
+      { /* <HeroGradientAnimation /> */}
 
       <div className="container">
         <RevealWrapper className="text-center">

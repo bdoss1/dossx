@@ -4,7 +4,7 @@ title: Privacy Policy
 
 # Privacy Policy
 
-**Effective Date:** April 2, 2025  
+**Effective Date:** September 27, 2025  
 
 At **DossX**, your privacy matters. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you interact with our website, applications, AI-powered tools, and related services.
 
@@ -62,16 +62,27 @@ Some features rely on third-party AI models (e.g., OpenAI GPT-4, Google Gemini).
 
 ---
 
-## 5. Cookies and Tracking Technologies
+## 5. Cookies & Tracking Technologies
 
-We use cookies, pixels, and similar technologies to:
+We use cookies, pixels, and similar tracking technologies to improve your experience, analyze site performance, and deliver relevant advertising. Cookies are small text files stored on your device that help us remember preferences, maintain sessions, and understand how you interact with our site.
 
-- Understand how visitors navigate our site  
-- Remember preferences and login sessions  
-- Improve site speed and performance  
-- Show relevant ads or retargeting (optional and disclosed via banner)
+**Types of cookies we use:**
 
-You can disable cookies via your browser settings, though some features may not work as intended.
+| Category | Purpose | Examples |
+|----------|---------|----------|
+| **Essential Cookies** | Required for core functionality such as authentication and security. | Session tokens, login cookies |
+| **Performance Cookies** | Provide analytics and performance data to improve user experience. | Google Analytics |
+| **Functionality Cookies** | Remember user preferences and saved settings. | Language preferences |
+| **Marketing Cookies** | Enable targeted advertising and campaign measurement. | Meta Pixel, LinkedIn Insights |
+
+Some cookies are set by third-party services we use, such as **Stripe** (payments), **Clerk** (authentication), **OpenAI & ElevenLabs** (AI runtime), and **Google Analytics** (usage insights).
+
+**Your Choices:**  
+- You can control or delete cookies through your browser settings.  
+- You may opt out of targeted ads using tools like [Your Online Choices](https://www.youronlinechoices.com) or [Google Ad Settings](https://adssettings.google.com).  
+- Disabling cookies may affect site functionality.
+
+We do not currently respond to “Do Not Track” signals due to the lack of an industry standard.
 
 ---
 
@@ -94,7 +105,7 @@ Depending on where you reside, you may have the right to:
 - Access, correct, or delete personal data we hold about you  
 - Withdraw consent for marketing communications  
 - Object to or restrict certain processing activities  
-- Receive a copy of your data in portable format  
+- Receive a copy of your data in a portable format  
 - Lodge a complaint with a supervisory authority
 
 To exercise these rights, email us at **privacy@dossx.com**.
@@ -122,7 +133,7 @@ We may modify this Privacy Policy from time to time. When we do, we will revise 
 ## 11. Contact Us
 
 **DossX LLC**  
-1919 McKinney Ave, Suite 1000  
 Dallas, TX 75201 USA  
+
 📧 [privacy@dossx.com](mailto:privacy@dossx.com)  
-🌐 <https://dossx.com>
+🌐 [https://dossx.com](https://dossx.com)

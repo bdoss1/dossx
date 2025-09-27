@@ -9,11 +9,14 @@ import CTA from '@/components/shared/CTA'
 import CtaImageSlider from '@/components/shared/CtaImageSlider'
 import FaqV2 from '@/components/shared/FaqV2'
 import LayoutTwo from '@/components/shared/LayoutTwo'
-
+import Agent from '@/components/agent/VoiceAgent'
+import VoiceAgent from '@/components/agent/VoiceAgent'
 
 export const metadata = {
   title: 'DossX | Future-Ready Apps & Automation',
 }
+
+
 
 const homepage17 = () => {
   return (
@@ -29,9 +32,11 @@ const homepage17 = () => {
       <FaqV2 titleChange />
       <CTA buttonText="Launch Now">
        Launch Your AI Workflow in Minutes.
-        
-        
       </CTA>
+      <VoiceAgent />
+
+
+
     </LayoutTwo>
   )
 }

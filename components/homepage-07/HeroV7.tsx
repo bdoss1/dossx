@@ -8,7 +8,7 @@ const HeroV7 = () => {
   return (
     <section className="relative overflow-hidden pb-14 pt-32 max-sm:px-3 md:pb-16 md:pt-44 lg:pb-[88px] xl:pb-[100px]">
       <div className="absolute left-[12%] top-40 -z-10 h-2/6 w-2/6 blur-[35px] md:blur-[60px]">
-        <HeroGradientAnimation />
+        { /* <HeroGradientAnimation /> */}
       </div>
 
       <RevealWrapper className="mx-auto max-w-screen-xl px-5">

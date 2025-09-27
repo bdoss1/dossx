@@ -6,90 +6,54 @@ import { useState } from 'react';
 import RevealWrapper from '../animation/RevealWrapper';
 import TextAppearAnimation from '../animation/TextAppearAnimation';
 
-/* ——— DossX Service Catalog ——— */
+/* ——— DossX Service Catalog (current) ——— */
 const servicesData = [
   {
     id: 1,
-    title: 'AI Chatbot Integration',
-    subtitle: 'Custom GPT chatbots & multi-agent workflows.',
+    title: 'Voxia — 24/7 Voice Concierge',
+    subtitle: 'Natural phone & web conversations powered by ElevenLabs + OpenAI.',
     items: [
-      'Conversational design',
-      'RAG knowledge base',
-      'Multi-agent orchestration',
-      'Omni-channel deployment',
-      'Usage analytics',
-      'API integration',
+      'Inbound phone & site voice widget',
+      'FAQ, order status, bookings',
+      'Reads from DB + calendar in real time',
+      'Slack/Teams human handoff',
+      'Transcripts & analytics',
+      'Twilio/Zoom/Teams routing',
     ],
+    ctaHref: '/agents/voice',
   },
   {
     id: 2,
-    title: 'Marketing & Social Media Suite',
-    subtitle: 'AI-driven post creation & scheduling across all networks.',
+    title: 'QuotaX — AI Sales Agent',
+    subtitle: 'Capture, enrich, and nurture leads with CRM-grade automation.',
     items: [
-      'Automated content ideation',
-      'Hashtag optimization',
-      'Multi-platform scheduling',
-      'Performance analytics',
-      'Content repurposing',
-      'Trend monitoring',
+      'Lead capture & enrichment',
+      'Multi-channel outreach (email/SMS/DM)',
+      'Sequencing & playbooks',
+      'Salesforce / HubSpot sync',
+      'Pipeline & attribution analytics',
+      'Smart booking & reminders',
     ],
+    ctaHref: '/agents/sales',
   },
   {
     id: 3,
-    title: 'Sales & CRM Accelerator',
-    subtitle: 'Automate outreach, follow-ups & lead scoring.',
+    title: 'Synapse — Data Hub & Sync',
+    subtitle: 'Unify sources, clean data, and keep systems in lockstep.',
     items: [
-      'AI-powered follow-ups',
-      'Hot lead scoring',
-      'CRM synchronization',
-      'Payment notifications',
-      'Pipeline analytics',
-      'Dynamic email templates',
+      'Connect CRMs/ERPs/DBs',
+      'Deduplication & standardization',
+      'Anomaly detection & alerts',
+      'Scheduled & real-time sync',
+      'Lineage & governance',
+      'Role-based access & audit logs',
     ],
-  },
-  {
-    id: 4,
-    title: 'E-commerce Optimization Pack',
-    subtitle: 'Streamline order workflows & generate product media.',
-    items: [
-      'Order automation',
-      'AI image/video generation',
-      'Inventory alerts',
-      'Abandoned-cart triggers',
-      'Shopify/Magento sync',
-      'Sales performance reports',
-    ],
-  },
-  {
-    id: 5,
-    title: 'Productivity & Scheduling Toolkit',
-    subtitle: 'Two-way calendar sync & team broadcast automation.',
-    items: [
-      'Calendar integration',
-      'Automated reminders',
-      'Team announcements',
-      'Recurring meeting setup',
-      'Task assignment flows',
-      'Productivity dashboards',
-    ],
-  },
-  {
-    id: 6,
-    title: 'Data Enrichment & Integration',
-    subtitle: 'Enrich leads & sync across all your apps.',
-    items: [
-      'Firmographic enrichment',
-      'Email verification',
-      'CRM import/export',
-      'Custom webhook triggers',
-      'Data transformation',
-      'Integration templates',
-    ],
+    ctaHref: '/agents/synapse',
   },
 ];
 
 const ServicesV3 = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
   const toggleAccordion = (index: number) =>
     setActiveIndex(activeIndex === index ? null : index);
 
@@ -101,13 +65,13 @@ const ServicesV3 = () => {
       </div>
 
       <div className="container">
-        {/* About Header */}
+        {/* Header */}
         <div className="mb-10 flex flex-col items-start justify-center gap-x-10 gap-y-2 md:mb-20 md:flex-row lg:justify-between">
           <div className="flex-1">
             <TextAppearAnimation>
               <h2 className="text-appear max-lg:leading-[1.33]">
-                <span className="font-instrument italic lg:text-[65px]">About&nbsp;</span>
-                DossX
+                <span className="font-instrument italic lg:text-[65px]">DossX&nbsp;</span>
+                Solutions
               </h2>
             </TextAppearAnimation>
           </div>
@@ -115,18 +79,20 @@ const ServicesV3 = () => {
           <div className="flex-1 max-md:w-full md:self-end">
             <TextAppearAnimation>
               <p className="text-appear max-w-lg md:justify-self-end md:text-right">
-                DossX is your go-to lab for next-gen software and AI automations, founded by Baron Doss—an engineer who codes like an artist and dreams like a futurist. We tackle your hardest challenges with rock-solid architecture, clever workflows, and a dash of swagger. Whether you’re a scrappy startup racing the clock or an enterprise demanding bulletproof scale, we fuse product vision and engineering precision into solutions that move you faster, think smarter, and leave competitors in the dust.
+                We build intelligent systems that run on your data and speak your brand’s voice.
+                From always-on voice support to autonomous sales funnels and clean, synced data —
+                DossX gets you live fast and scales with you.
               </p>
             </TextAppearAnimation>
 
             <RevealWrapper as="ul" className="mt-5 justify-self-end max-md:w-full md:mt-10">
               <li className="mx-auto block w-full text-center md:inline-block md:w-auto">
-                <Link href="/services" className="rv-button rv-button-white block md:inline-block">
+                <Link href="/pricing" className="rv-button rv-button-white block md:inline-block">
                   <div className="rv-button-top">
-                    <span>Explore All Services</span>
+                    <span>See Pricing</span>
                   </div>
                   <div className="rv-button-bottom">
-                    <span>Explore All Services</span>
+                    <span>See Pricing</span>
                   </div>
                 </Link>
               </li>
@@ -134,7 +100,7 @@ const ServicesV3 = () => {
           </div>
         </div>
 
-        {/* accordion */}
+        {/* Accordion */}
         <RevealWrapper className="mx-auto w-full max-w-[1170px] [&>*:not(:last-child)]:mb-6">
           {servicesData.map((service, index) => (
             <div key={service.id} className="accordion-item overflow-hidden bg-secondary duration-300">
@@ -195,6 +161,18 @@ const ServicesV3 = () => {
                         </li>
                       ))}
                     </ul>
+
+                    {/* Deep link to details */}
+                    <div className="mt-6 md:mt-0 md:ml-auto">
+                      <Link href={service.ctaHref} className="rv-button rv-button-primary inline-block">
+                        <div className="rv-button-top">
+                          <span>Learn More</span>
+                        </div>
+                        <div className="rv-button-bottom">
+                          <span className="text-nowrap">Learn More</span>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
