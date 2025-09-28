@@ -12,35 +12,53 @@ interface MenuItemProps {
   isActive?: boolean
 }
 
+/* ---- Updated to match footer ---- */
 const menuItems: MenuItemProps[] = [
   {
     title: 'Home',
     url: '#',
-    items: [
-    { title: 'DossX.com', url: '/' },
-    ],
-  },
-  {
-    title: 'About',
-    url: '#',
-    items: [
-      { title: 'About DossX', url: '/about-02' },
-      { title: 'Contact US', url: '/contact' },
-    ],
+    items: [{ title: 'DossX.com', url: '/' }],
   },
   {
     title: 'Solutions',
     url: '#',
     items: [
-      { title: 'DossX Services', url: '/services' },
+      { title: 'Voxia — Voice Agent', url: '/agents/voice' },
+      { title: 'QuotaX — Sales Agent', url: '/agents/sales' },
+      { title: 'Synapse — Orchestration', url: '/agents/synapse' },
+      { title: 'All Services', url: '/services' },
     ],
   },
   {
-    title: 'Blog',
+    title: 'Resources',
     url: '#',
     items: [
-      { title: 'DossX Blog', url: '/ai-blog' },
-      
+      { title: 'DossX Blog', url: '/seo-blog' },
+      { title: 'Partners', url: '/partners' },
+      { title: 'Investors', url: '/investors' },
+      { title: 'System Status', url: '/status' },
+    ],
+  },
+  {
+    title: 'Company',
+    url: '#',
+    items: [
+      { title: 'About DossX', url: '/about' },
+      { title: 'Pricing', url: '/pricing' },
+      { title: 'Contact', url: '/contact' },
+
+    ],
+  },
+  {
+    title: 'Support',
+    url: '#',
+    items: [
+      { title: 'FAQ', url: '/faq' },
+      { title: 'Terms of Service', url: '/terms' },
+      { title: 'Privacy Policy', url: '/policy' },
+      { title: 'Support Center', url: '/support' },
+
+
     ],
   },
 ]
@@ -56,7 +74,7 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>((props, ref)
   const [initialLoad, setInitialLoad] = useState(true)
   const dropdownRefsMap = useRef(new Map<string, HTMLUListElement | null>())
 
-  //  initial active item current path
+  // initial active item current path
   useEffect(() => {
     let foundParent = false
 
@@ -65,7 +83,6 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>((props, ref)
         const activeSubItem = item.items.find(
           (subItem) => pathname === subItem.url || pathname.startsWith(subItem.url + '/'),
         )
-
         if (activeSubItem) {
           setActiveItems([item.title])
           foundParent = true
@@ -78,28 +95,19 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>((props, ref)
       const topLevelMatch = menuItems.find(
         (item) => pathname === item.url || (item.url !== '#' && pathname.startsWith(item.url + '/')),
       )
-
-      if (topLevelMatch) {
-        setActiveItems([topLevelMatch.title])
-      }
+      if (topLevelMatch) setActiveItems([topLevelMatch.title])
     }
 
-    if (pathname === '/') {
-      setActiveItems(['Home'])
-    }
-
+    if (pathname === '/') setActiveItems(['Home'])
     setInitialLoad(false)
   }, [pathname])
 
   useEffect(() => {
     if (initialLoad && pathname === '/') {
       setActiveItems(['Home'])
-
       setTimeout(() => {
         const homeDropdown = dropdownRefsMap.current.get('Home')
-        if (homeDropdown) {
-          gsap.set(homeDropdown, { display: 'block', autoAlpha: 1, x: 0 })
-        }
+        if (homeDropdown) gsap.set(homeDropdown, { display: 'block', autoAlpha: 1, x: 0 })
       }, 100)
     }
   }, [initialLoad, pathname])
@@ -110,20 +118,15 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>((props, ref)
       const dropdownRef = dropdownRefsMap.current.get(item.title)
       if (dropdownRef) {
         if (activeItems.includes(item.title)) {
-          // Show dropdown
           gsap.set(dropdownRef, { display: 'block', autoAlpha: 0, x: 10 })
           gsap.to(dropdownRef, {
             autoAlpha: 1,
             x: 0,
             duration: 0.2,
             ease: 'power3.in',
-            stagger: {
-              amount: 0.1,
-              ease: 'back.out(1.7)',
-            },
+            stagger: { amount: 0.1, ease: 'back.out(1.7)' },
           })
         } else {
-          // Hide dropdown
           gsap.to(dropdownRef, {
             autoAlpha: 0,
             x: 10,
@@ -142,44 +145,50 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>((props, ref)
     if (window.innerWidth > 368) {
       setActiveItems((prev) => (prev.includes(title) ? [] : [title]))
     } else {
-      setActiveItems((prev) => (prev.includes(title) ? prev.filter((item) => item !== title) : [...prev, title]))
+      setActiveItems((prev) => (prev.includes(title) ? prev.filter((i) => i !== title) : [...prev, title]))
     }
   }
 
   const setDropdownRef = (el: HTMLUListElement | null, title: string) => {
     if (el) {
       dropdownRefsMap.current.set(title, el)
-
-      // If this is the Home dropdown and we're on the homepage, make it visible immediately
       if (title === 'Home' && pathname === '/' && initialLoad) {
         gsap.set(el, { display: 'block', autoAlpha: 1, x: 0 })
       }
     }
   }
 
-  const isLinkActive = (url: string) => {
-    return pathname === url || pathname.startsWith(url + '/')
-  }
+  const isLinkActive = (url: string) => pathname === url || pathname.startsWith(url + '/')
 
   return (
     <ul ref={ref} className="menu-list">
       {menuItems.map((item) => (
         <li
           key={item.title}
-          className={`menu-list-item menu-list-item-anchor ${activeItems.includes(item.title) ? 'active' : ''}`}>
+          className={`menu-list-item menu-list-item-anchor ${activeItems.includes(item.title) ? 'active' : ''}`}
+        >
           <a
             href={item.url}
             onClick={(e) => {
               e.preventDefault()
               handleDropdownClick(item.title)
             }}
-            className="menu-list-item-text text-[28px] leading-[70px] text-white md:text-[42px] xl:text-[56px] xl:leading-[90px]">
+            className="menu-list-item-text text-[28px] leading-[70px] text-white md:text-[42px] xl:text-[56px] xl:leading-[90px]"
+          >
             {item.title}
           </a>
+
           {item.items && (
             <ul
               ref={(el) => setDropdownRef(el, item.title)}
-              className={`menu-list-item-dropdown relative left-0 h-fit max-h-[60vh] w-full gap-x-4 overflow-y-auto md:absolute md:left-[48%] md:max-h-none md:w-[350px] md:overflow-visible md:pb-0 lg:left-[33%] lg:w-[650px] xl:left-[44%] ${item.title === 'Home' ? '!grid !grid-cols-1 lg:-mt-[70px] lg:!grid-cols-2' : '!grid !grid-cols-1 lg:top-5'} ${activeItems.includes(item.title) || (item.title === 'Home' && pathname === '/' && initialLoad) ? 'block' : 'hidden'} `}>
+              className={`menu-list-item-dropdown relative left-0 h-fit max-h-[60vh] w-full gap-x-4 overflow-y-auto md:absolute md:left-[48%] md:max-h-none md:w-[350px] md:overflow-visible md:pb-0 lg:left-[33%] lg:w-[650px] xl:left-[44%] ${
+                item.title === 'Home' ? '!grid !grid-cols-1 lg:-mt-[70px] lg:!grid-cols-2' : '!grid !grid-cols-1 lg:top-5'
+              } ${
+                activeItems.includes(item.title) || (item.title === 'Home' && pathname === '/' && initialLoad)
+                  ? 'block'
+                  : 'hidden'
+              } `}
+            >
               {item.items.map((subItem) => (
                 <li key={subItem.title}>
                   <Link
@@ -189,7 +198,8 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>((props, ref)
                     }}
                     className={`menu-list-item-dropdown-list inline-block pb-1 pl-3 text-base leading-8 text-white md:text-lg md:leading-[50px] ${
                       isLinkActive(subItem.url) ? 'active' : ''
-                    }`}>
+                    }`}
+                  >
                     {subItem.title.includes('-') ? (
                       <>
                         {subItem.title.split('-')[0]}-
