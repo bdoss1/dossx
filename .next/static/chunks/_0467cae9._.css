@@ -8946,6 +8946,10 @@ html.lenis {
     padding-top: 88px;
   }
 
+  .lg\:pt-\[160px\] {
+    padding-top: 160px;
+  }
+
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
