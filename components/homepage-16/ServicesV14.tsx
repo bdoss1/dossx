@@ -1,24 +1,25 @@
-// components/homepage-17/ServicesV15.tsx
-import getMarkDownData from '@/utils/GetMarkDownData'
-import Link from 'next/link'
-import RevealWrapper from '../animation/RevealWrapper'
-import TextAppearAnimation02 from '../animation/TextAppearAnimation02'
+'use client';
 
-interface ServicesType {
-  slug: string
-  title: string
-  description: string
-  feature: string[]
-  [key: string]: any
-}
+import getMarkDownData from '@/utils/GetMarkDownData';
+import Link from 'next/link';
+import RevealWrapper from '../animation/RevealWrapper';
+import TextAppearAnimation02 from '../animation/TextAppearAnimation02';
 
-// ✅ Point to your updated MD directory (Voxia / QuotaX / Synapse)
-const loadedData: ServicesType[] = getMarkDownData('data/app-development')
+type ServicesType = {
+  slug: string;
+  content: string;
+  title?: string;
+  description?: string;
+  feature?: string[];
+};
 
-// If you prefer deep-linking to agent pages, switch return to `/agents/${map[slug]}`
-const hrefFor = (slug: string) => `/services/${slug}`
+// ✅ Point this to your services MD directory (where Voxia / QuotaX / Synapse live)
+const loadedData = getMarkDownData('data/app-development') as ServicesType[];
 
-const ServicesV15 = () => {
+// Helper: build href to your services detail route
+const hrefFor = (slug: string) => `/services/${slug}`;
+
+const ServicesV14 = () => {
   return (
     <section className="relative overflow-hidden pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px]">
       <div className="container">
@@ -29,16 +30,16 @@ const ServicesV15 = () => {
             </RevealWrapper>
             <TextAppearAnimation02>
               <h2>
-                AI Products Built for <br />
-                <i className="font-instrument">Real-World Growth</i>
+                From Idea to Impact: AI Systems That Drive
+                <br />
+                <i className="font-instrument"> Real-World Results</i>
               </h2>
             </TextAppearAnimation02>
           </div>
 
           <div className="max-md:w-full md:w-[40%]">
             <p className="text-appear text-appear-2 max-w-lg max-md:text-justify md:place-self-end md:text-right">
-              DossX turns AI into outcomes. Launch voice, sales, and data intelligence that plugs into your stack, answers customers,
-              books revenue, and scales without the drama.
+              At DossX, we fuse cutting-edge AI with strategic execution to turn complex workflows into seamless growth — helping your business operate smarter, respond faster, and engage deeper.
             </p>
             <RevealWrapper as="ul" className="reveal-me mt-5 justify-self-end max-md:w-full md:mt-10">
               <li className="mx-auto block w-full text-center md:inline-block md:w-auto">
@@ -67,51 +68,66 @@ const ServicesV15 = () => {
           dark:xl:[&>*:not(:nth-child(3n))]:border-r-dark
         "
       >
-        {loadedData.map((service) => (
-          <RevealWrapper
-            key={service.slug}
-            className="group relative h-[500px] w-full overflow-hidden"
-          >
-            {/* Front Face (title) */}
-            <div className="absolute flex h-full w-full translate-y-0 items-center justify-start opacity-100 transition-all duration-700 group-hover:-translate-y-full group-hover:opacity-0">
-              <h4 className="pl-7 max-sm:text-xl">{service.title}</h4>
-            </div>
+        {loadedData.map((service) => {
+          const title = service.title ?? service.slug.replace(/-/g, ' ');
+          const desc =
+            service.description ??
+            'Discover how this DossX solution can streamline operations and drive measurable outcomes.';
+          const features = Array.isArray(service.feature) ? service.feature : [];
 
-            {/* Hover Face (details) */}
-            <div className="absolute z-10 h-full w-full translate-y-full border-t border-primary bg-secondary p-8 transition-all duration-700 group-hover:inset-0 group-hover:translate-y-0 dark:bg-secondary">
-              <Link href={hrefFor(service.slug)}>
-                <div className="mb-[55px] flex items-center justify-between gap-1">
-                  <h4 className="translate-y-5 text-primary opacity-0 transition-all delay-[240ms] duration-[800ms] group-hover:translate-y-0 group-hover:opacity-100 dark:text-backgroundBody max-sm:text-xl">
-                    {service.title}
-                  </h4>
-                  <span className="translate-x-20 transition-all duration-1000 group-hover:translate-x-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 32 32" fill="none">
-                      <path d="M5 16H27" className="stroke-primary dark:stroke-backgroundBody" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M18 7L27 16L18 25" className="stroke-primary dark:stroke-backgroundBody" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                </div>
+          return (
+            <RevealWrapper key={service.slug} className="group relative h-[500px] w-full overflow-hidden">
+              {/* Front Face (title only) */}
+              <div className="absolute flex h-full w-full translate-y-0 items-center justify-start opacity-100 transition-all duration-700 group-hover:-translate-y-full group-hover:opacity-0">
+                <h4 className="pl-7 max-sm:text-xl">{title}</h4>
+              </div>
 
-                <p className="translate-y-4 text-backgroundBody/70 opacity-0 transition-all delay-[340ms] duration-[800ms] group-hover:translate-y-0 group-hover:opacity-100 dark:text-backgroundBody/70">
-                  {service.description}
-                </p>
+              {/* Hover Face (details) */}
+              <div className="absolute z-10 h-full w-full translate-y-full border-t border-primary bg-secondary p-8 transition-all duration-700 group-hover:inset-0 group-hover:translate-y-0 dark:bg-secondary">
+                <Link href={hrefFor(service.slug)}>
+                  <div className="mb-[55px] flex items-center justify-between gap-1">
+                    <h4 className="translate-y-5 text-primary opacity-0 transition-all delay-[240ms] duration-[800ms] group-hover:translate-y-0 group-hover:opacity-100 dark:text-backgroundBody max-sm:text-xl">
+                      {title}
+                    </h4>
+                    <span className="translate-x-20 transition-all duration-1000 group-hover:translate-x-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 32 32" fill="none">
+                        <path
+                          d="M5 16H27"
+                          className="stroke-primary dark:stroke-backgroundBody"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M18 7L27 16L18 25"
+                          className="stroke-primary dark:stroke-backgroundBody"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
 
-                {!!service.feature?.length && (
-                  <ul className="mt-6 translate-y-3 pl-4 opacity-0 transition-all delay-[440ms] duration-[800ms] group-hover:translate-y-0 group-hover:opacity-100">
-                    {service.feature.map((f: string) => (
-                      <li key={f} className="list-disc text-base leading-relaxed text-backgroundBody/70 dark:text-backgroundBody/70">
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </Link>
-            </div>
-          </RevealWrapper>
-        ))}
+                  <p className="translate-y-4 text-backgroundBody/70 opacity-0 transition-all delay-[340ms] duration-[800ms] group-hover:translate-y-0 group-hover:opacity-100 dark:text-backgroundBody/70">
+                    {desc}
+                  </p>
+
+                  {features.length > 0 && (
+                    <ul className="mt-6 translate-y-3 pl-4 opacity-0 transition-all delay-[440ms] duration-[800ms] group-hover:translate-y-0 group-hover:opacity-100">
+                      {features.map((f) => (
+                        <li key={f} className="list-disc text-base leading-relaxed text-backgroundBody/70 dark:text-backgroundBody/70">
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </Link>
+              </div>
+            </RevealWrapper>
+          );
+        })}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ServicesV15
+export default ServicesV14;
