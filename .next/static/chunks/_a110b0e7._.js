@@ -732,7 +732,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const menuItems = [
+/* ---- Updated to match footer ---- */ const menuItems = [
     {
         title: 'Home',
         url: '#',
@@ -744,36 +744,86 @@ const menuItems = [
         ]
     },
     {
-        title: 'About',
-        url: '#',
-        items: [
-            {
-                title: 'About DossX',
-                url: '/about-02'
-            },
-            {
-                title: 'Contact US',
-                url: '/contact'
-            }
-        ]
-    },
-    {
         title: 'Solutions',
         url: '#',
         items: [
             {
-                title: 'DossX Services',
+                title: 'Voxia — Voice Agent',
+                url: '/agents/voice'
+            },
+            {
+                title: 'QuotaX — Sales Agent',
+                url: '/agents/sales'
+            },
+            {
+                title: 'Synapse — Orchestration',
+                url: '/agents/synapse'
+            },
+            {
+                title: 'All Services',
                 url: '/services'
             }
         ]
     },
     {
-        title: 'Blog',
+        title: 'Resources',
         url: '#',
         items: [
             {
                 title: 'DossX Blog',
-                url: '/ai-blog'
+                url: '/seo-blog'
+            },
+            {
+                title: 'Partners',
+                url: '/partners'
+            },
+            {
+                title: 'Investors',
+                url: '/investors'
+            },
+            {
+                title: 'System Status',
+                url: '/status'
+            }
+        ]
+    },
+    {
+        title: 'Company',
+        url: '#',
+        items: [
+            {
+                title: 'About DossX',
+                url: '/about'
+            },
+            {
+                title: 'Pricing',
+                url: '/pricing'
+            },
+            {
+                title: 'Contact',
+                url: '/contact'
+            }
+        ]
+    },
+    {
+        title: 'Support',
+        url: '#',
+        items: [
+            {
+                title: 'FAQ',
+                url: '/faq'
+            },
+            {
+                title: 'Terms of Service',
+                url: '/terms'
+            },
+            {
+                title: 'Privacy Policy',
+                url: '/policy'
+            },
+            {
+                title: 'Support Center',
+                url: '/support'
             }
         ]
     }
@@ -785,7 +835,7 @@ const MenuList = /*#__PURE__*/ _s((0, __TURBOPACK__imported__module__$5b$project
     const [activeItems, setActiveItems] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [initialLoad, setInitialLoad] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
     const dropdownRefsMap = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(new Map());
-    //  initial active item current path
+    // initial active item current path
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "MenuList.useEffect": ()=>{
             let foundParent = false;
@@ -809,17 +859,13 @@ const MenuList = /*#__PURE__*/ _s((0, __TURBOPACK__imported__module__$5b$project
                 const topLevelMatch = menuItems.find({
                     "MenuList.useEffect.topLevelMatch": (item)=>pathname === item.url || item.url !== '#' && pathname.startsWith(item.url + '/')
                 }["MenuList.useEffect.topLevelMatch"]);
-                if (topLevelMatch) {
-                    setActiveItems([
-                        topLevelMatch.title
-                    ]);
-                }
-            }
-            if (pathname === '/') {
-                setActiveItems([
-                    'Home'
+                if (topLevelMatch) setActiveItems([
+                    topLevelMatch.title
                 ]);
             }
+            if (pathname === '/') setActiveItems([
+                'Home'
+            ]);
             setInitialLoad(false);
         }
     }["MenuList.useEffect"], [
@@ -834,13 +880,11 @@ const MenuList = /*#__PURE__*/ _s((0, __TURBOPACK__imported__module__$5b$project
                 setTimeout({
                     "MenuList.useEffect": ()=>{
                         const homeDropdown = dropdownRefsMap.current.get('Home');
-                        if (homeDropdown) {
-                            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$gsap$40$3$2e$13$2e$0$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].set(homeDropdown, {
-                                display: 'block',
-                                autoAlpha: 1,
-                                x: 0
-                            });
-                        }
+                        if (homeDropdown) __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$gsap$40$3$2e$13$2e$0$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].set(homeDropdown, {
+                            display: 'block',
+                            autoAlpha: 1,
+                            x: 0
+                        });
                     }
                 }["MenuList.useEffect"], 100);
             }
@@ -857,7 +901,6 @@ const MenuList = /*#__PURE__*/ _s((0, __TURBOPACK__imported__module__$5b$project
                     const dropdownRef = dropdownRefsMap.current.get(item.title);
                     if (dropdownRef) {
                         if (activeItems.includes(item.title)) {
-                            // Show dropdown
                             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$gsap$40$3$2e$13$2e$0$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].set(dropdownRef, {
                                 display: 'block',
                                 autoAlpha: 0,
@@ -874,7 +917,6 @@ const MenuList = /*#__PURE__*/ _s((0, __TURBOPACK__imported__module__$5b$project
                                 }
                             });
                         } else {
-                            // Hide dropdown
                             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$gsap$40$3$2e$13$2e$0$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].to(dropdownRef, {
                                 autoAlpha: 0,
                                 x: 10,
@@ -900,7 +942,7 @@ const MenuList = /*#__PURE__*/ _s((0, __TURBOPACK__imported__module__$5b$project
                     title
                 ]);
         } else {
-            setActiveItems((prev)=>prev.includes(title) ? prev.filter((item)=>item !== title) : [
+            setActiveItems((prev)=>prev.includes(title) ? prev.filter((i)=>i !== title) : [
                     ...prev,
                     title
                 ]);
@@ -909,7 +951,6 @@ const MenuList = /*#__PURE__*/ _s((0, __TURBOPACK__imported__module__$5b$project
     const setDropdownRef = (el, title)=>{
         if (el) {
             dropdownRefsMap.current.set(title, el);
-            // If this is the Home dropdown and we're on the homepage, make it visible immediately
             if (title === 'Home' && pathname === '/' && initialLoad) {
                 __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$gsap$40$3$2e$13$2e$0$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].set(el, {
                     display: 'block',
@@ -919,9 +960,7 @@ const MenuList = /*#__PURE__*/ _s((0, __TURBOPACK__imported__module__$5b$project
             }
         }
     };
-    const isLinkActive = (url)=>{
-        return pathname === url || pathname.startsWith(url + '/');
-    };
+    const isLinkActive = (url)=>pathname === url || pathname.startsWith(url + '/');
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0_sass$40$1$2e$89$2e$2$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
         ref: ref,
         className: "menu-list",
@@ -960,35 +999,35 @@ const MenuList = /*#__PURE__*/ _s((0, __TURBOPACK__imported__module__$5b$project
                                                 children: subItem.title.split('-')[1]
                                             }, void 0, false, {
                                                 fileName: "[project]/components/navbarCompo/menu-list.tsx",
-                                                lineNumber: 196,
+                                                lineNumber: 206,
                                                 columnNumber: 25
                                             }, this)
                                         ]
                                     }, void 0, true) : subItem.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/navbarCompo/menu-list.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 194,
                                     columnNumber: 19
                                 }, this)
                             }, subItem.title, false, {
                                 fileName: "[project]/components/navbarCompo/menu-list.tsx",
-                                lineNumber: 184,
+                                lineNumber: 193,
                                 columnNumber: 17
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/navbarCompo/menu-list.tsx",
-                        lineNumber: 180,
+                        lineNumber: 182,
                         columnNumber: 13
                     }, this)
                 ]
             }, item.title, true, {
                 fileName: "[project]/components/navbarCompo/menu-list.tsx",
-                lineNumber: 167,
+                lineNumber: 166,
                 columnNumber: 9
             }, this))
     }, void 0, false, {
         fileName: "[project]/components/navbarCompo/menu-list.tsx",
-        lineNumber: 165,
+        lineNumber: 164,
         columnNumber: 5
     }, this);
 }, "yNOzZ4mM9hLU8BBgKQSanMcW75M=", false, function() {

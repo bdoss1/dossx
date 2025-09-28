@@ -33,7 +33,7 @@ const homepage17 = () => {
       <CTA buttonText="Launch Now">
        Launch Your AI Workflow in Minutes.
       </CTA>
-      <VoiceAgent />
+     {/* <VoiceAgent />  */}
 
 
 
