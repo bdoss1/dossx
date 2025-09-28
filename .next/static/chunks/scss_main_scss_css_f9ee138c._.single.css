@@ -2929,6 +2929,11 @@ a:is(.dark *) {
   padding-bottom: 35px;
 }
 
+.px-1 {
+  padding-left: .25rem;
+  padding-right: .25rem;
+}
+
 .pb-0 {
   padding-bottom: 0;
 }
