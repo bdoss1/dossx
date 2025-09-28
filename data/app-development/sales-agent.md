@@ -1,24 +1,24 @@
 ---
-title: 'SalesAgent'
-description: 'Capture, qualify, and follow up with leads automatically—syncing every touchpoint to your CRM.'
-coverImage: '/images/services/salesagent_header.png'
-badgeTitle: 'AI Sales Automation'
+title: 'QuotaX'
+description: 'AI-powered sales agent that captures, nurtures, and closes leads while your team sleeps.'
+coverImage: '/images/services/quotax_header.png'
+badgeTitle: 'Sales AI'
 logoDark: '/images/dossx_logo.png'
-feature: ['Lead Capture & Enrichment', 'Multi-Channel Sequences', 'CRM Sync (HubSpot/Salesforce/Pipedrive)']
+feature: ['Lead Capture & Scoring', 'Automated Follow-Ups', 'CRM Integration']
 ---
 
 ### Service overview
 
-SalesAgent streamlines your top-of-funnel with smart capture, qualification, and follow-ups—so leads never slip through the cracks. It enriches contacts, personalizes outreach, and logs every activity in your CRM for full visibility.
+QuotaX is your automated revenue engine — capturing leads, scoring their intent, nurturing them with AI-driven messaging, and syncing everything with your CRM. It works across email, SMS, and chat to convert interest into booked deals.
 
 ### Our service includes
 
-**Lead Capture & Enrichment:** Forms, chat, and imports with automatic data enrichment for cleaner records.  
-**Smart Qualification:** Score and route leads based on intent, fit, and recent activity.  
-**Multi-Channel Sequences:** Email, SMS, and social DMs with adaptive timing and content.  
-**CRM Integration:** Bi-directional sync with HubSpot, Salesforce, or Pipedrive—no duplicate chaos.  
-**Playbooks & Analytics:** Proven outreach recipes with pipeline reporting and win-rate insights.  
+**Lead Capture & Qualification:** Instantly engages site visitors and inbound leads, scoring them for sales readiness.  
+**AI-Driven Nurture Flows:** Sends personalized follow-ups, reminders, and product recommendations automatically.  
+**CRM Sync:** Updates Salesforce, HubSpot, or Pipedrive in real time — no manual data entry.  
+**Pipeline Analytics:** See which messages convert, track deal velocity, and optimize campaigns.  
+**Multi-Channel Outreach:** Run coordinated email, SMS, and chat campaigns from one hub.
 
 ### Why Choose Us
 
-Most tools blast templates; SalesAgent crafts context-aware outreach that respects your brand voice and time—boosting conversion while your team focuses on closing.
+QuotaX turns cold leads into warm conversations and qualified opportunities — without manual outreach. It scales sales follow-ups beyond human bandwidth, helping teams close more deals with less effort.

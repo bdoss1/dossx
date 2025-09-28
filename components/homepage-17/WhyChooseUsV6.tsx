@@ -16,9 +16,7 @@ const WhyChooseUsV6 = () => {
             </RevealWrapper>
             <TextAppearAnimation>
               <h2 className="text-appear lg:leading-[1.1]">
-                Smart, scalable&nbsp;
-                <i className="font-instrument">AI</i>
-                &nbsp;solutions
+                Ship-ready&nbsp;<i className="font-instrument">AI</i>&nbsp;that scales with your business
               </h2>
             </TextAppearAnimation>
           </div>
@@ -26,7 +24,8 @@ const WhyChooseUsV6 = () => {
           <div className="w-full md:w-[40%] md:max-w-72 md:self-end lg:max-w-[470px]">
             <TextAppearAnimation>
               <p className="text-appear max-w-lg md:place-self-end md:text-right">
-                From instant-value products to enterprise-grade security, DossX delivers everything you need to automate, analyze, and scale—fast.
+                DossX turns real workflows into revenue: voice agents that never sleep, sales automation that never
+                forgets, and orchestration that keeps every system in sync. Faster launches, cleaner ops, happier customers.
               </p>
             </TextAppearAnimation>
 
@@ -45,48 +44,78 @@ const WhyChooseUsV6 = () => {
           </div>
         </div>
 
-        {/* ─── Solution Cards ─── */}
+        {/* ─── Solution Cards (DossX Core) ─── */}
         <article>
           <RevealWrapper className="mb-[30px] flex flex-col gap-[30px] max-lg:flex-wrap md:flex-row">
-            {/* Plug-and-Play Products */}
+            {/* Voxia */}
             <RevealWrapper className="flex-1 border px-[30px] py-20 dark:border-dark">
-              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Plug-and-Play Products</h5>
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Voxia — 24/7 Voice Concierge</h5>
               <p className="text-base leading-[1.6]">
-                Out-of-the-box apps—SwiftInvoice, SwiftBuild, SwiftWatch—that deliver value on Day 1 without heavy dev lift.
+                Natural, human-sounding voice powered by ElevenLabs + OpenAI. Answers FAQs, books appointments, checks
+                order status, and hands off to humans in Slack/Teams when it matters.
               </p>
+              <div className="mt-5">
+                <Link href="/agents/voice" className="underline hover:text-primary">
+                  Explore Voxia →
+                </Link>
+              </div>
             </RevealWrapper>
 
-            {/* AI-Powered Automations */}
+            {/* QuotaX */}
             <RevealWrapper className="flex-1 border px-[30px] py-20 dark:border-dark">
-              <h5 className="mb-2.5 mt-5 lg:text-[35px]">AI-Powered Automations</h5>
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">QuotaX — AI Sales Engine</h5>
               <p className="text-base leading-[1.6]">
-                AI-driven workflows and multi-agent orchestration that erase busywork and keep operations running 24 / 7.
+                Capture, score, and nurture leads across email/SMS/chat. Auto-syncs with your CRM and books meetings
+                while your team sleeps—complete funnel visibility included.
               </p>
+              <div className="mt-5">
+                <Link href="/agents/sales" className="underline hover:text-primary">
+                  Explore QuotaX →
+                </Link>
+              </div>
             </RevealWrapper>
 
-            {/* Real-Time Data Insights */}
+            {/* Synapse */}
             <RevealWrapper className="flex-1 border px-[30px] py-20 dark:border-dark">
-              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Real-Time Data Insights</h5>
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Synapse — Workflow Orchestration</h5>
               <p className="text-base leading-[1.6]">
-                Built-in dashboards and predictive analytics that surface trends, churn risks, and bottlenecks before they bite.
+                Event-driven automation that connects your apps, data, and agents. Build branching logic, monitor runs,
+                and keep CRMs, calendars, and billing perfectly in sync.
               </p>
+              <div className="mt-5">
+                <Link href="/agents/synapse" className="underline hover:text-primary">
+                  Explore Synapse →
+                </Link>
+              </div>
             </RevealWrapper>
           </RevealWrapper>
 
+          {/* ─── Platform Advantages ─── */}
           <RevealWrapper className="flex flex-col gap-[30px] md:flex-row">
-            {/* Enterprise-Grade Security */}
+            {/* Security */}
             <RevealWrapper className="min-h-[322px] flex-1 border px-[30px] py-20 dark:border-dark">
-              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Enterprise-Grade Security</h5>
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Enterprise-grade Security</h5>
               <p className="text-base leading-[1.6]">
-                SOC 2–ready controls, end-to-end encryption, and role-based access—so compliance teams sleep soundly.
+                SOC-2 aligned controls, encryption at rest & in transit, role-based access, and full audit trails.
+                Trust built in from day one.
               </p>
             </RevealWrapper>
 
-            {/* Launch in Hours, Not Months */}
+            {/* Speed */}
             <RevealWrapper className="min-h-[322px] flex-1 border px-[30px] py-20 dark:border-dark">
-              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Launch in Hours, Not Months</h5>
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Launch in Days, Not Months</h5>
               <p className="text-base leading-[1.6]">
-                Pre-wired integrations and no-code configuration let you ship new workflows—or entire products—in a single sprint.
+                Pre-wired connectors and opinionated defaults mean you go live fast—then scale with advanced configs
+                as your needs grow.
+              </p>
+            </RevealWrapper>
+
+            {/* Human-in-the-loop */}
+            <RevealWrapper className="min-h-[322px] flex-1 border px-[30px] py-20 dark:border-dark">
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Human-in-the-Loop by Design</h5>
+              <p className="text-base leading-[1.6]">
+                Smart escalation and approvals where they matter. Keep teams informed with transcripts, summaries, and
+                alerts—right in Slack/Teams.
               </p>
             </RevealWrapper>
           </RevealWrapper>
