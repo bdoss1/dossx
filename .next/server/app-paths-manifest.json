@@ -1,7 +1,7 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/agents/sales/page": "app/agents/sales/page.js",
   "/agents/voice/page": "app/agents/voice/page.js",
   "/page": "app/page.js",
-  "/pricing/page": "app/pricing/page.js",
-  "/services/page": "app/services/page.js"
+  "/seo-blog/page": "app/seo-blog/page.js"
 }

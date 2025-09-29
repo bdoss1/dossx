@@ -13,7 +13,7 @@
       { "href": "/about", "label": "About DossX" },
       { "href": "/partners", "label": "Partner Program" },
       { "href": "/investors", "label": "Investors" },
-      { "href": "/seo-blog", "label": "The DossX Growth Lab" },
+      { "href": "/seo-blog", "label": "Blog" },
       { "href": "/pricing", "label": "Pricing" },
       { "href": "/contact", "label": "Contact" }
     ]

@@ -1,6 +1,6 @@
 ---
-thumbnail: '/images/blog-img/ai-for-business-growth-synapse.png'
-featureImage: '/images/blog-img/ai-for-business-growth-synapse.png'
+thumbnail: '/images/assets/dossx_synapse_header.png'
+featureImage: '/images/assets/dossx_synapse_header.png'
 title: 'The Synapse Effect: Automating the Unseen Work That Scales Companies'
 description: 'When systems talk to each other, businesses grow. Synapse makes it automatic.'
 date: 'September 27, 2025'

@@ -1,6 +1,6 @@
 ---
-thumbnail: '/images/blog-img/voice-agents-the-new-frontline.png'
-featureImage: '/images/blog-img/voice-agents-the-new-frontline.png'
+thumbnail: '/images/assets/dossx_voxia_header.png'
+featureImage: '/images/assets/dossx_voxia_header.png'
 title: 'Your Business Voice, Upgraded: Why Every Brand Needs Voxia'
 description: 'How a 24/7 AI voice concierge drives revenue, lifts CSAT, and scales support without adding headcount.'
 date: 'September 27, 2025'

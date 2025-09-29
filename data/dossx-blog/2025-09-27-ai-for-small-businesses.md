@@ -1,6 +1,6 @@
 ---
-thumbnail: '/images/blog-img/blog-details-img-5.png'
-featureImage: '/images/blog-img/blog-details-img-5.png'
+thumbnail: '/images/assets/dossx_main_header.png'
+featureImage: '/images/assets/dossx_main_header.png'
 title: 'AI for Small Businesses: Leveling the Playing Field'
 description: 'AI isn’t just for tech giants. See how DossX helps small teams automate like Fortune 500s.'
 date: 'September 27, 2025'

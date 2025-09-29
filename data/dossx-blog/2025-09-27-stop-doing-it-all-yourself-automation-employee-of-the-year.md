@@ -1,6 +1,7 @@
 ---
-thumbnail: '/images/blog-img/future-of-automation-small-business.png'
-featureImage: '/images/blog-img/future-of-automation-small-business.png'
+
+thumbnail: '/images/assets/dossx_blog_header-3.png'
+featureImage: '/images/assets/dossx_blog_header-3.png'
 title: 'Stop Doing It All Yourself: Why Automation Is the New Employee of the Year'
 description: 'You don’t need more hands—you need leverage. Here’s how AI agents create it.'
 date: 'September 27, 2025'

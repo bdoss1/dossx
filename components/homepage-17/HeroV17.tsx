@@ -38,7 +38,7 @@ const HeroV17 = () => {
               </Link>
             </li>
 
-            <li className="mx-auto block w-[90%] md:inline-block md:w-auto">
+            {/* <li className="mx-auto block w-[90%] md:inline-block md:w-auto">
               <Link href="/contact" className="rv-button rv-button-secondary block md:inline-block">
                 <div className="rv-button-top">
                   <span>Book an AI Audit</span>
@@ -47,7 +47,7 @@ const HeroV17 = () => {
                   <span className="text-nowrap">Book an AI Audit</span>
                 </div>
               </Link>
-            </li>
+            </li> */}
           </ul>
 
           {/* Micro copy */}

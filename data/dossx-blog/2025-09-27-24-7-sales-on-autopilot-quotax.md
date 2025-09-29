@@ -1,6 +1,6 @@
 ---
-thumbnail: '/images/blog-img/sales-automation-playbook.png'
-featureImage: '/images/blog-img/sales-automation-playbook.png'
+thumbnail: '/images/assets/dossx_blog_header.png'
+featureImage: '/images/assets/dossx_blog_header.png'
 title: '24/7 Sales on Autopilot: The Rise of AI Closer Agents (QuotaX)'
 description: 'QuotaX captures leads, personalizes outreach, and books meetings while your team sleeps — here’s how to put it to work.'
 date: 'September 27, 2025'

@@ -1,6 +1,6 @@
 ---
-thumbnail: '/images/blog-img/blog-details-img-2.png'
-featureImage: '/images/blog-img/blog-details-img-2.png'
+thumbnail: '/images/assets/dossx_qoutax_header.png'
+featureImage: '/images/assets/dossx_qoutax_header.png'
 title: 'Automating Your Sales Funnel: The Power of QuotaX'
 description: 'Learn how AI-driven sales agents capture leads, nurture relationships, and close deals automatically.'
 date: 'September 27, 2025'

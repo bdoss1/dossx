@@ -7,7 +7,7 @@ const SocialProof = () => {
         <div className="relative">
           <div className="z-50 flex items-center justify-center">
             <img
-              src="/images/hero-img/dossx-ad-image.png"
+              src="/images/assets/dossx_main_header.png"
               alt="social-proof"
               className="hidden dark:inline-block"
             />

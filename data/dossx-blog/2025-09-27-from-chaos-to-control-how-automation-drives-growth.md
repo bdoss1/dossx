@@ -1,6 +1,6 @@
 ---
-thumbnail: '/images/blog-img/ai-agents-revolutionizing-business.png'
-featureImage: '/images/blog-img/ai-agents-revolutionizing-business.png'
+thumbnail: '/images/assets/dossx_blog_header-2.png'
+featureImage: '/images/assets/dossx_blog_header-2.png'
 title: 'From Chaos to Control: How Automation Turns Hustle Into Growth'
 description: 'A founder’s story about moving from reactive firefighting to compounding momentum with AI agents.'
 date: 'September 27, 2025'
