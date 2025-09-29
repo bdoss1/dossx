@@ -15,7 +15,7 @@ const MARQUEE_IMAGES = [
   { id: 4, src: '/images/assets/dossx_blog_header-3.png' },
   { id: 5, src: '/images/assets/dossx_blog_header-4.png' },
   { id: 6, src: '/images/assets/dossx_synapse_header.png' },
-  { id: 7, src: '/images/marquee-img/hero-marquee-04.png' },
+  { id: 7, src: '/images/assets/dossx_blog_header-5.png' },
   { id: 8, src: '/images/marquee-img/hero-marquee-05.png' },
   { id: 9, src: '/images/marquee-img/hero-marquee-06.png' },
 ]

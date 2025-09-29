@@ -2666,7 +2666,7 @@ const MARQUEE_IMAGES = [
     },
     {
         id: 7,
-        src: '/images/marquee-img/hero-marquee-04.png'
+        src: '/images/assets/dossx_blog_header-5.png'
     },
     {
         id: 8,

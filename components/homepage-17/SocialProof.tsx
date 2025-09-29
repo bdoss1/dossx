@@ -6,11 +6,11 @@ const SocialProof = () => {
       <RevealWrapperV2 className="container">
         <div className="relative">
           <div className="z-50 flex items-center justify-center">
-            <img
-              src="/images/assets/dossx_main_header.png"
+            {/*<img
+              src="/images/assets/dossx_main_header-1.png"
               alt="social-proof"
               className="hidden dark:inline-block"
-            />
+            /> */}
           </div>
         </div>
       </RevealWrapperV2>
