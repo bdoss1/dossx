@@ -12,7 +12,7 @@ interface MenuItemProps {
   isActive?: boolean
 }
 
-/* ---- Updated for rebrand: websites + CMS + hosting + AI workflows + AI-powered SaaS ---- */
+/* ---- Updated for rebrand: consolidated services ---- */
 const menuItems: MenuItemProps[] = [
   {
     title: 'Home',
@@ -23,12 +23,10 @@ const menuItems: MenuItemProps[] = [
     title: 'Solutions',
     url: '#',
     items: [
-      { title: 'Web Design & Development', url: '/services#web' },
-      { title: 'Proprietary CMS Platform', url: '/services#cms' },
+      { title: 'Web Platform', url: '/services#web-platform' },
       { title: 'AI Workflows & Automation', url: '/services#ai-workflows' },
       { title: 'Voxia — AI Voice Agent', url: '/services#voxia' },
-      { title: 'AI-Powered SaaS Solutions', url: '/services#saas' },
-      { title: 'Managed Hosting & Support', url: '/services#hosting' },
+      { title: 'AI-Powered SaaS', url: '/services#saas' },
     ],
   },
   {

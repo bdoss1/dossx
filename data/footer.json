@@ -2,12 +2,10 @@
   {
     "title": "Solutions",
     "links": [
-      { "href": "/services#web", "label": "Web Design & Development" },
-      { "href": "/services#cms", "label": "Proprietary CMS Platform" },
+      { "href": "/services#web-platform", "label": "Web Platform — Design, CMS & Hosting" },
       { "href": "/services#ai-workflows", "label": "AI Workflows & Automation" },
       { "href": "/services#voxia", "label": "Voxia — AI Voice Agent" },
-      { "href": "/services#saas", "label": "AI-Powered SaaS Solutions" },
-      { "href": "/services#hosting", "label": "Managed Hosting & Support" }
+      { "href": "/services#saas", "label": "AI-Powered SaaS Solutions" }
     ]
   },
   {

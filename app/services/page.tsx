@@ -24,15 +24,18 @@ const ServicesPage = () => {
       <section className="pb-20 pt-10">
         <div className="container max-w-6xl">
 
-          {/* Web Design & Development */}
-          <div id="web" className="mb-20 scroll-mt-32">
+          {/* Web Platform — Design, CMS & Hosting */}
+          <div id="web-platform" className="mb-20 scroll-mt-32">
             <div className="mb-8 border-l-4 border-primary pl-6">
-              <h2 className="mb-2 text-3xl font-bold md:text-4xl">Web Design & Development</h2>
-              <p className="text-lg text-white/70">High-performance digital experiences designed to engage users and convert traffic into revenue.</p>
+              <h2 className="mb-2 text-3xl font-bold md:text-4xl">Web Platform — Design, CMS & Hosting</h2>
+              <p className="text-lg text-white/70">Custom websites built on our proprietary CMS with fully managed hosting — a complete digital foundation.</p>
             </div>
-            <div className="grid gap-6 md:grid-cols-2">
+
+            {/* Three-column grid for the consolidated service */}
+            <div className="grid gap-6 md:grid-cols-3">
+              {/* Web Design & Development */}
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <h4 className="mb-3 text-xl font-semibold">What We Deliver</h4>
+                <h4 className="mb-3 text-xl font-semibold">Design & Development</h4>
                 <ul className="space-y-2 text-white/80">
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
@@ -56,24 +59,10 @@ const ServicesPage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <h4 className="mb-3 text-xl font-semibold">Why It Matters</h4>
-                <p className="text-white/80">
-                  Your website is more than a digital brochure — it&apos;s your 24/7 sales engine. We build sites that load fast, rank high, and convert visitors into customers with precision-engineered experiences.
-                </p>
-              </div>
-            </div>
-          </div>
 
-          {/* Proprietary CMS Platform */}
-          <div id="cms" className="mb-20 scroll-mt-32">
-            <div className="mb-8 border-l-4 border-primary pl-6">
-              <h2 className="mb-2 text-3xl font-bold md:text-4xl">Proprietary CMS Platform</h2>
-              <p className="text-lg text-white/70">A flexible publishing engine created by DossX to give businesses full control without the limits of traditional builders.</p>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2">
+              {/* Proprietary CMS */}
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <h4 className="mb-3 text-xl font-semibold">Platform Capabilities</h4>
+                <h4 className="mb-3 text-xl font-semibold">Proprietary CMS</h4>
                 <ul className="space-y-2 text-white/80">
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
@@ -93,16 +82,45 @@ const ServicesPage = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Fast, secure performance
+                    No plugin bloat or conflicts
                   </li>
                 </ul>
               </div>
+
+              {/* Managed Hosting */}
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <h4 className="mb-3 text-xl font-semibold">Why It Matters</h4>
-                <p className="text-white/80">
-                  Stop fighting your CMS. Our proprietary platform gives you the flexibility to manage content your way — without the bloat, plugin conflicts, or security vulnerabilities of traditional systems.
-                </p>
+                <h4 className="mb-3 text-xl font-semibold">Managed Hosting</h4>
+                <ul className="space-y-2 text-white/80">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                    24/7 uptime monitoring
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                    Performance optimization
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                    Security management
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                    Maintenance & updates
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                    Ongoing support
+                  </li>
+                </ul>
               </div>
+            </div>
+
+            {/* Why It Matters - full width */}
+            <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+              <h4 className="mb-3 text-xl font-semibold">Why It Matters</h4>
+              <p className="text-white/80">
+                Your website is your 24/7 sales engine. We deliver a complete web platform — custom design, flexible CMS, and managed hosting — so you get a high-performance site without juggling multiple vendors or fighting with traditional builders.
+              </p>
             </div>
           </div>
 
@@ -110,7 +128,7 @@ const ServicesPage = () => {
           <div id="ai-workflows" className="mb-20 scroll-mt-32">
             <div className="mb-8 border-l-4 border-primary pl-6">
               <h2 className="mb-2 text-3xl font-bold md:text-4xl">AI Workflows & Automation</h2>
-              <p className="text-lg text-white/70">We build intelligent workflows that remove repetitive work and keep systems moving automatically.</p>
+              <p className="text-lg text-white/70">Intelligent workflows that remove repetitive work and keep systems moving automatically.</p>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
@@ -224,47 +242,6 @@ const ServicesPage = () => {
                 <h4 className="mb-3 text-xl font-semibold">Why It Matters</h4>
                 <p className="text-white/80">
                   Off-the-shelf software rarely fits perfectly. We build custom SaaS solutions that reduce manual work, scale operations, and improve customer experience — tailored to your exact business needs.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Managed Hosting & Support */}
-          <div id="hosting" className="mb-20 scroll-mt-32">
-            <div className="mb-8 border-l-4 border-primary pl-6">
-              <h2 className="mb-2 text-3xl font-bold md:text-4xl">Managed Hosting & Support</h2>
-              <p className="text-lg text-white/70">Secure, high-performance environments ensuring your platform stays fast, protected, and optimized.</p>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <h4 className="mb-3 text-xl font-semibold">What&apos;s Included</h4>
-                <ul className="space-y-2 text-white/80">
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Uptime monitoring
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Performance optimization
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Security management
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Maintenance & updates
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Ongoing support
-                  </li>
-                </ul>
-              </div>
-              <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <h4 className="mb-3 text-xl font-semibold">Why It Matters</h4>
-                <p className="text-white/80">
-                  Your digital platform is only as good as its infrastructure. We manage everything from server optimization to security patches, so you can focus on running your business.
                 </p>
               </div>
             </div>
