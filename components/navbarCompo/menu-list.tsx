@@ -23,10 +23,12 @@ const menuItems: MenuItemProps[] = [
     title: 'Solutions',
     url: '#',
     items: [
-      { title: 'Web Design & Development', url: '/services' },
+      { title: 'Web Design & Development', url: '/services#web' },
+      { title: 'Proprietary CMS Platform', url: '/services#cms' },
       { title: 'AI Workflows & Automation', url: '/services#ai-workflows' },
+      { title: 'Voxia — AI Voice Agent', url: '/services#voxia' },
       { title: 'AI-Powered SaaS Solutions', url: '/services#saas' },
-      { title: 'All Services', url: '/services' },
+      { title: 'Managed Hosting & Support', url: '/services#hosting' },
     ],
   },
   {

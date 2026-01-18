@@ -147,6 +147,47 @@ const ServicesPage = () => {
             </div>
           </div>
 
+          {/* Voxia Voice Agent */}
+          <div id="voxia" className="mb-20 scroll-mt-32">
+            <div className="mb-8 border-l-4 border-primary pl-6">
+              <h2 className="mb-2 text-3xl font-bold md:text-4xl">Voxia — AI Voice Agent</h2>
+              <p className="text-lg text-white/70">Your always-on voice representative, available 24/7 to handle calls, answer FAQs, and schedule appointments.</p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                <h4 className="mb-3 text-xl font-semibold">What Voxia Delivers</h4>
+                <ul className="space-y-2 text-white/80">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                    Real-time voice conversations powered by AI
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                    Calendar & CRM sync for automated booking
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                    Knowledge-driven responses from your data
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                    Seamless human handoff when needed
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                    Custom voice profiles to match your brand
+                  </li>
+                </ul>
+              </div>
+              <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                <h4 className="mb-3 text-xl font-semibold">Why It Matters</h4>
+                <p className="text-white/80">
+                  Voxia makes every call a conversion opportunity. It reduces missed calls, automates scheduling, and creates a polished first impression — all while scaling infinitely without hiring additional staff.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* AI-Powered SaaS Solutions */}
           <div id="saas" className="mb-20 scroll-mt-32">
             <div className="mb-8 border-l-4 border-primary pl-6">
