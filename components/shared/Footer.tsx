@@ -14,15 +14,17 @@ const Footer = () => {
             <h5 className="mb-4 font-satoshi text-sm font-bold uppercase tracking-[3px] text-white sm:mb-8">
               Reach Us
             </h5>
+            <p className="mb-3 text-sm text-white/80">
+              DossX builds websites, intelligent automation, and AI-powered SaaS solutions.
+            </p>
             <p className="mb-5 text-sm text-white">
-              Book a quick 15 min meeting where we discuss if our offer <br />
-              would work for your case
+              Tell us about your project.
             </p>
             <div className="group flex max-w-[360px] items-center justify-between gap-4 bg-primary bg-opacity-30 p-4 backdrop-blur-2xl">
               <Image className="h-[55px] w-auto" src={logo} alt="logo" />
               <div>
-                <h6 className="font-satoshi text-sm font-bold text-white">Schedule a Free Meeting</h6>
-                <p className="text-sm text-white">1 spot left this month</p>
+                <h6 className="font-satoshi text-sm font-bold text-white">Request a Consultation</h6>
+                <p className="text-sm text-white">Let&apos;s build your digital system</p>
               </div>
               <Link href="/contact">
                 <figure className="relative h-[55px] w-[55px] cursor-pointer overflow-hidden bg-primary">

@@ -2,9 +2,11 @@
   {
     "title": "Solutions",
     "links": [
-      { "href": "/agents/voice", "label": "Voxia — 24/7 Voice Agent" },
-      { "href": "/agents/sales", "label": "QuotaX — AI Sales Agent" },
-      { "href": "/agents/synapse", "label": "Synapse — AI Integration Hub" }
+      { "href": "/services", "label": "Web Design & Development" },
+      { "href": "/services#cms", "label": "Proprietary CMS Platform" },
+      { "href": "/services#ai-workflows", "label": "AI Workflows & Automation" },
+      { "href": "/services#saas", "label": "AI-Powered SaaS Solutions" },
+      { "href": "/services#hosting", "label": "Managed Hosting & Support" }
     ]
   },
   {
@@ -12,9 +14,8 @@
     "links": [
       { "href": "/about", "label": "About DossX" },
       { "href": "/partners", "label": "Partner Program" },
-      { "href": "/investors", "label": "Investors" },
-      { "href": "/seo-blog", "label": "Blog" },
-      { "href": "/pricing", "label": "Pricing" },
+      { "href": "/seo-blog", "label": "Growth Lab" },
+      { "href": "/pricing", "label": "Plans" },
       { "href": "/contact", "label": "Contact" }
     ]
   },

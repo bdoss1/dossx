@@ -12,7 +12,7 @@ interface MenuItemProps {
   isActive?: boolean
 }
 
-/* ---- Updated to match footer ---- */
+/* ---- Updated for rebrand: websites + CMS + hosting + AI workflows + AI-powered SaaS ---- */
 const menuItems: MenuItemProps[] = [
   {
     title: 'Home',
@@ -23,9 +23,9 @@ const menuItems: MenuItemProps[] = [
     title: 'Solutions',
     url: '#',
     items: [
-      { title: 'Voxia — Voice Agent', url: '/agents/voice' },
-      { title: 'QuotaX — Sales Agent', url: '/agents/sales' },
-      { title: 'Synapse — Orchestration', url: '/agents/synapse' },
+      { title: 'Web Design & Development', url: '/services' },
+      { title: 'AI Workflows & Automation', url: '/services#ai-workflows' },
+      { title: 'AI-Powered SaaS Solutions', url: '/services#saas' },
       { title: 'All Services', url: '/services' },
     ],
   },
@@ -33,9 +33,8 @@ const menuItems: MenuItemProps[] = [
     title: 'Resources',
     url: '#',
     items: [
-      { title: 'DossX Blog', url: '/seo-blog' },
+      { title: 'Growth Lab', url: '/seo-blog' },
       { title: 'Partners', url: '/partners' },
-      { title: 'Investors', url: '/investors' },
       { title: 'System Status', url: '/status' },
     ],
   },
@@ -44,9 +43,8 @@ const menuItems: MenuItemProps[] = [
     url: '#',
     items: [
       { title: 'About DossX', url: '/about' },
-      { title: 'Pricing', url: '/pricing' },
+      { title: 'Plans', url: '/pricing' },
       { title: 'Contact', url: '/contact' },
-
     ],
   },
   {
@@ -57,8 +55,6 @@ const menuItems: MenuItemProps[] = [
       { title: 'Terms of Service', url: '/terms' },
       { title: 'Privacy Policy', url: '/policy' },
       { title: 'Support Center', url: '/support' },
-
-
     ],
   },
 ]

@@ -1,6 +1,6 @@
 ---
 title: 'SwiftBuild Business Automation Suite'
-description: 'One dashboard of n8n workflows that captures leads, texts missed callers, and drives repeat business.'
+description: 'One dashboard of AI workflows that captures leads, texts missed callers, and drives repeat business.'
 coverImage: '/images/services/dossx_header.png'
 badgeTitle: 'Local Biz Growth'
 logoDark: '/images/dossx_logo.png'

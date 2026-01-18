@@ -18,18 +18,18 @@ const ServicesV15 = () => {
         <div className="mb-16 flex flex-col items-start justify-center gap-x-10 gap-y-3 md:mb-20 md:flex-row md:items-center lg:justify-start">
           <div className="md:w-[60%]">
             <RevealWrapper className="rv-badge mb-3 md:mb-4">
-              <span className="rv-badge-text">Solutions</span>
+              <span className="rv-badge-text">The DossX Difference</span>
             </RevealWrapper>
             <TextAppearAnimation02>
               <h2>
-                From Idea to Impact: AI Automations That Drive<br />
-            <i className="font-instrument"> Real-World Results</i>
+                More Than a Website.<br />
+            <i className="font-instrument"> A Complete Digital Ecosystem</i>
               </h2>
             </TextAppearAnimation02>
           </div>
           <div className="max-md:w-full md:w-[40%]">
             <p className="text-appear text-appear-2 max-w-lg max-md:text-justify md:place-self-end md:text-right">
-            At DossX, we fuse cutting-edge AI with strategic execution to turn complex workflows into seamless growth — helping your business operate smarter, respond faster, and engage deeper.
+            Most businesses rely on fragmented tools and rigid platforms. DossX engineers unified digital ecosystems designed to perform, automate, and scale from day one.
             </p>
             <RevealWrapper as="ul" className="reveal-me mt-5 justify-self-end max-md:w-full md:mt-10">
               <li className="mx-auto block w-full text-center md:inline-block md:w-auto">
