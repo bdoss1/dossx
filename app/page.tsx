@@ -13,27 +13,21 @@ import Agent from '@/components/agent/VoiceAgent'
 import VoiceAgent from '@/components/agent/VoiceAgent'
 
 export const metadata = {
-  title: 'DossX | Future-Ready Apps & Automation',
+  title: 'DossX | Custom Websites, AI Workflows & AI-Powered SaaS Solutions',
+  description: 'DossX builds intelligent digital platforms: custom websites, proprietary CMS, managed hosting, AI workflows, and AI-powered SaaS solutions engineered for growth.',
 }
-
-
 
 const homepage17 = () => {
   return (
     <LayoutTwo>
-   
       <HeroV17 />
       <SocialProof />
-     {/* <MarqueeV3 /> */}
-      {/*< <ClientSuccessStories /> */}
       <ServicesV15 />
-      {/*<DawnloadOurApp /> */}
       <WhyChooseUsV6 />
       <FaqV2 titleChange />
-      <CTA buttonText="Launch Now">
-       Launch Your AI Workflow in Minutes.
+      <CTA buttonText="Start Your Project">
+        Your business deserves more than a website. It deserves intelligence.
       </CTA>
-     {/* <VoiceAgent />  */}
 
 
 

@@ -2,37 +2,37 @@
   [
     {
       "id": 1,
-      "question": "Which DossX solution is right for my business?",
-      "answer": "If you want 24/7 phone and web support, VoiceAgent is your go-to. For smarter lead generation and follow-ups, SalesAgent handles the heavy lifting. Need clean, reliable data across tools? DataAgent keeps everything synced. And if you’re just starting your AI journey, our Consulting packages guide you from strategy to launch."
+      "question": "What services does DossX offer?",
+      "answer": "DossX provides end-to-end digital infrastructure including custom website design and development, a proprietary CMS platform, AI workflows and automation, AI-powered SaaS solutions, and fully managed hosting with ongoing support. We build unified digital ecosystems designed to perform, automate, and scale."
     },
     {
       "id": 2,
       "question": "How does DossX integrate with my existing systems?",
-      "answer": "DossX solutions connect to CRMs, ERPs, calendars, and databases via secure APIs or lightweight SDKs. Most setups require no custom development—just add your credentials in the dashboard and start syncing data, calls, and workflows in minutes."
+      "answer": "DossX solutions connect seamlessly to your existing tools — CRMs, calendars, databases, marketing platforms, and more. Our AI workflows orchestrate data and actions across your stack through secure integrations, keeping everything in sync without manual effort."
     }
   ],
   [
     {
       "id": 3,
-      "question": "How is pricing structured and billed?",
-      "answer": "Each solution has Starter, Growth, and Pro monthly tiers based on usage and feature depth. A one-time setup fee is billed with your first subscription, and all plans are month-to-month with no long-term contracts. You can upgrade, downgrade, or cancel anytime."
+      "question": "What is the DossX proprietary CMS?",
+      "answer": "Our proprietary CMS is a flexible publishing platform built specifically for modern business needs. Unlike traditional builders, it offers modular content structure, custom publishing workflows, scalable architecture, and multi-site capabilities — all without the bloat, plugin conflicts, or security vulnerabilities of legacy systems."
     },
     {
       "id": 4,
-      "question": "What’s the typical onboarding timeline?",
-      "answer": "Most clients are live within 3–7 business days. After you subscribe, our team handles setup, connects your data sources, and walks you through a kickoff call. Your first AI-powered agents or data pipelines can be active within the first week."
+      "question": "What's the typical project timeline?",
+      "answer": "Most clients are live within weeks, not months. After an initial consultation, we scope your project, build in agile sprints, and keep you informed with regular updates. The exact timeline depends on project complexity, but we're built for speed without sacrificing quality."
     }
   ],
   [
     {
       "id": 5,
       "question": "Can DossX build custom AI solutions for my business?",
-      "answer": "Absolutely. Beyond our standard solutions, we offer custom development through our Consulting packages. Whether you need a unique voice workflow, a specialized data pipeline, or complex multi-agent orchestration, we’ll design and build a solution tailored to your exact goals."
+      "answer": "Absolutely. Beyond websites and standard automation, we design and build custom AI-powered SaaS solutions tailored to your specific business needs — whether that's internal tools, customer-facing platforms, workflow automation, or AI-assisted products. We work with you to define requirements and deliver a solution that scales with your growth."
     },
     {
       "id": 6,
-      "question": "What reporting and analytics do I get?",
-      "answer": "Every DossX solution includes a real-time dashboard that tracks usage, performance, and ROI metrics. Higher tiers add deeper analytics—like transcript insights for VoiceAgent, pipeline conversions for SalesAgent, and anomaly detection reports for DataAgent."
+      "question": "What's included with managed hosting?",
+      "answer": "DossX managed hosting includes 24/7 uptime monitoring, performance optimization, security management, regular maintenance and updates, and ongoing technical support. We handle the infrastructure so you can focus on running your business."
     }
   ]
 ]

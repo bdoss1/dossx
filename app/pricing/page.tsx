@@ -1,189 +1,196 @@
 import CTA from '@/components/shared/CTA'
-import CtaImageSlider from '@/components/shared/CtaImageSlider'
 import LayoutOne from '@/components/shared/LayoutOne'
 import PageHero from '@/components/shared/PageHero'
 import Link from 'next/link'
-import SubscribeButton from '@/components/pricing/SubscribeButton' // unified checkout button
 
-export const metadata = { title: 'Pricing' }
-
-const TIERS = [
-  { key: 'starter', name: 'Starter', blurb: 'For small teams getting started', badge: 'Most Accessible' },
-  { key: 'growth',  name: 'Growth',  blurb: 'For scaling teams and integrations', badge: 'Most Popular' },
-  { key: 'pro',     name: 'Pro',     blurb: 'For advanced needs & compliance', badge: 'Best Value' },
-] as const
-
-// One-time setup fees per product
-const SETUP_FEES: Record<'voice' | 'sales', number> = {
-  voice: 499, // branding, KB import, calendar + DB wiring
-  sales: 399, // CRM connection, pipeline mapping, starter flows
+export const metadata = {
+  title: 'Plans | DossX',
+  description: 'Choose the right DossX plan for your business. From launch to enterprise — scalable digital infrastructure and AI-powered solutions.',
 }
 
-// ----------------- PRODUCTS -----------------
-const PRODUCTS = [
+const PLANS = [
   {
-    key: 'voice',
-    title: 'Voxia (VoiceAgent)',
-    desc: '24/7 AI voice concierge with knowledge base + calendar.',
-    price: { starter: '$229/mo', growth: '$499/mo', pro: '$999/mo' },
-    runs:  { starter: '500 runs', growth: '2,500 runs', pro: '10,000 runs' },
-    features: [
-      ['Starter', ['Website/phone voice widget', 'FAQ + DB + Calendar basics', 'Transcripts & basic analytics']],
-      ['Growth',  ['Bookings + Slack/Teams handoff', 'Custom branding', 'Email summaries & alerts']],
-      ['Pro',     ['Full integrations & compliance', 'Advanced analytics dashboard', 'Priority support SLA']],
+    name: 'Launch',
+    description: 'For businesses getting started with a strong digital foundation.',
+    scope: 'Essential scope',
+    highlights: [
+      'Custom website design & development',
+      'Proprietary CMS setup',
+      'Basic hosting & security',
+      'Core performance optimization',
+      'Email support',
     ],
   },
   {
-    key: 'sales',
-    title: 'QuotaX (SalesAgent)',
-    desc: 'AI funnel automation with CRM sync and follow-ups.',
-    price: { starter: '$229/mo', growth: '$449/mo', pro: '$899/mo' },
-    runs:  { starter: '1,000 leads', growth: '5,000 leads', pro: 'Unlimited workflows*' },
-    features: [
-      ['Starter', ['Lead capture & enrichment', 'Basic CRM integration', 'Email follow-ups']],
-      ['Growth',  ['Multi-channel outreach (email/SMS/DM)', 'Advanced sequences & playbooks', 'Pipeline analytics']],
-      ['Pro',     ['Enterprise CRM integrations', 'Advanced reporting & governance', 'Priority support SLA']],
+    name: 'Scale',
+    description: 'For growing businesses adding automation and advanced features.',
+    scope: 'Growth scope',
+    highlights: [
+      'Everything in Launch',
+      'AI workflow automation',
+      'Advanced CMS features',
+      'Enhanced hosting & CDN',
+      'Priority email & chat support',
     ],
+    popular: true,
   },
-  // -------- Synapse set to Contact for pricing ----------
   {
-    key: 'synapse',
-    title: 'Synapse (Workflow Intelligence)',
-    desc: 'Unified insights, cross-app actions, and decisioning across your stack.',
-    // Using "contact" flags for all tiers
-    price: { starter: 'Contact us', growth: 'Contact us', pro: 'Contact us' },
-    runs:  { starter: 'Custom scope', growth: 'Custom scope', pro: 'Custom scope' },
-    features: [
-      ['Starter', ['Connect core systems (CRM/Calendar/DB)', 'KPI snapshots & alerts', 'Foundational playbooks']],
-      ['Growth',  ['Multi-source orchestration', 'Team dashboards & governance', 'Advanced connectors']],
-      ['Pro',     ['Real-time event bus', 'Fine-grained access & audit', 'Custom data models & SLAs']],
+    name: 'Optimize',
+    description: 'For established businesses maximizing performance and efficiency.',
+    scope: 'Performance scope',
+    highlights: [
+      'Everything in Scale',
+      'Advanced AI-powered features',
+      'Custom integrations',
+      'Performance monitoring',
+      'Dedicated support channel',
     ],
-    contactOnly: true as const,
   },
-] as const
-
-// ---- UI bits ----
-function TierCard({
-  product,
-  tier,
-}: {
-  product: (typeof PRODUCTS)[number],
-  tier: (typeof TIERS)[number]
-}) {
-  const price = product.price[tier.key as 'starter' | 'growth' | 'pro']
-  const usage = product.runs[tier.key as 'starter' | 'growth' | 'pro']
-  const feat  = product.features.find(([label]) => label.toLowerCase() === tier.name.toLowerCase())?.[1] as string[] | undefined
-
-  const isContactOnly = (product as any).contactOnly === true
-  const setup = (product.key === 'voice' || product.key === 'sales') ? SETUP_FEES[product.key] : undefined
-
-  return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur dark:bg-secondary">
-      <div className="mb-2 flex items-center justify-between">
-        <h4 className="text-lg font-semibold">{tier.name}</h4>
-        <span className="rounded-full border border-white/10 px-2 py-0.5 text-xs text-white/70">{tier.badge}</span>
-      </div>
-
-      {/* Price / Contact */}
-      <div className="mb-1 text-3xl font-bold">
-        {isContactOnly ? 'Contact us' : price}
-      </div>
-      <div className="mb-4 text-sm text-white/70">{usage}</div>
-
-      {/* Features */}
-      <ul className="mb-4 space-y-2 text-sm text-white/80">
-        {(feat || []).map((f) => (
-          <li key={f} className="flex items-start gap-2">
-            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary/80" />
-            <span>{f}</span>
-          </li>
-        ))}
-      </ul>
-
-      {/* Setup fee note (only for products that use SubscribeButton) */}
-      {!isContactOnly && setup && (
-        <p className="mb-4 text-xs text-white/70">
-          One-time setup fee: <span className="font-semibold">${setup}</span> (billed with first purchase)
-        </p>
-      )}
-
-      {/* Action */}
-      {isContactOnly ? (
-        <Link
-          href="/contact"
-          className="rv-button rv-button-secondary block w-full text-center"
-        >
-          <div className="rv-button-top"><span>Contact Sales — {product.title}</span></div>
-          <div className="rv-button-bottom"><span className="text-nowrap">Contact Sales — {product.title}</span></div>
-        </Link>
-      ) : (
-        <SubscribeButton
-          product={product.key as 'voice' | 'sales'}
-          tier={tier.key as 'starter' | 'growth' | 'pro'}
-          label={`Subscribe – ${product.title}`}
-          className="rv-button rv-button-primary block w-full text-center"
-        />
-      )}
-
-      <p className="mt-3 text-xs text-white/60">Cancel anytime. *Fair use limits may apply.</p>
-    </div>
-  )
-}
+  {
+    name: 'Systems',
+    description: 'For enterprises needing full-stack digital infrastructure.',
+    scope: 'Enterprise scope',
+    highlights: [
+      'Everything in Optimize',
+      'AI-powered SaaS development',
+      'Enterprise hosting & SLAs',
+      'Custom security & compliance',
+      'Dedicated account manager',
+    ],
+  },
+]
 
 const PricingPage = () => {
   return (
     <LayoutOne>
       <PageHero
-        title="Pricing"
+        title="Service"
         italicTitle="Plans"
-        badgeTitle="Pricing"
-        description="One subscription, real outcomes. Launch DossX products fast, scale when growth demands."
+        badgeTitle="Plans"
+        description="Choose the engagement level that fits your business. Every plan includes our full-service approach to digital infrastructure."
         scale
       />
 
-      {/* SaaS Product Sections */}
-      <section className="container space-y-14 pb-10">
-        {PRODUCTS.map((p) => (
-          <div key={p.key} className="rounded-3xl border border-white/10 bg-black/20 p-6 md:p-10">
-            <div className="mb-6 md:mb-8">
-              <h3 id={`${p.key}-pricing`} className="text-2xl md:text-3xl font-bold">{p.title}</h3>
-              <p className="mt-1 text-white/70">{p.desc}</p>
+      {/* Plans Grid */}
+      <section className="container pb-20">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {PLANS.map((plan) => (
+            <div
+              key={plan.name}
+              className={`relative rounded-2xl border p-6 ${
+                plan.popular
+                  ? 'border-primary bg-primary/5'
+                  : 'border-white/10 bg-white/5'
+              }`}
+            >
+              {plan.popular && (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white">
+                  Most Popular
+                </span>
+              )}
+
+              <h3 className="mb-2 text-2xl font-bold">{plan.name}</h3>
+              <p className="mb-4 text-sm text-white/70">{plan.description}</p>
+
+              <div className="mb-6 border-t border-white/10 pt-4">
+                <p className="text-sm font-semibold text-white/80">{plan.scope}</p>
+              </div>
+
+              <ul className="mb-6 space-y-2">
+                {plan.highlights.map((highlight) => (
+                  <li key={highlight} className="flex items-start gap-2 text-sm text-white/80">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                href="/contact"
+                className={`block w-full rounded-lg py-3 text-center font-semibold transition ${
+                  plan.popular
+                    ? 'bg-primary text-white hover:bg-primary/90'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                }`}
+              >
+                Request a Consultation
+              </Link>
             </div>
-            <div className="grid gap-5 md:grid-cols-3">
-              {TIERS.map((t) => (
-                <TierCard key={t.key} product={p} tier={t} />
-              ))}
+          ))}
+        </div>
+      </section>
+
+      {/* What's Included */}
+      <section className="container pb-20">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12">
+          <h2 className="mb-8 text-center text-3xl font-bold">What Every Plan Includes</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="text-center">
+              <h4 className="mb-2 text-lg font-semibold">Performance-First Builds</h4>
+              <p className="text-sm text-white/70">Core Web Vitals optimized for speed and conversion.</p>
+            </div>
+            <div className="text-center">
+              <h4 className="mb-2 text-lg font-semibold">Proprietary CMS</h4>
+              <p className="text-sm text-white/70">Flexible content management without the limitations.</p>
+            </div>
+            <div className="text-center">
+              <h4 className="mb-2 text-lg font-semibold">Secure Hosting</h4>
+              <p className="text-sm text-white/70">Enterprise-grade infrastructure with SSL and backups.</p>
+            </div>
+            <div className="text-center">
+              <h4 className="mb-2 text-lg font-semibold">Mobile-First Design</h4>
+              <p className="text-sm text-white/70">Responsive experiences across all devices.</p>
+            </div>
+            <div className="text-center">
+              <h4 className="mb-2 text-lg font-semibold">SEO Foundations</h4>
+              <p className="text-sm text-white/70">Technical SEO built into every project.</p>
+            </div>
+            <div className="text-center">
+              <h4 className="mb-2 text-lg font-semibold">Ongoing Support</h4>
+              <p className="text-sm text-white/70">Maintenance and updates included.</p>
             </div>
           </div>
-        ))}
+        </div>
       </section>
 
-      {/* Add-ons Strip */}
-      <section className="container mb-16 rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8">
-        <h4 className="text-xl font-semibold">Add-Ons & Upsells</h4>
-        <ul className="mt-3 grid gap-2 text-sm text-white/80 md:grid-cols-2 lg:grid-cols-3">
-          <li>Extra Usage: +$25 / 500 runs · +$200 / 5,000 runs</li>
-          <li>Custom Voice Pack: $149 one-time or $49/mo</li>
-          <li>Phone Routing (Twilio/Zoom/Teams): $99/mo</li>
-          <li>Additional CRM/Data Connectors: $59–$79/mo</li>
-          <li>Real-Time Sync Upgrade: $199/mo</li>
-          <li>Priority SLA: $299/mo · Dedicated Success: $499/mo · White-Label: $199/mo</li>
-        </ul>
+      {/* Add-ons */}
+      <section className="container pb-20">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12">
+          <h2 className="mb-6 text-2xl font-bold">Available Add-Ons</h2>
+          <p className="mb-8 text-white/70">Enhance your plan with additional capabilities as your needs grow.</p>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-lg bg-white/5 p-4">
+              <h4 className="font-semibold">Extended Automation</h4>
+              <p className="text-sm text-white/70">Additional AI workflow capacity</p>
+            </div>
+            <div className="rounded-lg bg-white/5 p-4">
+              <h4 className="font-semibold">Custom Integrations</h4>
+              <p className="text-sm text-white/70">Connect additional tools and platforms</p>
+            </div>
+            <div className="rounded-lg bg-white/5 p-4">
+              <h4 className="font-semibold">Advanced Analytics</h4>
+              <p className="text-sm text-white/70">Deeper insights and reporting</p>
+            </div>
+            <div className="rounded-lg bg-white/5 p-4">
+              <h4 className="font-semibold">Priority Support</h4>
+              <p className="text-sm text-white/70">Faster response times and SLAs</p>
+            </div>
+            <div className="rounded-lg bg-white/5 p-4">
+              <h4 className="font-semibold">White-Label Options</h4>
+              <p className="text-sm text-white/70">Remove DossX branding for partners</p>
+            </div>
+            <div className="rounded-lg bg-white/5 p-4">
+              <h4 className="font-semibold">Multi-Site Management</h4>
+              <p className="text-sm text-white/70">Manage multiple properties from one dashboard</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* CTA (short contact blurb) */}
-      <section className="container mb-20 text-center">
-        <h3 className="text-2xl md:text-3xl font-bold mb-4">
-          Not sure which plan fits best?
-        </h3>
-        <p className="mb-6 text-white/70 max-w-2xl mx-auto">
-          Tell us about your stack and goals — we’ll recommend the right starting tier and stand up a quick pilot.
-        </p>
-        <Link href="/contact" className="rv-button rv-button-primary inline-block">
-          <div className="rv-button-top"><span>Contact Us</span></div>
-          <div className="rv-button-bottom"><span className="text-nowrap">Contact Us</span></div>
-        </Link>
-      </section>
+      {/* CTA */}
+      <CTA buttonText="Request a Consultation">
+        Not sure which plan fits best? Tell us about your project.
+      </CTA>
     </LayoutOne>
   )
 }

@@ -12,11 +12,11 @@ const WhyChooseUsV6 = () => {
         <div className="mb-16 flex flex-col items-start justify-center gap-x-10 gap-y-4 md:flex-row lg:mb-24 lg:justify-between">
           <div className="md:w-[60%] md:self-start">
             <RevealWrapper className="rv-badge mb-2">
-              <span className="rv-badge-text">Why Choose DossX</span>
+              <span className="rv-badge-text">Powered by Intelligence</span>
             </RevealWrapper>
             <TextAppearAnimation>
               <h2 className="text-appear lg:leading-[1.1]">
-                Ship-ready&nbsp;<i className="font-instrument">AI</i>&nbsp;that scales with your business
+                Digital platforms that&nbsp;<i className="font-instrument">work</i>&nbsp;while you sleep
               </h2>
             </TextAppearAnimation>
           </div>
@@ -24,8 +24,7 @@ const WhyChooseUsV6 = () => {
           <div className="w-full md:w-[40%] md:max-w-72 md:self-end lg:max-w-[470px]">
             <TextAppearAnimation>
               <p className="text-appear max-w-lg md:place-self-end md:text-right">
-                DossX turns real workflows into revenue: voice agents that never sleep, sales automation that never
-                forgets, and orchestration that keeps every system in sync. Faster launches, cleaner ops, happier customers.
+                DossX integrates automation and AI directly into your digital foundation, creating systems that operate continuously behind the scenes to save time, reduce manual work, and increase efficiency.
               </p>
             </TextAppearAnimation>
 
@@ -44,47 +43,44 @@ const WhyChooseUsV6 = () => {
           </div>
         </div>
 
-        {/* ─── Solution Cards (DossX Core) ─── */}
+        {/* ─── Core Service Cards ─── */}
         <article>
           <RevealWrapper className="mb-[30px] flex flex-col gap-[30px] max-lg:flex-wrap md:flex-row">
-            {/* Voxia */}
+            {/* Web Design & Development */}
             <RevealWrapper className="flex-1 border px-[30px] py-20 dark:border-dark">
-              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Voxia — 24/7 Voice Concierge</h5>
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Web Design & Development</h5>
               <p className="text-base leading-[1.6]">
-                Natural, human-sounding voice powered by ElevenLabs + OpenAI. Answers FAQs, books appointments, checks
-                order status, and hands off to humans in Slack/Teams when it matters.
+                High-performance digital experiences designed to engage users and convert traffic into revenue. Custom UI/UX, mobile-first development, and SEO-optimized structure.
               </p>
               <div className="mt-5">
-                <Link href="/agents/voice" className="underline hover:text-primary">
-                  Explore Voxia →
+                <Link href="/services" className="underline hover:text-primary">
+                  Explore Web Services →
                 </Link>
               </div>
             </RevealWrapper>
 
-            {/* QuotaX */}
+            {/* Proprietary CMS */}
             <RevealWrapper className="flex-1 border px-[30px] py-20 dark:border-dark">
-              <h5 className="mb-2.5 mt-5 lg:text-[35px]">QuotaX — AI Sales Engine</h5>
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Proprietary CMS Platform</h5>
               <p className="text-base leading-[1.6]">
-                Capture, score, and nurture leads across email/SMS/chat. Auto-syncs with your CRM and books meetings
-                while your team sleeps—complete funnel visibility included.
+                A flexible publishing engine created by DossX to give businesses full control without the limits of traditional builders. Modular content, scalable architecture, and fast performance.
               </p>
               <div className="mt-5">
-                <Link href="/agents/sales" className="underline hover:text-primary">
-                  Explore QuotaX →
+                <Link href="/services#cms" className="underline hover:text-primary">
+                  Explore CMS →
                 </Link>
               </div>
             </RevealWrapper>
 
-            {/* Synapse */}
+            {/* AI Workflows */}
             <RevealWrapper className="flex-1 border px-[30px] py-20 dark:border-dark">
-              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Synapse — Workflow Orchestration</h5>
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">AI Workflows & Automation</h5>
               <p className="text-base leading-[1.6]">
-                Event-driven automation that connects your apps, data, and agents. Build branching logic, monitor runs,
-                and keep CRMs, calendars, and billing perfectly in sync.
+                Intelligent backend workflows that eliminate repetitive tasks and streamline operations. Automated lead capture, internal notifications, and workflow-driven system integration.
               </p>
               <div className="mt-5">
-                <Link href="/agents/synapse" className="underline hover:text-primary">
-                  Explore Synapse →
+                <Link href="/services#ai-workflows" className="underline hover:text-primary">
+                  Explore AI Workflows →
                 </Link>
               </div>
             </RevealWrapper>
@@ -92,30 +88,27 @@ const WhyChooseUsV6 = () => {
 
           {/* ─── Platform Advantages ─── */}
           <RevealWrapper className="flex flex-col gap-[30px] md:flex-row">
-            {/* Security */}
+            {/* AI-Powered SaaS */}
             <RevealWrapper className="min-h-[322px] flex-1 border px-[30px] py-20 dark:border-dark">
-              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Enterprise-grade Security</h5>
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">AI-Powered SaaS Solutions</h5>
               <p className="text-base leading-[1.6]">
-                SOC-2 aligned controls, encryption at rest & in transit, role-based access, and full audit trails.
-                Trust built in from day one.
+                Custom software products designed to automate services, centralize operations, and scale business performance. Workflow-driven platforms, AI-assisted tools, and operational dashboards.
               </p>
             </RevealWrapper>
 
-            {/* Speed */}
+            {/* Managed Hosting */}
             <RevealWrapper className="min-h-[322px] flex-1 border px-[30px] py-20 dark:border-dark">
-              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Launch in Days, Not Months</h5>
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Managed Hosting & Support</h5>
               <p className="text-base leading-[1.6]">
-                Pre-wired connectors and opinionated defaults mean you go live fast—then scale with advanced configs
-                as your needs grow.
+                Secure, high-performance environments ensuring your platform stays fast, protected, and optimized. Uptime monitoring, security management, and ongoing support.
               </p>
             </RevealWrapper>
 
-            {/* Human-in-the-loop */}
+            {/* Performance-First */}
             <RevealWrapper className="min-h-[322px] flex-1 border px-[30px] py-20 dark:border-dark">
-              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Human-in-the-Loop by Design</h5>
+              <h5 className="mb-2.5 mt-5 lg:text-[35px]">Performance-First Delivery</h5>
               <p className="text-base leading-[1.6]">
-                Smart escalation and approvals where they matter. Keep teams informed with transcripts, summaries, and
-                alerts—right in Slack/Teams.
+                Core Web Vitals optimized builds that load fast and convert better. Lightning-fast performance across devices with scalable architecture for growth.
               </p>
             </RevealWrapper>
           </RevealWrapper>

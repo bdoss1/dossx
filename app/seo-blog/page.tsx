@@ -4,7 +4,8 @@ import LayoutOne from '@/components/shared/LayoutOne'
 import getMarkDownData from '@/utils/GetMarkDownData'
 
 export const metadata = {
-  title: 'The DossX Growth Lab',
+  title: 'DossX Growth Lab | Insights on Web, Automation & AI',
+  description: 'Insights on performance web infrastructure, AI workflows, automation strategy, and building scalable SaaS systems.',
 }
 
 export interface Blog2Type {
@@ -13,16 +14,14 @@ export interface Blog2Type {
   [key: string]: any
 }
 
-// ✅ Updated to load from new blog folder
 const loadedBlogs: Blog2Type[] = getMarkDownData('data/dossx-blog')
 
 const BlogPage02 = () => {
   return (
     <LayoutOne>
-      {/* ✅ Updated hero title to match new blog brand */}
       <BlogHero
-        title="The DossX Growth Lab"
-        subtitle="Insights, strategies, and stories on how AI is reshaping business — from automation to revenue growth."
+        title="DossX Growth Lab"
+        subtitle="Insights on performance web infrastructure, AI workflows, automation strategy, and building scalable SaaS systems."
       />
       <BlogItems loadedBlogs={loadedBlogs} />
     </LayoutOne>

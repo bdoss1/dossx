@@ -11,7 +11,13 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
-  title: 'DossX | Where AI Meets Real-World Business',
+  title: 'DossX | Custom Websites, AI Workflows & AI-Powered SaaS',
+  description: 'DossX builds intelligent digital platforms: custom websites, proprietary CMS, managed hosting, AI workflows, and AI-powered SaaS solutions engineered for growth.',
+  openGraph: {
+    title: 'DossX | Custom Websites, AI Workflows & AI-Powered SaaS',
+    description: 'DossX builds intelligent digital platforms: custom websites, proprietary CMS, managed hosting, AI workflows, and AI-powered SaaS solutions engineered for growth.',
+    siteName: 'DossX',
+  },
 }
 
 export default function RootLayout({
