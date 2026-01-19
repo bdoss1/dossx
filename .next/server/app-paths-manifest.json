@@ -1,9 +1,0 @@
-{
-  "/about/page": "app/about/page.js",
-  "/agents/sales/page": "app/agents/sales/page.js",
-  "/agents/voice/page": "app/agents/voice/page.js",
-  "/page": "app/page.js",
-  "/seo-blog/page": "app/seo-blog/page.js",
-  "/services/page": "app/services/page.js",
-  "/support/page": "app/support/page.js"
-}

@@ -10,19 +10,18 @@ const HeroV17 = () => {
         <div className="text-center">
           {/* Badge */}
           <div className="rv-badge mb-4 inline-flex items-center justify-center">
-            <span className="rv-badge-text">Websites + AI Workflows + SaaS</span>
+            <span className="rv-badge-text">AI Workflows + SaaS</span>
           </div>
 
           {/* Headline */}
           <h1 className="mb-3 lg:leading-[1.08]">
-            Websites. Systems. AI-Powered Growth.
+            AI-Powered Growth.
           </h1>
 
           {/* Subhead */}
           <p className="mx-auto mb-8 max-w-xl md:mb-14 lg:max-w-[800px] xl:mb-[76px]">
-            DossX builds intelligent digital platforms that automate operations, scale businesses, and turn your online presence into a performance engine.
-            <br /><br />
-            <span className="text-white/70">Custom websites, proprietary CMS, managed hosting, AI workflows, and scalable SaaS solutions — engineered for companies that refuse to move slow.</span>
+            DossX delivers intelligent automation, AI voice technology, and scalable SaaS solutions designed to power modern business growth.<br /><br />
+            <span className="text-white/70">AI workflows, and scalable SaaS solutions — engineered for companies that refuse to move slow.</span>
           </p>
 
           {/* CTAs */}
