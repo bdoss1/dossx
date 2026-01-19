@@ -23,7 +23,6 @@ const menuItems: MenuItemProps[] = [
     title: 'Solutions',
     url: '#',
     items: [
-      { title: 'Web Platform', url: '/services#web-platform' },
       { title: 'AI Workflows & Automation', url: '/services#ai-workflows' },
       { title: 'Voxia — AI Voice Agent', url: '/services#voxia' },
       { title: 'AI-Powered SaaS', url: '/services#saas' },

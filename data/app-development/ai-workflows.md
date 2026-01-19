@@ -1,24 +1,24 @@
 ---
 title: 'AI Workflows & Automation'
-description: 'Intelligent backend workflows that eliminate repetitive tasks and streamline operations.'
+description: 'Intelligent automation systems that streamline operations, eliminate repetitive work, and connect business tools into powerful backend workflows.'
 coverImage: '/images/services/dossx_header.png'
 badgeTitle: 'AI Automation'
 logoDark: '/images/dossx_logo.png'
-feature: ['Lead Routing & Notifications', 'Process Automation', 'Marketing Operations', 'System Integration']
+feature: ['Automated Lead Capture & Routing', 'Smart Operational Workflows', 'AI-Assisted Task Execution', 'System Integrations', 'Process Automation']
 ---
 
 ### Service Overview
 
-DossX designs intelligent automation pipelines that handle the repetitive work so your team can focus on strategy and growth. From lead routing to internal workflows, we build systems that operate continuously behind the scenes.
+DossX builds intelligent automation systems that streamline operations, eliminate repetitive work, and connect business tools into powerful backend workflows.
 
 ### Our Service Includes
 
-**Automated Lead Routing:** Capture and route leads to the right team members instantly.
-**Internal Notifications:** Keep teams informed with smart alerts and triggers.
-**AI-Assisted Workflows:** Leverage AI to enhance decision-making and efficiency.
-**Marketing Operations Automation:** Automate campaigns, follow-ups, and reporting.
-**Backend Orchestration:** Connect your tools and systems into cohesive workflows.
+**Automated Lead Capture & Routing:** Capture and route leads to the right team members instantly.
+**Smart Operational Workflows:** Build workflows that handle complex business processes automatically.
+**AI-Assisted Task Execution:** Leverage AI to enhance decision-making and automate task completion.
+**System Integrations:** Connect your tools and platforms into cohesive, unified systems.
+**Process Automation Across Platforms:** Automate workflows across all your business applications.
 
 ### Why Choose DossX
 
-Manual processes drain resources and introduce errors. Our intelligent automation pipelines reduce operational overhead while improving accuracy and speed — letting your team work on what matters most.
+Manual processes drain resources and introduce errors. Our intelligent automation systems reduce operational overhead while improving accuracy and speed — letting your team focus on what matters most.

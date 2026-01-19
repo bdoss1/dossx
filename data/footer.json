@@ -2,7 +2,6 @@
   {
     "title": "Solutions",
     "links": [
-      { "href": "/services#web-platform", "label": "Web Platform — Design, CMS & Hosting" },
       { "href": "/services#ai-workflows", "label": "AI Workflows & Automation" },
       { "href": "/services#voxia", "label": "Voxia — AI Voice Agent" },
       { "href": "/services#saas", "label": "AI-Powered SaaS Solutions" }

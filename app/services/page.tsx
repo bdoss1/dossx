@@ -4,8 +4,8 @@ import PageHero from '@/components/shared/PageHero'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Digital Infrastructure & AI-Driven Solutions | DossX',
-  description: 'DossX delivers end-to-end systems combining design, development, proprietary CMS, automation, managed hosting, and AI-powered SaaS.',
+  title: 'AI Automation, Voice Technology & SaaS Solutions | DossX',
+  description: 'DossX delivers intelligent automation, AI voice technology, and scalable SaaS solutions designed to power modern business growth.',
 }
 
 const ServicesPage = () => {
@@ -13,10 +13,10 @@ const ServicesPage = () => {
     <LayoutOne>
       {/* Hero Section */}
       <PageHero
-        title="Digital Infrastructure &"
+        title="Intelligent Automation &"
         italicTitle="AI-Driven Solutions"
         badgeTitle="Services"
-        description="DossX delivers end-to-end systems combining design, development, proprietary CMS, automation, managed hosting, and AI-powered SaaS."
+        description="DossX delivers intelligent automation, AI voice technology, and scalable SaaS solutions designed to power modern business growth."
         scale
       />
 
@@ -24,111 +24,11 @@ const ServicesPage = () => {
       <section className="pb-20 pt-10">
         <div className="container max-w-6xl">
 
-          {/* Web Platform — Design, CMS & Hosting */}
-          <div id="web-platform" className="mb-20 scroll-mt-32">
-            <div className="mb-8 border-l-4 border-primary pl-6">
-              <h2 className="mb-2 text-3xl font-bold md:text-4xl">Web Platform — Design, CMS & Hosting</h2>
-              <p className="text-lg text-white/70">Custom websites built on our proprietary CMS with fully managed hosting — a complete digital foundation.</p>
-            </div>
-
-            {/* Three-column grid for the consolidated service */}
-            <div className="grid gap-6 md:grid-cols-3">
-              {/* Web Design & Development */}
-              <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <h4 className="mb-3 text-xl font-semibold">Design & Development</h4>
-                <ul className="space-y-2 text-white/80">
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Custom UI/UX design
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Mobile-first development
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    SEO-optimized structure
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Performance-focused builds
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Conversion-driven layouts
-                  </li>
-                </ul>
-              </div>
-
-              {/* Proprietary CMS */}
-              <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <h4 className="mb-3 text-xl font-semibold">Proprietary CMS</h4>
-                <ul className="space-y-2 text-white/80">
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Modular content structure
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Easy content management
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Scalable architecture
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Multi-site capabilities
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    No plugin bloat or conflicts
-                  </li>
-                </ul>
-              </div>
-
-              {/* Managed Hosting */}
-              <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <h4 className="mb-3 text-xl font-semibold">Managed Hosting</h4>
-                <ul className="space-y-2 text-white/80">
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    24/7 uptime monitoring
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Performance optimization
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Security management
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Maintenance & updates
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Ongoing support
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Why It Matters - full width */}
-            <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-              <h4 className="mb-3 text-xl font-semibold">Why It Matters</h4>
-              <p className="text-white/80">
-                Your website is your 24/7 sales engine. We deliver a complete web platform — custom design, flexible CMS, and managed hosting — so you get a high-performance site without juggling multiple vendors or fighting with traditional builders.
-              </p>
-            </div>
-          </div>
-
           {/* AI Workflows & Automation */}
           <div id="ai-workflows" className="mb-20 scroll-mt-32">
             <div className="mb-8 border-l-4 border-primary pl-6">
               <h2 className="mb-2 text-3xl font-bold md:text-4xl">AI Workflows & Automation</h2>
-              <p className="text-lg text-white/70">Intelligent workflows that remove repetitive work and keep systems moving automatically.</p>
+              <p className="text-lg text-white/70">Intelligent automation systems that streamline operations, eliminate repetitive work, and connect business tools into powerful backend workflows.</p>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
@@ -136,30 +36,30 @@ const ServicesPage = () => {
                 <ul className="space-y-2 text-white/80">
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Automated lead routing + notifications
+                    Automated lead capture & routing
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    AI-assisted internal workflows
+                    Smart operational workflows
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Marketing operations automation
+                    AI-assisted task execution
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Reporting + data handling pipelines
+                    System integrations
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Backend orchestration across tools
+                    Process automation across platforms
                   </li>
                 </ul>
               </div>
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
                 <h4 className="mb-3 text-xl font-semibold">Why It Matters</h4>
                 <p className="text-white/80">
-                  Manual processes drain resources and introduce errors. Our intelligent automation pipelines handle the repetitive work so your team can focus on strategy and growth.
+                  Manual processes drain resources and introduce errors. Our intelligent automation systems handle the repetitive work so your team can focus on strategy and growth.
                 </p>
               </div>
             </div>
@@ -169,7 +69,7 @@ const ServicesPage = () => {
           <div id="voxia" className="mb-20 scroll-mt-32">
             <div className="mb-8 border-l-4 border-primary pl-6">
               <h2 className="mb-2 text-3xl font-bold md:text-4xl">Voxia — AI Voice Agent</h2>
-              <p className="text-lg text-white/70">Your always-on voice representative, available 24/7 to handle calls, answer FAQs, and schedule appointments.</p>
+              <p className="text-lg text-white/70">AI-powered voice assistant designed to handle customer conversations, automate call responses, and support business communication at scale.</p>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
@@ -177,30 +77,30 @@ const ServicesPage = () => {
                 <ul className="space-y-2 text-white/80">
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Real-time voice conversations powered by AI
+                    Natural voice interactions
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Calendar & CRM sync for automated booking
+                    Automated call handling
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Knowledge-driven responses from your data
+                    Smart routing & responses
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Seamless human handoff when needed
+                    Customer support assistance
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Custom voice profiles to match your brand
+                    Scalable voice automation
                   </li>
                 </ul>
               </div>
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
                 <h4 className="mb-3 text-xl font-semibold">Why It Matters</h4>
                 <p className="text-white/80">
-                  Voxia makes every call a conversion opportunity. It reduces missed calls, automates scheduling, and creates a polished first impression — all while scaling infinitely without hiring additional staff.
+                  Voxia makes every call a conversion opportunity. It reduces missed calls, automates customer interactions, and creates a polished first impression — all while scaling infinitely without hiring additional staff.
                 </p>
               </div>
             </div>
@@ -210,7 +110,7 @@ const ServicesPage = () => {
           <div id="saas" className="mb-20 scroll-mt-32">
             <div className="mb-8 border-l-4 border-primary pl-6">
               <h2 className="mb-2 text-3xl font-bold md:text-4xl">AI-Powered SaaS Solutions</h2>
-              <p className="text-lg text-white/70">Custom software products designed to automate services, centralize operations, and scale business performance.</p>
+              <p className="text-lg text-white/70">Custom SaaS platforms powered by AI and automation to help businesses run smarter, faster, and more efficiently.</p>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
@@ -218,11 +118,11 @@ const ServicesPage = () => {
                 <ul className="space-y-2 text-white/80">
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Workflow-driven platforms
+                    AI-driven business platforms
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    AI-assisted tools
+                    Workflow-based SaaS tools
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
@@ -230,11 +130,11 @@ const ServicesPage = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Subscription-ready software
+                    Subscription-ready systems
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                    Custom internal business systems
+                    Custom software tailored to business needs
                   </li>
                 </ul>
               </div>
@@ -251,27 +151,27 @@ const ServicesPage = () => {
           <div className="mb-20 rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12">
             <h2 className="mb-6 text-center text-3xl font-bold md:text-4xl">Service Plans</h2>
             <p className="mx-auto mb-10 max-w-2xl text-center text-white/70">
-              Choose the engagement level that fits your business. Every plan includes our full-service approach to digital infrastructure.
+              Choose the engagement level that fits your business. Every plan includes our full-service approach to intelligent automation.
             </p>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               <div className="rounded-xl border border-white/10 bg-black/20 p-6 text-center">
                 <h4 className="mb-2 text-xl font-semibold">Launch</h4>
-                <p className="mb-4 text-sm text-white/70">For businesses getting started with a strong digital foundation.</p>
+                <p className="mb-4 text-sm text-white/70">For businesses getting started with automation.</p>
                 <Link href="/contact" className="text-primary underline hover:no-underline">Request a Consultation</Link>
               </div>
               <div className="rounded-xl border border-white/10 bg-black/20 p-6 text-center">
                 <h4 className="mb-2 text-xl font-semibold">Scale</h4>
-                <p className="mb-4 text-sm text-white/70">For growing businesses adding automation and advanced features.</p>
+                <p className="mb-4 text-sm text-white/70">For growing businesses adding advanced automation.</p>
                 <Link href="/contact" className="text-primary underline hover:no-underline">Request a Consultation</Link>
               </div>
               <div className="rounded-xl border border-white/10 bg-black/20 p-6 text-center">
                 <h4 className="mb-2 text-xl font-semibold">Optimize</h4>
-                <p className="mb-4 text-sm text-white/70">For established businesses maximizing performance and efficiency.</p>
+                <p className="mb-4 text-sm text-white/70">For established businesses maximizing efficiency.</p>
                 <Link href="/contact" className="text-primary underline hover:no-underline">Request a Consultation</Link>
               </div>
               <div className="rounded-xl border border-white/10 bg-black/20 p-6 text-center">
                 <h4 className="mb-2 text-xl font-semibold">Systems</h4>
-                <p className="mb-4 text-sm text-white/70">For enterprises needing full-stack digital infrastructure.</p>
+                <p className="mb-4 text-sm text-white/70">For enterprises needing full AI-powered infrastructure.</p>
                 <Link href="/contact" className="text-primary underline hover:no-underline">Request a Consultation</Link>
               </div>
             </div>
@@ -282,7 +182,7 @@ const ServicesPage = () => {
 
       {/* CTA */}
       <CTA buttonText="Request a Consultation">
-        Tell us about your project. Let&apos;s design a digital system built to scale your business.
+        Tell us about your project. Let&apos;s build intelligent systems designed to scale your business.
       </CTA>
     </LayoutOne>
   )
