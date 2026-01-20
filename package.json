@@ -11,7 +11,11 @@
     "format": "prettier --write 'app/**/*.{js,jsx,ts,tsx,css,html}' './**/*.{js,jsx,ts,tsx,css,html}'"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.971.0",
+    "@aws-sdk/s3-request-presigner": "^3.971.0",
+    "@clerk/nextjs": "^6.36.8",
     "@gsap/react": "^2.1.1",
+    "@prisma/client": "^7.2.0",
     "@radix-ui/react-dialog": "^1.1.10",
     "@radix-ui/react-visually-hidden": "^1.2.0",
     "@types/matter-js": "^0.19.8",
@@ -25,6 +29,7 @@
     "matter-js": "^0.20.0",
     "next": "15.1.11",
     "next-themes": "^0.4.3",
+    "prisma": "^7.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
@@ -37,12 +42,17 @@
     "stripe": "^18.5.0",
     "swiper": "^11.1.15",
     "tailwind-merge": "^3.2.0",
-    "unified": "^11.0.5"
+    "unified": "^11.0.5",
+    "uuid": "^13.0.0",
+    "zod": "^4.3.5"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/uuid": "^11.0.0",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "eslint-config-prettier": "^9.1.0",
@@ -53,7 +63,8 @@
     "prettier-plugin-css-order": "^2.1.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.0.17"
   },
   "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }

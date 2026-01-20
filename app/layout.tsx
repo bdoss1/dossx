@@ -9,6 +9,7 @@ import '../scss/main.scss'
 import SplashCursor from '@/components/animation/SplashCursor'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
+import { ClerkProvider } from '@clerk/nextjs'
 
 export const metadata: Metadata = {
   title: 'DossX | Custom Websites, AI Workflows & AI-Powered SaaS',
@@ -26,20 +27,22 @@ export default function RootLayout({
   children: ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${satoshi.variable} antialiased`}>
-        <Suspense fallback={<div>Loading...</div>}>
-          <SmoothScrollProvider>
-            <ThemeModeProvider>
-              <SpeedInsights/>
-              <Analytics />
-              {/*<ThemeSwitcher />*/}
-              <SplashCursor />
-              {children}
-            </ThemeModeProvider>
-          </SmoothScrollProvider>
-        </Suspense>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${satoshi.variable} antialiased`}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <SmoothScrollProvider>
+              <ThemeModeProvider>
+                <SpeedInsights/>
+                <Analytics />
+                {/*<ThemeSwitcher />*/}
+                <SplashCursor />
+                {children}
+              </ThemeModeProvider>
+            </SmoothScrollProvider>
+          </Suspense>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }

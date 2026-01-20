@@ -1,0 +1,260 @@
+// Prisma schema for Voxia self-serve onboarding + billing + dashboard
+// PostgreSQL database (Supabase compatible)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================================
+// ORGANIZATION & MEMBERSHIP
+// ============================================================================
+
+model Organization {
+  id          String   @id @default(uuid()) @db.Uuid
+  ownerUserId String   @map("owner_user_id") // Clerk user id
+  name        String
+  timezone    String   @default("America/New_York")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  members             OrgMember[]
+  subscriptions       Subscription[]
+  voxiaAgents         VoxiaAgent[]
+  calendarConnections CalendarConnection[]
+  calendarRules       CalendarRule[]
+  onboardingState     OnboardingState?
+
+  @@map("organizations")
+}
+
+model OrgMember {
+  id        String   @id @default(uuid()) @db.Uuid
+  orgId     String   @map("org_id") @db.Uuid
+  userId    String   @map("user_id") // Clerk user id
+  role      OrgRole  @default(MEMBER)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  organization Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+
+  @@unique([orgId, userId])
+  @@map("org_members")
+}
+
+enum OrgRole {
+  OWNER
+  ADMIN
+  MEMBER
+}
+
+// ============================================================================
+// SUBSCRIPTIONS
+// ============================================================================
+
+model Subscription {
+  id                   String             @id @default(uuid()) @db.Uuid
+  orgId                String             @map("org_id") @db.Uuid
+  stripeCustomerId     String             @map("stripe_customer_id")
+  stripeSubscriptionId String             @unique @map("stripe_subscription_id")
+  status               SubscriptionStatus @default(INCOMPLETE)
+  plan                 VoxiaPlan
+  currentPeriodEnd     DateTime?          @map("current_period_end")
+  createdAt            DateTime           @default(now()) @map("created_at")
+  updatedAt            DateTime           @updatedAt @map("updated_at")
+
+  organization Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+
+  @@map("subscriptions")
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  TRIALING
+  PAST_DUE
+  CANCELED
+  INCOMPLETE
+  INCOMPLETE_EXPIRED
+  UNPAID
+  PAUSED
+}
+
+enum VoxiaPlan {
+  LAUNCH
+  GROWTH
+  SCALE
+}
+
+// ============================================================================
+// ONBOARDING STATE
+// ============================================================================
+
+model OnboardingState {
+  orgId        String            @id @map("org_id") @db.Uuid
+  stage        OnboardingStage   @default(STARTED)
+  selectedPlan VoxiaPlan?        @map("selected_plan")
+  updatedAt    DateTime          @updatedAt @map("updated_at")
+
+  organization Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+
+  @@map("onboarding_state")
+}
+
+enum OnboardingStage {
+  STARTED
+  PLAN_SELECTED
+  PAID
+  SETUP_SUBMITTED
+  COMPLETE
+}
+
+// ============================================================================
+// VOXIA AGENT
+// ============================================================================
+
+model VoxiaAgent {
+  id                    String      @id @default(uuid()) @db.Uuid
+  orgId                 String      @map("org_id") @db.Uuid
+  externalId            String?     @map("external_id") // from Voxia backend
+  name                  String
+  status                AgentStatus @default(DRAFT)
+  greetingScript        String?     @map("greeting_script") @db.Text
+  tonePreset            String      @default("professional") @map("tone_preset")
+  toneNotes             String?     @map("tone_notes") @db.Text
+  businessHoursJson     Json?       @map("business_hours_json")
+  routingRulesJson      Json?       @map("routing_rules_json")
+  afterHoursBehaviorJson Json?      @map("after_hours_behavior_json")
+  escalationContactsJson Json?      @map("escalation_contacts_json")
+  goalsJson             Json?       @map("goals_json")
+  appointmentTypesJson  Json?       @map("appointment_types_json")
+  bookingRulesJson      Json?       @map("booking_rules_json")
+  offersAppointments    Boolean     @default(false) @map("offers_appointments")
+  createdAt             DateTime    @default(now()) @map("created_at")
+  updatedAt             DateTime    @updatedAt @map("updated_at")
+
+  organization     Organization      @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  knowledgeSources KnowledgeSource[]
+  callLogs         CallLog[]
+
+  @@map("voxia_agents")
+}
+
+enum AgentStatus {
+  DRAFT
+  CONFIGURING
+  ACTIVE
+  PAUSED
+  NEEDS_ATTENTION
+}
+
+// ============================================================================
+// KNOWLEDGE BASE
+// ============================================================================
+
+model KnowledgeSource {
+  id              String               @id @default(uuid()) @db.Uuid
+  agentId         String               @map("agent_id") @db.Uuid
+  type            KnowledgeSourceType
+  title           String
+  location        String               @db.Text // URL or file key
+  content         String?              @db.Text // For pasted text or Q&A
+  status          KnowledgeStatus      @default(PENDING)
+  lastIngestedAt  DateTime?            @map("last_ingested_at")
+  errorMessage    String?              @map("error_message") @db.Text
+  createdAt       DateTime             @default(now()) @map("created_at")
+  updatedAt       DateTime             @updatedAt @map("updated_at")
+
+  agent            VoxiaAgent         @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  knowledgeEntries KnowledgeEntry[]
+
+  @@map("knowledge_sources")
+}
+
+enum KnowledgeSourceType {
+  URL
+  FILE
+  MANUAL
+  QA
+}
+
+enum KnowledgeStatus {
+  PENDING
+  PROCESSING
+  READY
+  ERROR
+}
+
+model KnowledgeEntry {
+  id           String   @id @default(uuid()) @db.Uuid
+  agentId      String   @map("agent_id") @db.Uuid
+  sourceId     String   @map("source_id") @db.Uuid
+  content      String   @db.Text
+  metadataJson Json?    @map("metadata_json")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  source KnowledgeSource @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+
+  @@map("knowledge_entries")
+}
+
+// ============================================================================
+// CALENDAR CONNECTIONS
+// ============================================================================
+
+model CalendarConnection {
+  id                    String           @id @default(uuid()) @db.Uuid
+  orgId                 String           @map("org_id") @db.Uuid
+  provider              CalendarProvider
+  accessTokenEncrypted  String           @map("access_token_encrypted") @db.Text
+  refreshTokenEncrypted String           @map("refresh_token_encrypted") @db.Text
+  expiresAt             DateTime         @map("expires_at")
+  scopes                String?
+  calendarIdsJson       Json?            @map("calendar_ids_json")
+  email                 String?          // Connected account email
+  createdAt             DateTime         @default(now()) @map("created_at")
+  updatedAt             DateTime         @updatedAt @map("updated_at")
+
+  organization Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+
+  @@unique([orgId, provider])
+  @@map("calendar_connections")
+}
+
+enum CalendarProvider {
+  GOOGLE
+  MICROSOFT
+}
+
+model CalendarRule {
+  id        String   @id @default(uuid()) @db.Uuid
+  orgId     String   @map("org_id") @db.Uuid
+  rulesJson Json     @map("rules_json")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  organization Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+
+  @@map("calendar_rules")
+}
+
+// ============================================================================
+// CALL LOGS (Phase 1 stub)
+// ============================================================================
+
+model CallLog {
+  id              String   @id @default(uuid()) @db.Uuid
+  agentId         String   @map("agent_id") @db.Uuid
+  startedAt       DateTime @map("started_at")
+  durationSeconds Int?     @map("duration_seconds")
+  outcome         String?
+  notesJson       Json?    @map("notes_json")
+  callerPhone     String?  @map("caller_phone")
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  agent VoxiaAgent @relation(fields: [agentId], references: [id], onDelete: Cascade)
+
+  @@map("call_logs")
+}
