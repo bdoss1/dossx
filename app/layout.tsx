@@ -9,6 +9,7 @@ import '../scss/main.scss'
 import SplashCursor from '@/components/animation/SplashCursor'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
+import { ClerkProvider } from '@clerk/nextjs'
 
 export const metadata: Metadata = {
   title: 'DossX | Custom Websites, AI Workflows & AI-Powered SaaS',
@@ -20,26 +21,37 @@ export const metadata: Metadata = {
   },
 }
 
+// Conditional Clerk wrapper - only wraps when publishable key is available
+function ConditionalClerkProvider({ children }: { children: ReactNode }) {
+  // During build time without env vars, skip Clerk
+  if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
+    return <>{children}</>
+  }
+  return <ClerkProvider>{children}</ClerkProvider>
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${satoshi.variable} antialiased`}>
-        <Suspense fallback={<div>Loading...</div>}>
-          <SmoothScrollProvider>
-            <ThemeModeProvider>
-              <SpeedInsights/>
-              <Analytics />
-              {/*<ThemeSwitcher />*/}
-              <SplashCursor />
-              {children}
-            </ThemeModeProvider>
-          </SmoothScrollProvider>
-        </Suspense>
-      </body>
-    </html>
+    <ConditionalClerkProvider>
+      <html lang="en">
+        <body className={`${satoshi.variable} antialiased`}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <SmoothScrollProvider>
+              <ThemeModeProvider>
+                <SpeedInsights/>
+                <Analytics />
+                {/*<ThemeSwitcher />*/}
+                <SplashCursor />
+                {children}
+              </ThemeModeProvider>
+            </SmoothScrollProvider>
+          </Suspense>
+        </body>
+      </html>
+    </ConditionalClerkProvider>
   )
 }
