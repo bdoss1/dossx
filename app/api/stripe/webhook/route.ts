@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { stripe } from '@/lib/stripe/config'
-import { db } from '@/lib/db'
+import { getDb } from '@/lib/db'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -130,6 +130,8 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const subscriptionData = await stripe.subscriptions.retrieve(subscriptionId) as any
 
+  const db = await getDb()
+
   // Upsert subscription record
   await db.subscription.upsert({
     where: { stripeSubscriptionId: subscriptionId },
@@ -168,6 +170,8 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
 async function handleSubscriptionUpdated(subscription: any) {
   const { orgId } = subscription.metadata || {}
 
+  const db = await getDb()
+
   // Try to find existing subscription by Stripe ID
   const existingSub = await db.subscription.findUnique({
     where: { stripeSubscriptionId: subscription.id },
@@ -204,6 +208,7 @@ async function handleSubscriptionUpdated(subscription: any) {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function handleSubscriptionDeleted(subscription: any) {
+  const db = await getDb()
   await db.subscription.updateMany({
     where: { stripeSubscriptionId: subscription.id },
     data: {
@@ -220,6 +225,8 @@ async function handleInvoicePaid(invoice: any) {
   const subscriptionId = typeof invoice.subscription === 'string'
     ? invoice.subscription
     : invoice.subscription.id
+
+  const db = await getDb()
 
   // Ensure subscription is marked as active
   await db.subscription.updateMany({
@@ -238,6 +245,8 @@ async function handleInvoicePaymentFailed(invoice: any) {
   const subscriptionId = typeof invoice.subscription === 'string'
     ? invoice.subscription
     : invoice.subscription.id
+
+  const db = await getDb()
 
   // Mark subscription as past due
   await db.subscription.updateMany({

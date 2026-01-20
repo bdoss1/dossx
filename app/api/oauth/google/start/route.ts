@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { getGoogleAuthUrl, isGoogleOAuthConfigured } from '@/lib/oauth/google'
-import { db } from '@/lib/db'
+import { getDb } from '@/lib/db'
 import { v4 as uuid } from 'uuid'
 
 export const runtime = 'nodejs'
@@ -24,6 +24,8 @@ export async function GET() {
         { status: 503 }
       )
     }
+
+    const db = await getDb()
 
     // Find user's organization
     const orgMember = await db.orgMember.findFirst({

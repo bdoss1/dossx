@@ -1,6 +1,6 @@
 import { auth } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
-import { db } from '@/lib/db'
+import { getDb } from '@/lib/db'
 
 export type GatingResult = {
   isAuthenticated: false
@@ -38,6 +38,8 @@ export async function getGatingContext(): Promise<GatingResult> {
   if (!userId) {
     return { isAuthenticated: false }
   }
+
+  const db = await getDb()
 
   // Find the user's organization
   const orgMember = await db.orgMember.findFirst({
@@ -105,6 +107,8 @@ export async function getGatingContext(): Promise<GatingResult> {
  * Ensure user has an organization, creating one if needed
  */
 export async function ensureOrganization(userId: string): Promise<string> {
+  const db = await getDb()
+
   // Check if user already has an org
   const existingMember = await db.orgMember.findFirst({
     where: { userId },

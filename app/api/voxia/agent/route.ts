@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
-import { db } from '@/lib/db'
+import { getDb } from '@/lib/db'
 import { agentUpdateSchema } from '@/lib/voxia/types'
 
 export const runtime = 'nodejs'
@@ -17,6 +17,8 @@ export async function GET() {
         { status: 401 }
       )
     }
+
+    const db = await getDb()
 
     // Find user's agent
     const orgMember = await db.orgMember.findFirst({
@@ -104,6 +106,8 @@ export async function PATCH(req: NextRequest) {
     }
 
     const data = parseResult.data
+
+    const db = await getDb()
 
     // Find user's agent and verify subscription
     const orgMember = await db.orgMember.findFirst({

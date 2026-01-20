@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { exchangeMicrosoftCode } from '@/lib/oauth/microsoft'
-import { db } from '@/lib/db'
+import { getDb } from '@/lib/db'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -47,6 +47,8 @@ export async function GET(req: NextRequest) {
 
     // Exchange code for tokens
     const tokens = await exchangeMicrosoftCode(code)
+
+    const db = await getDb()
 
     // Upsert calendar connection
     await db.calendarConnection.upsert({

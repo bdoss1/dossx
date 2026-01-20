@@ -1,7 +1,7 @@
 import { getGatingContext, canAccessFeature } from '@/lib/voxia/gating'
 import { VoxiaCard } from '@/components/voxia/VoxiaCard'
 import { VoxiaButton } from '@/components/voxia/VoxiaButton'
-import { db } from '@/lib/db'
+import { getDb } from '@/lib/db'
 import { redirect } from 'next/navigation'
 
 export default async function VoxiaOverviewPage() {
@@ -14,6 +14,8 @@ export default async function VoxiaOverviewPage() {
   if (!context.organization) {
     redirect('/voxia/onboarding')
   }
+
+  const db = await getDb()
 
   // Fetch full agent details
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

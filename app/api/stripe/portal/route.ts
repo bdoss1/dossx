@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { stripe, STRIPE_CUSTOMER_PORTAL_RETURN_URL } from '@/lib/stripe/config'
-import { db } from '@/lib/db'
+import { getDb } from '@/lib/db'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -16,6 +16,8 @@ export async function POST(req: NextRequest) {
         { status: 401 }
       )
     }
+
+    const db = await getDb()
 
     // Find user's organization and subscription
     const orgMember = await db.orgMember.findFirst({

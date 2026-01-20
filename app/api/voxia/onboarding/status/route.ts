@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
-import { db } from '@/lib/db'
+import { getDb } from '@/lib/db'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -15,6 +15,8 @@ export async function GET() {
         { status: 401 }
       )
     }
+
+    const db = await getDb()
 
     // Find user's organization
     const orgMember = await db.orgMember.findFirst({

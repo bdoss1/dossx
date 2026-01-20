@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { stripe, getPriceIdForPlan, VoxiaPlanType } from '@/lib/stripe/config'
-import { db } from '@/lib/db'
+import { getDb } from '@/lib/db'
 import { ensureOrganization } from '@/lib/voxia/gating'
 
 export const runtime = 'nodejs'
@@ -30,6 +30,8 @@ export async function POST(req: NextRequest) {
 
     // Ensure user has an organization
     const orgId = await ensureOrganization(userId)
+
+    const db = await getDb()
 
     // Get or create Stripe customer
     const org = await db.organization.findUnique({

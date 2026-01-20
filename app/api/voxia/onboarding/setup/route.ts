@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
-import { db } from '@/lib/db'
+import { getDb } from '@/lib/db'
 import { setupFormSchema, SetupFormData } from '@/lib/voxia/types'
 import { ensureOrganization } from '@/lib/voxia/gating'
 
@@ -34,6 +34,8 @@ export async function POST(req: NextRequest) {
 
     // Ensure organization exists
     const orgId = await ensureOrganization(userId)
+
+    const db = await getDb()
 
     // Verify user has an active subscription
     const subscription = await db.subscription.findFirst({

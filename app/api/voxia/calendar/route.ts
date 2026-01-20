@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
-import { db } from '@/lib/db'
+import { getDb } from '@/lib/db'
 import { calendarRulesSchema } from '@/lib/voxia/types'
 import { listGoogleCalendars, refreshGoogleToken } from '@/lib/oauth/google'
 import { listMicrosoftCalendars, refreshMicrosoftToken } from '@/lib/oauth/microsoft'
@@ -31,6 +31,8 @@ export async function GET() {
         { status: 401 }
       )
     }
+
+    const db = await getDb()
 
     // Find user's organization
     const orgMember = await db.orgMember.findFirst({
@@ -146,6 +148,8 @@ export async function POST(req: NextRequest) {
 
     const body = await req.json()
 
+    const db = await getDb()
+
     // Find user's organization
     const orgMember = await db.orgMember.findFirst({
       where: { userId },
@@ -242,6 +246,8 @@ export async function DELETE(req: NextRequest) {
         { status: 400 }
       )
     }
+
+    const db = await getDb()
 
     // Verify ownership
     const orgMember = await db.orgMember.findFirst({

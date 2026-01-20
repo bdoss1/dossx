@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
-import { db } from '@/lib/db'
+import { getDb } from '@/lib/db'
 import { uploadFile, isS3Configured } from '@/lib/s3/upload'
 
 export const runtime = 'nodejs'
@@ -37,6 +37,8 @@ export async function POST(req: NextRequest) {
         { status: 503 }
       )
     }
+
+    const db = await getDb()
 
     // Find user's agent
     const orgMember = await db.orgMember.findFirst({
