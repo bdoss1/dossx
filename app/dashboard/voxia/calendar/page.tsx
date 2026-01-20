@@ -333,7 +333,7 @@ export default function CalendarPage() {
                 min={0}
                 value={rules.leadTime}
                 onChange={(e) => setRules(r => ({ ...r, leadTime: parseInt(e.target.value) || 0 }))}
-                helperText="How far in advance appointments must be booked"
+                hint="How far in advance appointments must be booked"
               />
               <VoxiaInput
                 label="Maximum Appointments Per Day"
@@ -341,7 +341,7 @@ export default function CalendarPage() {
                 min={1}
                 value={rules.maxPerDay}
                 onChange={(e) => setRules(r => ({ ...r, maxPerDay: parseInt(e.target.value) || 1 }))}
-                helperText="Limit daily appointment volume"
+                hint="Limit daily appointment volume"
               />
               <VoxiaInput
                 label="Buffer Before (minutes)"
@@ -349,7 +349,7 @@ export default function CalendarPage() {
                 min={0}
                 value={rules.bufferBefore}
                 onChange={(e) => setRules(r => ({ ...r, bufferBefore: parseInt(e.target.value) || 0 }))}
-                helperText="Prep time before each appointment"
+                hint="Prep time before each appointment"
               />
               <VoxiaInput
                 label="Buffer After (minutes)"
@@ -357,7 +357,7 @@ export default function CalendarPage() {
                 min={0}
                 value={rules.bufferAfter}
                 onChange={(e) => setRules(r => ({ ...r, bufferAfter: parseInt(e.target.value) || 0 }))}
-                helperText="Wind-down time after each appointment"
+                hint="Wind-down time after each appointment"
               />
             </div>
 

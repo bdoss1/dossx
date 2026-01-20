@@ -2,12 +2,23 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { db } from '@/lib/db'
 import { calendarRulesSchema } from '@/lib/voxia/types'
-import { decrypt } from '@/lib/crypto/encryption'
 import { listGoogleCalendars, refreshGoogleToken } from '@/lib/oauth/google'
 import { listMicrosoftCalendars, refreshMicrosoftToken } from '@/lib/oauth/microsoft'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
+
+// Calendar connection type
+interface CalendarConnectionRecord {
+  id: string
+  provider: string
+  accessTokenEncrypted: string
+  refreshTokenEncrypted: string
+  expiresAt: Date
+  email: string | null
+  calendarIdsJson: unknown
+  createdAt: Date
+}
 
 // GET - Fetch calendar connections and rules
 export async function GET() {
@@ -38,13 +49,14 @@ export async function GET() {
       return NextResponse.json({ connections: [], rules: null })
     }
 
-    const org = orgMember.organization
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const org = orgMember.organization as any
 
     // Fetch calendars from each connected provider
     const connections = await Promise.all(
-      org.calendarConnections.map(async (conn) => {
+      (org.calendarConnections as CalendarConnectionRecord[]).map(async (conn: CalendarConnectionRecord) => {
         let calendars: { id: string; name: string; primary?: boolean }[] = []
-        let needsRefresh = new Date() >= conn.expiresAt
+        const needsRefresh = new Date() >= conn.expiresAt
 
         try {
           // Refresh token if needed
@@ -76,14 +88,14 @@ export async function GET() {
           // Fetch calendars
           if (conn.provider === 'GOOGLE') {
             const googleCals = await listGoogleCalendars(conn.accessTokenEncrypted)
-            calendars = googleCals.map(c => ({
+            calendars = googleCals.map((c: { id: string; summary: string; primary?: boolean }) => ({
               id: c.id,
               name: c.summary,
               primary: c.primary,
             }))
           } else if (conn.provider === 'MICROSOFT') {
             const msCals = await listMicrosoftCalendars(conn.accessTokenEncrypted)
-            calendars = msCals.map(c => ({
+            calendars = msCals.map((c: { id: string; name: string; isDefaultCalendar?: boolean }) => ({
               id: c.id,
               name: c.name,
               primary: c.isDefaultCalendar,
@@ -97,14 +109,15 @@ export async function GET() {
           id: conn.id,
           provider: conn.provider,
           email: conn.email,
-          selectedCalendarIds: conn.calendarIdsJson as string[] || [],
+          selectedCalendarIds: (conn.calendarIdsJson as string[]) || [],
           availableCalendars: calendars,
           createdAt: conn.createdAt,
         }
       })
     )
 
-    const rules = org.calendarRules[0]?.rulesJson || null
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const rules = (org.calendarRules as any[])[0]?.rulesJson || null
 
     return NextResponse.json({
       connections,
@@ -148,14 +161,17 @@ export async function POST(req: NextRequest) {
       },
     })
 
-    if (!orgMember?.organization.subscriptions[0]) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const org = orgMember?.organization as any
+
+    if (!org?.subscriptions?.[0]) {
       return NextResponse.json(
         { error: 'Active subscription required' },
         { status: 403 }
       )
     }
 
-    const orgId = orgMember.organization.id
+    const orgId = org.id
 
     // Handle selected calendars update
     if (body.connectionId && body.selectedCalendarIds) {
@@ -241,7 +257,10 @@ export async function DELETE(req: NextRequest) {
       },
     })
 
-    if (!orgMember?.organization.calendarConnections[0]) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const org = orgMember?.organization as any
+
+    if (!org?.calendarConnections?.[0]) {
       return NextResponse.json(
         { error: 'Calendar connection not found' },
         { status: 404 }

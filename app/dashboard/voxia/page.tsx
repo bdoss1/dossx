@@ -16,12 +16,13 @@ export default async function VoxiaOverviewPage() {
   }
 
   // Fetch full agent details
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const agent = await db.voxiaAgent.findFirst({
     where: { orgId: context.organization.id },
     include: {
       knowledgeSources: true,
     },
-  })
+  }) as any
 
   const canManage = canAccessFeature(context.subscription?.status)
 
@@ -161,13 +162,13 @@ export default async function VoxiaOverviewPage() {
               </div>
               <div className="text-center">
                 <p className="text-2xl font-bold text-green-600 dark:text-green-400">
-                  {agent.knowledgeSources.filter(s => s.status === 'READY').length}
+                  {agent.knowledgeSources.filter((s: { status: string }) => s.status === 'READY').length}
                 </p>
                 <p className="text-sm text-colorText dark:text-dark-100">Ready</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">
-                  {agent.knowledgeSources.filter(s => s.status === 'PROCESSING').length}
+                  {agent.knowledgeSources.filter((s: { status: string }) => s.status === 'PROCESSING').length}
                 </p>
                 <p className="text-sm text-colorText dark:text-dark-100">Processing</p>
               </div>

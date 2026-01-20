@@ -285,7 +285,7 @@ export default function KnowledgePage() {
               placeholder="https://example.com/about"
               value={urlInput}
               onChange={(e) => setUrlInput(e.target.value)}
-              helperText="We'll extract content from this page for your knowledge base."
+              hint="We'll extract content from this page for your knowledge base."
             />
             <VoxiaButton onClick={handleAddUrl} disabled={submitting || !urlInput.trim()}>
               {submitting ? 'Adding...' : 'Add URL'}

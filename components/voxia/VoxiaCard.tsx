@@ -1,7 +1,7 @@
-import { ReactNode } from 'react'
+import { ReactNode, HTMLAttributes } from 'react'
 import { clsx } from 'clsx'
 
-interface VoxiaCardProps {
+export interface VoxiaCardProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
   className?: string
   padding?: 'none' | 'sm' | 'md' | 'lg'
@@ -13,6 +13,8 @@ export function VoxiaCard({
   className,
   padding = 'md',
   variant = 'default',
+  onClick,
+  ...props
 }: VoxiaCardProps) {
   const paddingStyles = {
     none: '',
@@ -33,8 +35,11 @@ export function VoxiaCard({
         'rounded-2xl',
         paddingStyles[padding],
         variantStyles[variant],
+        onClick && 'cursor-pointer',
         className
       )}
+      onClick={onClick}
+      {...props}
     >
       {children}
     </div>

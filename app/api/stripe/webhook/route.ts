@@ -1,10 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { stripe } from '@/lib/stripe/config'
-import { db, SubscriptionStatus, VoxiaPlan, OnboardingStage } from '@/lib/db'
+import { db } from '@/lib/db'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
+
+// Types matching Prisma schema
+type SubscriptionStatus = 'ACTIVE' | 'TRIALING' | 'PAST_DUE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'UNPAID' | 'PAUSED'
+type VoxiaPlan = 'LAUNCH' | 'GROWTH' | 'SCALE'
 
 // Stripe requires raw body for webhook signature verification
 export async function POST(req: NextRequest) {
@@ -48,19 +52,19 @@ export async function POST(req: NextRequest) {
 
       case 'customer.subscription.created':
       case 'customer.subscription.updated':
-        await handleSubscriptionUpdated(event.data.object as Stripe.Subscription)
+        await handleSubscriptionUpdated(event.data.object)
         break
 
       case 'customer.subscription.deleted':
-        await handleSubscriptionDeleted(event.data.object as Stripe.Subscription)
+        await handleSubscriptionDeleted(event.data.object)
         break
 
       case 'invoice.paid':
-        await handleInvoicePaid(event.data.object as Stripe.Invoice)
+        await handleInvoicePaid(event.data.object)
         break
 
       case 'invoice.payment_failed':
-        await handleInvoicePaymentFailed(event.data.object as Stripe.Invoice)
+        await handleInvoicePaymentFailed(event.data.object)
         break
 
       default:
@@ -77,8 +81,9 @@ export async function POST(req: NextRequest) {
   }
 }
 
-function mapStripeStatus(status: Stripe.Subscription.Status): SubscriptionStatus {
-  const statusMap: Record<Stripe.Subscription.Status, SubscriptionStatus> = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function mapStripeStatus(status: string): SubscriptionStatus {
+  const statusMap: Record<string, SubscriptionStatus> = {
     active: 'ACTIVE',
     trialing: 'TRIALING',
     past_due: 'PAST_DUE',
@@ -91,7 +96,8 @@ function mapStripeStatus(status: Stripe.Subscription.Status): SubscriptionStatus
   return statusMap[status] || 'INCOMPLETE'
 }
 
-function getPlanFromMetadata(metadata: Stripe.Metadata | null): VoxiaPlan {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function getPlanFromMetadata(metadata: any): VoxiaPlan {
   const plan = metadata?.plan?.toUpperCase()
   if (plan === 'LAUNCH' || plan === 'GROWTH' || plan === 'SCALE') {
     return plan
@@ -121,22 +127,23 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
   }
 
   // Fetch the subscription details
-  const subscription = await stripe.subscriptions.retrieve(subscriptionId)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const subscriptionData = await stripe.subscriptions.retrieve(subscriptionId) as any
 
   // Upsert subscription record
   await db.subscription.upsert({
     where: { stripeSubscriptionId: subscriptionId },
     update: {
-      status: mapStripeStatus(subscription.status),
-      currentPeriodEnd: new Date(subscription.current_period_end * 1000),
+      status: mapStripeStatus(subscriptionData.status),
+      currentPeriodEnd: new Date(subscriptionData.current_period_end * 1000),
     },
     create: {
       orgId,
       stripeCustomerId: customerId,
       stripeSubscriptionId: subscriptionId,
-      status: mapStripeStatus(subscription.status),
+      status: mapStripeStatus(subscriptionData.status),
       plan: getPlanFromMetadata({ plan: plan || null }),
-      currentPeriodEnd: new Date(subscription.current_period_end * 1000),
+      currentPeriodEnd: new Date(subscriptionData.current_period_end * 1000),
     },
   })
 
@@ -157,7 +164,8 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
   console.log(`Checkout completed for org ${orgId}, subscription ${subscriptionId}`)
 }
 
-async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function handleSubscriptionUpdated(subscription: any) {
   const { orgId } = subscription.metadata || {}
 
   // Try to find existing subscription by Stripe ID
@@ -194,7 +202,8 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
   }
 }
 
-async function handleSubscriptionDeleted(subscription: Stripe.Subscription) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function handleSubscriptionDeleted(subscription: any) {
   await db.subscription.updateMany({
     where: { stripeSubscriptionId: subscription.id },
     data: {
@@ -204,7 +213,8 @@ async function handleSubscriptionDeleted(subscription: Stripe.Subscription) {
   console.log(`Subscription ${subscription.id} marked as canceled`)
 }
 
-async function handleInvoicePaid(invoice: Stripe.Invoice) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function handleInvoicePaid(invoice: any) {
   if (!invoice.subscription) return
 
   const subscriptionId = typeof invoice.subscription === 'string'
@@ -221,7 +231,8 @@ async function handleInvoicePaid(invoice: Stripe.Invoice) {
   console.log(`Invoice paid for subscription ${subscriptionId}`)
 }
 
-async function handleInvoicePaymentFailed(invoice: Stripe.Invoice) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function handleInvoicePaymentFailed(invoice: any) {
   if (!invoice.subscription) return
 
   const subscriptionId = typeof invoice.subscription === 'string'
@@ -236,19 +247,4 @@ async function handleInvoicePaymentFailed(invoice: Stripe.Invoice) {
     },
   })
   console.log(`Payment failed for subscription ${subscriptionId}`)
-}
-
-/**
- * Verify a Stripe webhook signature (exported for testing)
- */
-export function verifyWebhookSignature(
-  payload: string,
-  signature: string,
-  secret: string
-): Stripe.Event | null {
-  try {
-    return stripe.webhooks.constructEvent(payload, signature, secret)
-  } catch {
-    return null
-  }
 }

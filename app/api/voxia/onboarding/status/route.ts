@@ -52,9 +52,13 @@ export async function GET() {
       })
     }
 
-    const org = orgMember.organization
-    const subscription = org.subscriptions[0]
-    const agent = org.voxiaAgents[0]
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const org = orgMember.organization as any
+    const subscription = org.subscriptions?.[0]
+    const agent = org.voxiaAgents?.[0]
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const knowledgeSources = (agent?.knowledgeSources || []) as any[]
 
     return NextResponse.json({
       hasOrganization: true,
@@ -69,10 +73,10 @@ export async function GET() {
       agentId: agent?.id || null,
       agentName: agent?.name || null,
       agentStatus: agent?.status || null,
-      knowledgeSourcesCount: agent?.knowledgeSources.length || 0,
-      knowledgeSourcesReady: agent?.knowledgeSources.filter(s => s.status === 'READY').length || 0,
-      calendarConnected: org.calendarConnections.length > 0,
-      calendarProviders: org.calendarConnections.map(c => c.provider),
+      knowledgeSourcesCount: knowledgeSources.length,
+      knowledgeSourcesReady: knowledgeSources.filter((s: { status: string }) => s.status === 'READY').length,
+      calendarConnected: (org.calendarConnections || []).length > 0,
+      calendarProviders: (org.calendarConnections || []).map((c: { provider: string }) => c.provider),
     })
   } catch (error) {
     console.error('Onboarding status error:', error)
