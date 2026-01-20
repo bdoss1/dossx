@@ -21,13 +21,22 @@ export const metadata: Metadata = {
   },
 }
 
+// Conditional Clerk wrapper - only wraps when publishable key is available
+function ConditionalClerkProvider({ children }: { children: ReactNode }) {
+  // During build time without env vars, skip Clerk
+  if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
+    return <>{children}</>
+  }
+  return <ClerkProvider>{children}</ClerkProvider>
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode
 }>) {
   return (
-    <ClerkProvider>
+    <ConditionalClerkProvider>
       <html lang="en">
         <body className={`${satoshi.variable} antialiased`}>
           <Suspense fallback={<div>Loading...</div>}>
@@ -43,6 +52,6 @@ export default function RootLayout({
           </Suspense>
         </body>
       </html>
-    </ClerkProvider>
+    </ConditionalClerkProvider>
   )
 }

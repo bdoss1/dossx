@@ -1,13 +1,18 @@
 import Stripe from 'stripe'
 
-if (!process.env.STRIPE_SECRET_KEY) {
-  throw new Error('STRIPE_SECRET_KEY is not set')
-}
+// Use a placeholder during build time, actual key required at runtime
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY || 'sk_placeholder_for_build'
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2025-04-30.basil',
+export const stripe = new Stripe(stripeSecretKey, {
+  apiVersion: '2025-08-27.basil',
   typescript: true,
 })
+
+export function requireStripeKey() {
+  if (!process.env.STRIPE_SECRET_KEY) {
+    throw new Error('STRIPE_SECRET_KEY is not set')
+  }
+}
 
 export const VOXIA_PRICES = {
   LAUNCH: process.env.STRIPE_PRICE_VOXIA_LAUNCH || '',
